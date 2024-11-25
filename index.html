@@ -142,13 +142,37 @@
 
         <!-- Scroll Indicator -->
         <div class="absolute left-4 top-1/3 flex flex-col items-center">
-            <p class="text-gray-600 text-sm uppercase tracking-widest rotate-90 mb-2">Scroll Down</p>
-            <div class="w-1 h-12 bg-gray-300 rounded-full"></div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                class="w-6 h-6 text-gray-500 mt-2">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            <!-- Scroll Down Text -->
+            <p class="text-gray-600 text-sm uppercase tracking-widest rotate-90 mb-2">
+              Scroll Down
+            </p>
+            
+            <!-- Vertical Line -->
+            <div class="w-1 h-24 bg-gray-300 rounded-full"></div>
+            
+            <!-- Arrow -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-gray-500 mt-2">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
-        </div>
+            
+            <!-- Circle with Dot -->
+            <div class="mt-4 flex flex-col items-center">
+              <div class="relative">
+                <!-- Up Arrow -->
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2">
+                  <div class="border-t-2 border-l-2 border-gray-500 w-4 h-4 transform rotate-45"></div>
+                </div>
+                <!-- Circle -->
+                <div class="border-2 border-gray-500 rounded-full w-16 h-16 flex items-center justify-center">
+                  <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                </div>
+                <!-- Down Arrow -->
+                <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2">
+                  <div class="border-t-2 border-l-2 border-gray-500 w-4 h-4 transform rotate-[225deg]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
 
     <!-- About Section -->
