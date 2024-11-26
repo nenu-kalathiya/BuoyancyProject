@@ -17,6 +17,9 @@
     <!-- Font Awesome CDN link -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+    <!-- swiper slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -25,8 +28,12 @@
         tailwind.config = {
             theme: {
                 extend: {
+                    colors: {
+                        customGray: '#434343', 
+                        customBlue: '#001B3A', 
+                    },
                     fontFamily: {
-                        montserrat: ['Montserrat', 'sans-serif'], // Custom font define kar rahe hain
+                        montserrat: ['Montserrat', 'sans-serif'], 
                     },
                 },
             },
@@ -36,141 +43,102 @@
 
 <body class="font-montserrat">
     <!-- Navbar -->
-    <header class="bg-transparent text-black py-4">
-        <div
-            class="container mx-auto px-8 lg:px-20 py-4 font-normal text-[#434343] text-xl flex justify-between items-center">
-            <!-- Left Section: Logo -->
-            <div class="text-2xl font-bold hidden md:flex">
-                <a href="#">
-                    <img src="assets/img/logo.png" alt="Logo" class="h-24 w-auto md:h-8 lg:h-20">
+    <header class="py-5">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./assets/img/logo.png" alt="logo" class="h-24">
                 </a>
             </div>
-
-            <!-- Center Section: Navigation Links -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Services</a>
-                <a href="#">Products</a>
-                <a href="#">Career</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact Us</a>
+            <nav>
+                <ul class="flex text-customGray">
+                    <li>
+                        <a href="#" class="block p-5 text-emerald-800 font-bold relative">
+                            Home
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block p-5">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block p-5">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block p-5">Products</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block p-5">Career</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block p-5">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block p-5">Contact Us</a>
+                    </li>
+                </ul>
             </nav>
-
-            <!-- Right Section: Search Icon and Get a Quote Button -->
-            <div class="flex items-center space-x-10 hidden md:flex">
-                <!-- Search Icon  -->
-                <i class="fa-solid fa-magnifying-glass text-2xl text-[#135c2e]"></i>
-
-                <button
-                    class="flex items-center bg-whitetext-[#135c2e] font-semibold text-lg rounded-full shadow-md hover:shadow-lg focus:outline-none relative ">
-
-                    <span class="px-6 py-3 text-[#135c2e]">Get A Quote</span>
-
-                    <!-- Arrow icon inside button -->
-                    <div class="ml-3 w-14 h-14 flex items-center justify-center rounded-full bg-gray-100 shadow-inner">
-                        <i class="fa-solid fa-angles-right text-xl text-[#135c2e]"></i>
-                    </div>
-                </button>
-
-            </div>
-        </div>
-
-        <!-- Mobile Menu (Hamburger) -->
-        <div class="md:hidden flex justify-between items-center px-6 py-4">
-            <!-- Hamburger Menu Button -->
-            <button class="text-[#135c2e]" id="hamburger-btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu Links (Hidden initially) -->
-        <div class="md:hidden hidden" id="mobile-menu">
-            <div class="flex justify-between items-center bg-white px-6 py-4">
-                <!-- Logo for Mobile Menu -->
-                <div class="text-2xl font-bold">
-                    <a href="#">
-                        <img src="assets/img/logo.png" alt="Logo" class="h-12 w-auto">
-                    </a>
-                </div>
-                <!-- Close Button for Mobile Menu -->
-                <button class="text-[#434343]" id="close-btn">
-                    <i class="fa-solid fa-xmark"></i>
+            <div class="flex items-center">
+                <a href="#" class="text-2xl text-emerald-800 mr-8">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <button class="bg-white rounded-full pl-8 shadow-md ">
+                    <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                    <i
+                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
                 </button>
             </div>
-            <!-- Mobile Navigation Links -->
-            <nav class="flex flex-col text-[#434343] space-y-4 px-6 py-4 bg-white">
-                <a href="#" class="py-2">Home</a>
-                <a href="#" class="py-2">About Us</a>
-                <a href="#" class="py-2">Services</a>
-                <a href="#" class="py-2">Products</a>
-                <a href="#" class="py-2">Career</a>
-                <a href="#" class="py-2">Blog</a>
-                <a href="#" class="py-2">Contact Us</a>
-            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative bg-white overflow-hidden">
-        <div class="container mx-auto flex flex-col lg:flex-row items-center lg:space-x-12 px-6 lg:px-0 py-12 lg:py-20">
-            <!-- Left Content -->
-            <div class="flex-initial w-full lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
-                <h1 class="text-3xl lg:text-5xl font-bold text-gray-800 font-sans mb-4 leading-tight">
+    <!-- hero sec -->
+    <section class="relative">
+        <div class="flex items-center">
+            <div class="w-5/12 pl-48 pr-24">
+                <h1 class="text-6xl font-semibold text-[#001B3A] leading-tight mb-5">
                     Buoyancy Impex Pvt Ltd.
                 </h1>
-                <p class="text-lg lg:text-xl text-gray-600 mb-4">
+                <p class="text-5xl leading-tight text-neutral-500 mb-5">
                     Where Business & Profitability Converge
                 </p>
-                <p class="text-sm text-gray-500 mb-8">
+                <p class="text-lg mb-5 text-gray-500">
                     We Are Trusted Partners In International Market Since 2005 With Prominence & Stability
                 </p>
-                <button
-                    class="flex items-center bg-white text-[#135c2e] font-semibold text-lg rounded-full shadow-md hover:shadow-lg focus:outline-none relative">
-                    <span class="px-6 py-3 text-lg">Get A Quote</span>
-                    <div class="ml-3 w-14 h-14 flex items-center justify-center rounded-full bg-gray-100 shadow-inner">
-                        <i class="fa-solid fa-angles-right text-xl text-[#135c2e]"></i>
-                    </div>
+                <button class="bg-white rounded-full pl-8 shadow-md ">
+                    <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                    <i
+                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
                 </button>
             </div>
-
-            <!-- Right Image -->
-            <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
-                <img src="assets/img/slider-img.png" alt="Industrial site"
-                    class="rounded-lg shadow-lg w-full h-auto object-cover">
+            <div class="w-7/12">
+                <img src="assets/img/slider-img.png" alt="Industrial site" class="w-full h-full object-cover shadow-lg">
             </div>
         </div>
-
         <!-- Scroll Indicator -->
         <div
-            class="absolute top-1/2 left-[5%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-6">
+            class="flex items-center gap-x-6 transform rotate-90 origin-center absolute -left-[8%] top-2/4 -translate-y-2/4">
             <!-- Scroll Text -->
-            <p class="text-gray-600 text-sm lg:text-base uppercase tracking-widest transform rotate-90 origin-center">
-                Scroll Down
-            </p>
+            <p class="uppercase text-sm text-gray-500">Scroll Down</p>
             <!-- Vertical Line -->
-            <div class="w-px h-24 lg:h-32 bg-gray-400"></div>
-            <!-- Circle with Dot and Arrows -->
-            <div class="relative flex flex-col items-center space-y-4">
-                <!-- Up Arrow -->
-                <div class="absolute top-0 transform -translate-y-5">
-                    <div class="w-4 h-4 border-t-2 border-l-2 border-gray-500 transform rotate-45"></div>
-                </div>
-                <!-- Circle with Dot -->
-                <div class="w-16 h-16 border-2 border-gray-500 rounded-full flex items-center justify-center">
-                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
-                </div>
-                <!-- Down Arrow -->
-                <div class="absolute bottom-0 transform translate-y-5">
-                    <div class="w-4 h-4 border-t-2 border-l-2 border-gray-500 transform rotate-[225deg]"></div>
-                </div>
+            <div class="w-56 h-px bg-gray-500"></div>
+            <!-- Up Arrow -->
+            <a href="" class="">
+                <i class="fa-solid fa-chevron-left text-gray-500"></i>
+            </a>
+            <!-- Circle with Dot -->
+            <div class="w-16 h-16 border-2 border-gray-500 rounded-full flex items-center justify-center">
+                <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
             </div>
+            <!-- Down Arrow -->
+            <a href="" class="">
+                <i class="fa-solid fa-chevron-right text-gray-500"></i>
+            </a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="container mx-auto px-4 pt-36 font-montserrat">
-        <h2 class="text-center text-[46px] font-montserrat font-medium text-[#001b3a] mb-6">
+    <section class="container mx-auto px-4 pt-36">
+        <h2 class="text-center text-[46px] font-medium text-[#001b3a] mb-6">
             We’re Here To Revolutionize The Business
         </h2>
         <p class="text-[#434343] font-normal  text-center mx-auto">
@@ -189,11 +157,11 @@
     </section>
 
     <!-- What We Do Section -->
-    <section class="container mx-auto px-4 py-16 mb-0 font-montserrat">
+    <section class="container mx-auto px-4 pt-16">
         <!-- Cards Wrapper -->
         <div class="flex flex-col items-center min-h-screen bg-white py-16">
-            <h2 class="text-center text-[46px] font-montserrat font-medium text-[#001b3a] mb-2">What We Do</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center font-montserrat">
+            <h2 class="text-center text-[46px] font-medium text-[#001b3a] mb-16">What We Do</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
                 <!-- Card 1 -->
                 <div>
                     <div class="relative flex items-center justify-center w-56 h-56 rounded-full bg-white mx-auto"
@@ -222,13 +190,13 @@
                         <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center" style="box-shadow: 
                         inset 0px 1px 18px 0px #CDCDCD, inset -20px -3px 50px 0px #fff;">
                             <!-- Icon -->
-                            <img src="assets/img/vector-2.png" alt="Logistics Icon" class="h-16 w-16">
+                            <img src="assets/img/vector-2.png" alt="Export Icon" class="h-16 w-16">
                         </div>
                     </div>
                     <h3 class="text-2xl font-semibold text-[#1F1F1F] mt-6">Logistic Services</h3>
                     <p class="text-[#434343] text-lg mt-2">
-                        This strenuous task is just a cakewalk for us. We've dedication and commitment to strong
-                        customer services. Our unmatched services make us the industry leader.
+                        This strenuous task is just a cakewalk for us. We’ve dedication and commitment to strong
+                        customer services. Our unmatchable services make us the industry leader.
                     </p>
                 </div>
 
@@ -262,8 +230,8 @@
     </section>
 
     <!-- key points section -->
-    <section class="container mx-auto px-4 py-16 mt-0">
-        <div class="relative w-full h-screen flex items-center justify-center">
+    <section class="px-4 pb-16">
+        <div class="relative w-full min-h-screen flex items-center justify-center">
             <!-- Background Container -->
             <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center"
                 style="background-image: url('assets/img/industrial.jpg');">
@@ -271,35 +239,52 @@
                 <div class="absolute top-0 left-0 w-1/2 h-full bg-black/50">
                     <!-- Content inside the overlay -->
                     <div
-                        class="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 flex flex-col items-start max-w-lg px-8 py-12 text-white bg-white/10 rounded-lg shadow-lg backdrop-blur-md">
-                        <h2 class="text-3xl font-bold mb-4">About Us</h2>
-                        <p class="text-lg mb-6">Key points about company</p>
-                        <p class="text-sm mb-6">
+                        class="absolute left-4 top-1/2 transform -translate-y-1/2 flex flex-col items-start text-center max-w-lg px-8 py-12 text-white rounded-lg ">
+                        <h2 class="text-[46px] font-bold mb-4">About Us</h2>
+                        <p class="text-[26px] mb-6">Key points about company</p>
+                        <p class="text-lg mb-6 text-start font-normal">
                             BUOYANCY IMPEX PRIVATE LIMITED is an independent, privately held global
                             enterprise on trading and Exports of Petroleum derivatives like Bitumen,
-                            Base oils... <a href="#" class="underline">Read More</a>
+                            Base oils... <a href="#" class="font-bold ">Read More</a>
                         </p>
                         <!-- Accordion -->
                         <div class="w-full">
                             <!-- History -->
-                            <div class="border-b border-gray-300 py-4">
-                                <button class="flex justify-between w-full text-left text-lg">
-                                    <span>History</span>
-                                    <span>▼</span>
+                            <div class="border-b border-white py-4">
+                                <button class="flex justify-between items-center w-full text-left text-[22px]">
+                                    <!-- Dots and Text -->
+                                    <span class="flex items-center">
+                                        <span class="text-xl font-bold mr-2">•••</span>
+                                        History
+                                    </span>
+                                    <!-- Arrow -->
+                                    <i class="fa-solid fa-angle-down"></i>
                                 </button>
                             </div>
+
                             <!-- Quality -->
-                            <div class="border-b border-gray-300 py-4">
-                                <button class="flex justify-between w-full text-left text-lg">
-                                    <span>Quality</span>
-                                    <span>▼</span>
+                            <div class="border-b border-white py-4">
+                                <button class="flex justify-between items-center w-full text-left text-[22px]">
+                                    <!-- Dots and Text -->
+                                    <span class="flex items-center">
+                                        <span class="text-xl font-bold mr-2">•••</span>
+                                        Quality
+                                    </span>
+                                    <!-- Arrow -->
+                                    <i class="fa-solid fa-angle-down"></i>
                                 </button>
                             </div>
+
                             <!-- Future -->
-                            <div class="py-4">
-                                <button class="flex justify-between w-full text-left text-lg">
-                                    <span>Future</span>
-                                    <span>▼</span>
+                            <div class="py-4 ">
+                                <button class="flex justify-between items-center w-full text-left text-[22px]">
+                                    <!-- Dots and Text -->
+                                    <span class="flex items-center">
+                                        <span class="text-xl font-bold mr-2">•••</span>
+                                        Future
+                                    </span>
+                                    <!-- Arrow -->
+                                    <i class="fa-solid fa-angle-down"></i>
                                 </button>
                             </div>
                         </div>
@@ -309,90 +294,210 @@
         </div>
     </section>
 
-
-    <section class="container mx-auto w-full py-16">
-        <div class=""max-w-6xl px-6">
+    <!-- Product Showcase carousel -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
             <!-- Section Header -->
-            <div class="mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Product Showcase</h2>
-                <p class="text-lg text-gray-600">
-                    It is a long established fact that a reader will be distracted by the
-                    readable content of a page when looking at its layout.
+            <div class="mb-12 relative">
+                <h2 class="text-[46px] font-medium text-[#001b3a]">Product Showcase</h2>
+                <p class="text-[#434343] text-[18px] font-normal">
+                    It is a long established fact that a reader will be distracted by the readable content of <br /> a
+                    page when looking at its layout.
                 </p>
-                
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev left-3/4"></div>
+                <div class="swiper-button-next"></div>
             </div>
-
-            <!-- Carousel Section -->
-            <div class="relative">
-                <!-- Carousel Wrapper -->
-                <div id="carousel"
-                    class="flex scroll-smooth snap-x snap-mandatory gap-6 no-scrollbar">
-                    <!-- Card 1 -->
-                    <div class="min-w-[300px] bg-white shadow-md rounded-lg overflow-hidden snap-center">
-                        <img src="https://via.placeholder.com/300x200" alt="Fertilizers"
-                            class="w-full h-48 object-cover" />
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold mb-2 text-gray-800">Fertilizers</h3>
-                            <p class="text-sm text-gray-600 mb-4">
-                                It is a long established fact that a reader will be distracted by
-                                the readable content of a page when looking at its layout.
+            <!-- Carousel Wrapper -->
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper py-10">
+                    <!-- Slides -->
+                    <div class="swiper-slide px-3">
+                        <div class="bg-white shadow-lg rounded-3xl p-6 max-w-sm flex-shrink-0">
+                            <img src="assets/img/furtilizer.jpg" alt="Fertilizers"
+                                class="rounded-2xl  w-full h-40 object-cover mb-4" />
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Fertilizers</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                It is a long established fact that a reader will be distracted by the readable content of a
+                                page.
                             </p>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm hover:bg-green-600">
-                                View More
+                            <button class="bg-white rounded-full pl-8 shadow-md ">
+                                <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                                <i
+                                    class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
                             </button>
                         </div>
                     </div>
-                    <!-- Card 2 -->
-                    <div class="min-w-[300px] bg-white shadow-md rounded-lg overflow-hidden snap-center">
-                        <img src="https://via.placeholder.com/300x200" alt="Sulfur" class="w-full h-48 object-cover" />
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold mb-2 text-gray-800">Sulfur</h3>
-                            <p class="text-sm text-gray-600 mb-4">
-                                It is a long established fact that a reader will be distracted by
-                                the readable content of a page when looking at its layout.
+                    <div class="swiper-slide px-3">
+                        <div class="bg-white shadow-lg rounded-lg p-6 max-w-sm flex-shrink-0">
+                            <img src="assets/img/sulfer.jpg" alt="Fertilizers"
+                                class="rounded-md w-full h-40 object-cover mb-4" />
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Fertilizers</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                It is a long established fact that a reader will be distracted by the readable content of a
+                                page.
                             </p>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm hover:bg-green-600">
-                                View More
+                            <button class="bg-white rounded-full pl-8 shadow-md ">
+                                <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                                <i
+                                    class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
                             </button>
                         </div>
                     </div>
-                    <!-- Card 3 -->
-                    <div class="min-w-[300px] bg-white shadow-md rounded-lg overflow-hidden snap-center">
-                        <img src="https://via.placeholder.com/300x200" alt="Bitumen" class="w-full h-48 object-cover" />
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold mb-2 text-gray-800">Bitumen</h3>
-                            <p class="text-sm text-gray-600 mb-4">
-                                It is a long established fact that a reader will be distracted by
-                                the readable content of a page when looking at its layout.
+                    <div class="swiper-slide px-3">
+                        <div class="bg-white shadow-lg rounded-lg p-6 max-w-sm flex-shrink-0">
+                            <img src="assets/img/Bitumen.jpg" alt="Fertilizers"
+                                class="rounded-md w-full h-40 object-cover mb-4" />
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Fertilizers</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                It is a long established fact that a reader will be distracted by the readable content of a
+                                page.
                             </p>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm hover:bg-green-600">
-                                View More
+                            <button class="bg-white rounded-full pl-8 shadow-md ">
+                                <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                                <i
+                                    class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
                             </button>
                         </div>
                     </div>
-                    <!-- Card 4 -->
-                    <div class="min-w-[300px] bg-white shadow-md rounded-lg overflow-hidden snap-center">
-                        <img src="https://via.placeholder.com/300x200" alt="Base Oil"
-                            class="w-full h-48 object-cover" />
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold mb-2 text-gray-800">
-                                Base Oil & Derivatives
-                            </h3>
-                            <p class="text-sm text-gray-600 mb-4">
-                                It is a long established fact that a reader will be distracted by
-                                the readable content of a page when looking at its layout.
+                    <div class="swiper-slide px-3">
+                        <div class="bg-white shadow-lg rounded-lg p-6 max-w-sm flex-shrink-0">
+                            <img src="assets/img/sunset.jpg   z" alt="Fertilizers"
+                                class="rounded-md w-full h-40 object-cover mb-4" />
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Fertilizers</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                It is a long established fact that a reader will be distracted by the readable content of a
+                                page.
                             </p>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm hover:bg-green-600">
-                                View Details
+                            <button class="bg-white rounded-full pl-8 shadow-md ">
+                                <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                                <i
+                                    class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-3">
+                        <div class="bg-white shadow-lg rounded-lg p-6 max-w-sm flex-shrink-0">
+                            <img src="assets/img/furtilizer.jpg" alt="Fertilizers"
+                                class="rounded-md w-full h-40 object-cover mb-4" />
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Fertilizers</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                It is a long established fact that a reader will be distracted by the readable content of a
+                                page.
+                            </p>
+                            <button class="bg-white rounded-full pl-8 shadow-md ">
+                                <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                                <i
+                                    class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
                             </button>
                         </div>
                     </div>
                 </div>
-
+            
                 
+            
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Statistic Till -->
+    <section class="relative bg-gray-800 text-white py-16">
+        <!-- Content Container -->
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center lg:space-x-12">
+                <!-- Left Content -->
+                <div class="lg:w-2/3">
+                    <h2 class="text-4xl font-bold mb-6">Statistic Till 2021</h2>
+                    <p class="text-gray-300 mb-6">
+                        With the impressive and outstanding legacy of 15 years, our company has reached a level that
+                        could only
+                        be imagined. We’re proud to have the best brains of the industry and their untiring work has
+                        paid
+                        dividends. We always exceed the expectations and do better than the best. Our company is
+                        ambitious
+                        to give the energy, its full value. So, join us today in writing a new history.
+                    </p>
+                    <!-- Key Metrics -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
+                        <p class="flex items-center">
+                            <i class="fa-solid fa-angle-right text-green-500 mr-3"></i> 289M $ Sales generated
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fa-solid fa-angle-right text-green-500 mr-3"></i> 7.3% Market share increase
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fa-solid fa-angle-right text-green-500 mr-3"></i> 19 years of collective
+                            experience
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fa-solid fa-angle-right text-green-500 mr-3"></i> Annual Trading Volume: upto
+                            42,370 MT
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="lg:w-1/3 mt-8 lg:mt-0 flex justify-center">
+                    <img src="assets/img/worker_img.png" alt="Engineer"
+                        class="rounded-lg shadow-lg w-full max-w-sm h-auto" />
+                </div>
+                <!-- Statistics Circles -->
+        <div class=" bottom-0 right-1/2 transform -translate-x-1/2 translate-y-1/2 flex justify-between gap-8">
+            <!-- Circle 1 -->
+            <div class="text-center flex flex-col items-center">
+                <div class="w-36 h-36 bg-white rounded-full flex flex-col items-center justify-center shadow-md">
+                    <h3 class="text-3xl font-bold text-green-500">432</h3>
+                    <p class="text-xs font-semibold text-gray-300 mt-2">Project Completed</p>
+                </div>
+            </div>
+
+            <!-- Circle 2 -->
+            <div class="text-center flex flex-col items-center">
+                <div class="w-36 h-36 bg-white rounded-full flex flex-col items-center justify-center shadow-md">
+                    <h3 class="text-3xl font-bold text-green-500">38</h3>
+                    <p class="text-xs font-semibold text-gray-300 mt-2">In Countries</p>
+                </div>
+            </div>
+
+            <!-- Circle 3 -->
+            <div class="text-center flex flex-col items-center">
+                <div class="w-36 h-36 bg-white rounded-full flex flex-col items-center justify-center shadow-md">
+                    <h3 class="text-3xl font-bold text-green-500">186</h3>
+                    <p class="text-xs font-semibold text-gray-300 mt-2">Expert Clients Base</p>
+                </div>
+            </div>
+        </div>
             </div>
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        const carousel = document.getElementById('carousel');
+        const cardWidth = document.querySelector('.flex-shrink-0').offsetWidth + 24; // 24px for gap
+
+        // Move carousel to the left
+        prevButton.addEventListener('click', () => {
+            carousel.scrollBy({
+                left: -cardWidth,
+                behavior: 'smooth'
+            });
+        });
+
+        // Move carousel to the right
+        nextButton.addEventListener('click', () => {
+            carousel.scrollBy({
+                left: cardWidth,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
 
     <script>
         // Toggle mobile menu
@@ -410,31 +515,20 @@
     </script>
 
     <script>
-        $(document).ready(function () {
-            $(".hover-card").hover(
-                function () {
-                    $(this).addClass("shadow-2xl transform -translate-y-2");
-                },
-                function () {
-                    $(this).removeClass("shadow-2xl transform -translate-y-2");
-                }
-            );
+        const swiper = new Swiper('.swiper', {
+        
+            // Optional parameters
+            loop: true,
+            slidesPerView: 4,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
         });
     </script>
-
-<script>
-    const carousel = document.getElementById("carousel");
-    const next = document.getElementById("next");
-    const prev = document.getElementById("prev");
-  
-    next.addEventListener("click", () => {
-      carousel.scrollBy({ left: 320, behavior: "smooth" });
-    });
-  
-    prev.addEventListener("click", () => {
-      carousel.scrollBy({ left: -320, behavior: "smooth" });
-    });
-  </script>
 </body>
 
 </html>
