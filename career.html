@@ -38,6 +38,7 @@
                     boxShadow: {
                         'custom-light': '10px 10px 30px 0px #00000073',
                         'custom-dark': '-10px -10px 30px 0px #2B2B2B',
+                        'inner-combo': 'inset 10px 10px 20px 0px rgba(0, 0, 0, 0.09), inset -10px -10px 20px 0px rgba(255, 255, 255, 1)',
                     },
                 },
             },
@@ -108,6 +109,347 @@
         </div>
     </section>
 
+    <!-- job cards  -->
+    <section class="container mx-auto py-16">
+        <div class="mb-12 relative">
+            <h2 class="text-[46px] font-medium text-[#001b3a]">Great Jpbs</h2>
+            <p class="text-[#434343] text-[16px] font-normal pb-2">
+                Find job details and your point of contact with only two clicks. You will receive a confirmation e-mail
+                as soon as your application has been sent successfully.
+            </p>
+            <p class="text-[#434343] text-[16px] font-normal">
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+                desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 gap-3">
+            <!-- Job Card 1-->
+            <div class="bg-white rounded-lg shadow-md border-2 border-[#135c2e]">
+                <!-- Header Section -->
+                <div class="flex justify-between items-center p-4 border-b border-[#135c2e]">
+                    <h1 class="text-lg font-semibold text-[#1F1F1F]">Export Manager</h1>
+                    <button id="toggle-details"
+                        class="text-gray-500 w-[40px] h-[40px] bg-gray shadow-inner rounded-full focus:outline-none hover:text-gray-800 transition duration-200"
+                        onclick="toggleDetails('job-details-1')">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                </div>
+
+                <!-- Job Details -->
+                <div id="job-details-1" class="p-4 space-y-4 text-gray-600 hidden">
+                    <!-- Top Info -->
+                    <div class="flex flex-wrap items-center gap-6 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Term:</span>
+                            <span>Full-time</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Start Date:</span>
+                            <span>ASAP</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Duration:</span>
+                            <span>Permanent</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Location:</span>
+                            <span>N/A</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Opening Date:</span>
+                            <span>N/A</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Deadline:</span>
+                            <span>N/A</span>
+                        </div>
+                    </div>
+
+                    <!-- Job Responsibilities -->
+                    <div>
+                        <h2 class="text-base font-semibold text-[#1F1F1F">Job Responsibilities</h2>
+                        <ul class="list-disc pl-5 mt-2 space-y-2">
+                            <li>Takes care of import documentations, liaison with various government and non-government
+                                departments like Bank, Custom, freight, shipping company, CHA etc.</li>
+                            <li>Reviews, reconciles, and approves warehousing invoices for storage and material handling
+                                fees</li>
+                            <li>Follow-up with seller for dispatch of material as per Agreement, PO s.</li>
+                            <li>Lead generation through net surfing and getting in touch with new suppliers/ partners.
+                            </li>
+                            <li>Being the single point of contact for the business import queries, follow-up for timely
+                                payments.</li>
+                            <li>Pre and Post shipment documentation comprising of preparation of Performa Invoice,
+                                Packing
+                                list, Issuance of Certificate of Origin (COO) and Certificate of Conformity (COC),
+                                issuance
+                                of Bill of Landing as per Letter of Credit (LC)/ buyer instructions.</li>
+                            <li>Have a formal understanding of domestic and international rules and regulations that
+                                govern
+                                the shipments of chemical items/ products.</li>
+                            <li>Work with transportation providers to ensure streamlined procedures in line with our
+                                business and products.</li>
+                            <li>Check all freight, clearance bills and follow up for timely payments as per credit
+                                period
+                                agreed.</li>
+                            <li>Resolve issues like consignment damage, lost, etc. with stakeholders, third party
+                                surveyors,
+                                and insurance party and ensure recovery.</li>
+                            <li>Should be able to visit bank or customs if required.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Requirements -->
+                    <div>
+                        <h2 class="text-base font-semibold text-[#1F1F1F">Requirements</h2>
+                        <ul class="list-disc pl-5 mt-2 space-y-2">
+                            <li>Good communication skills.</li>
+                            <li>Handle imports product Independently.</li>
+                            <li>Facilitates the entire import product which includes shippment coordination,import
+                                documents, custom clearance,goods movements from warehouse to warehouse,duty rate
+                                application.</li>
+                            <li>Minimum 5 years of experience in the same domain.</li>
+                            <li>Graduate is must.Post Graduation is an added advantage.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Card 2-->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <!-- Header Section -->
+                <div class="flex justify-between items-center p-4">
+                    <h1 class="text-lg font-semibold text-[#1F1F1F]">Senior Advocate</h1>
+                    <button id="toggle-details"
+                        class="text-gray-500 w-[40px] h-[40px] bg-gray shadow-inner rounded-full focus:outline-none hover:text-gray-800 transition duration-200"
+                        onclick="toggleDetails('job-details-1')">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                </div>
+
+                <!-- Job Details -->
+                <div id="job-details-2" class="p-4 space-y-4 text-gray-600 hidden">
+                    <!-- Top Info -->
+                    <div class="flex flex-wrap items-center gap-6 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Term:</span>
+                            <span>Full-time</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Start Date:</span>
+                            <span>ASAP</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Duration:</span>
+                            <span>Permanent</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Location:</span>
+                            <span>N/A</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Opening Date:</span>
+                            <span>N/A</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Deadline:</span>
+                            <span>N/A</span>
+                        </div>
+                    </div>
+
+                    <!-- Job Responsibilities -->
+                    <div>
+                        <h2 class="text-base font-semibold text-[#1F1F1F">Job Responsibilities</h2>
+                        <ul class="list-disc pl-5 mt-2 space-y-2">
+                            <li>Takes care of import documentations, liaison with various government and non-government
+                                departments like Bank, Custom, freight, shipping company, CHA etc.</li>
+                            <li>Reviews, reconciles, and approves warehousing invoices for storage and material handling
+                                fees</li>
+                            <li>Follow-up with seller for dispatch of material as per Agreement, PO s.</li>
+                            <li>Lead generation through net surfing and getting in touch with new suppliers/ partners.
+                            </li>
+                            <li>Being the single point of contact for the business import queries, follow-up for timely
+                                payments.</li>
+                            <li>Pre and Post shipment documentation comprising of preparation of Performa Invoice,
+                                Packing
+                                list, Issuance of Certificate of Origin (COO) and Certificate of Conformity (COC),
+                                issuance
+                                of Bill of Landing as per Letter of Credit (LC)/ buyer instructions.</li>
+                            <li>Have a formal understanding of domestic and international rules and regulations that
+                                govern
+                                the shipments of chemical items/ products.</li>
+                            <li>Work with transportation providers to ensure streamlined procedures in line with our
+                                business and products.</li>
+                            <li>Check all freight, clearance bills and follow up for timely payments as per credit
+                                period
+                                agreed.</li>
+                            <li>Resolve issues like consignment damage, lost, etc. with stakeholders, third party
+                                surveyors,
+                                and insurance party and ensure recovery.</li>
+                            <li>Should be able to visit bank or customs if required.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Requirements -->
+                    <div>
+                        <h2 class="text-base font-semibold text-[#1F1F1F">Requirements</h2>
+                        <ul class="list-disc pl-5 mt-2 space-y-2">
+                            <li>Good communication skills.</li>
+                            <li>Handle imports product Independently.</li>
+                            <li>Facilitates the entire import product which includes shippment coordination,import
+                                documents, custom clearance,goods movements from warehouse to warehouse,duty rate
+                                application.</li>
+                            <li>Minimum 5 years of experience in the same domain.</li>
+                            <li>Graduate is must.Post Graduation is an added advantage.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Card 3-->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <!-- Header Section -->
+                <div class="flex justify-between items-center p-4">
+                    <h1 class="text-lg font-semibold text-[#1F1F1F]">Marketing Manager</h1>
+                    <button id="toggle-details"
+                        class="text-gray-500 w-[40px] h-[40px] bg-gray shadow-inner rounded-full focus:outline-none hover:text-gray-800 transition duration-200"
+                        onclick="toggleDetails('job-details-1')">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                </div>
+
+                <!-- Job Details -->
+                <div id="job-details-3" class="p-4 space-y-4 text-gray-600 hidden">
+                    <!-- Top Info -->
+                    <div class="flex flex-wrap items-center gap-6 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Term:</span>
+                            <span>Full-time</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Start Date:</span>
+                            <span>ASAP</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Duration:</span>
+                            <span>Permanent</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Location:</span>
+                            <span>N/A</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Opening Date:</span>
+                            <span>N/A</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="assets/img/right.png" alt="right">
+                            <span class="font-semibold">Deadline:</span>
+                            <span>N/A</span>
+                        </div>
+                    </div>
+
+                    <!-- Job Responsibilities -->
+                    <div>
+                        <h2 class="text-base font-semibold text-[#1F1F1F">Job Responsibilities</h2>
+                        <ul class="list-disc pl-5 mt-2 space-y-2">
+                            <li>Takes care of import documentations, liaison with various government and non-government
+                                departments like Bank, Custom, freight, shipping company, CHA etc.</li>
+                            <li>Reviews, reconciles, and approves warehousing invoices for storage and material handling
+                                fees</li>
+                            <li>Follow-up with seller for dispatch of material as per Agreement, PO s.</li>
+                            <li>Lead generation through net surfing and getting in touch with new suppliers/ partners.
+                            </li>
+                            <li>Being the single point of contact for the business import queries, follow-up for timely
+                                payments.</li>
+                            <li>Pre and Post shipment documentation comprising of preparation of Performa Invoice,
+                                Packing
+                                list, Issuance of Certificate of Origin (COO) and Certificate of Conformity (COC),
+                                issuance
+                                of Bill of Landing as per Letter of Credit (LC)/ buyer instructions.</li>
+                            <li>Have a formal understanding of domestic and international rules and regulations that
+                                govern
+                                the shipments of chemical items/ products.</li>
+                            <li>Work with transportation providers to ensure streamlined procedures in line with our
+                                business and products.</li>
+                            <li>Check all freight, clearance bills and follow up for timely payments as per credit
+                                period
+                                agreed.</li>
+                            <li>Resolve issues like consignment damage, lost, etc. with stakeholders, third party
+                                surveyors,
+                                and insurance party and ensure recovery.</li>
+                            <li>Should be able to visit bank or customs if required.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Requirements -->
+                    <div>
+                        <h2 class="text-base font-semibold text-[#1F1F1F">Requirements</h2>
+                        <ul class="list-disc pl-5 mt-2 space-y-2">
+                            <li>Good communication skills.</li>
+                            <li>Handle imports product Independently.</li>
+                            <li>Facilitates the entire import product which includes shippment coordination,import
+                                documents, custom clearance,goods movements from warehouse to warehouse,duty rate
+                                application.</li>
+                            <li>Minimum 5 years of experience in the same domain.</li>
+                            <li>Graduate is must.Post Graduation is an added advantage.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- form section -->
+    <div class="container mx-auto">
+        <!-- Contact Section -->
+        <div class="py-12">
+            <div class="container mx-auto px-6 text-center">
+                <!-- Heading -->
+                <h2 class="text-2xl md:text-3xl font-bold text-[#001B3A] mb-4">
+                    Do we have everything you're looking for?
+                </h2>
+                <p class="text-gray-600 mb-8">
+                    Drop us your contact details. We are always more than happy to help.
+                </p>
+
+                <!-- Input Fields -->
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <!-- Name Input -->
+                    <input type="text" placeholder="Your Name"
+                        class="w-full md:w-1/5 p-5 rounded-xl bg-gray shadow-inner-combo" />
+
+                    <!-- Email Input -->
+                    <input type="email" placeholder="Your Email Address"
+                        class="w-full md:w-1/5 p-5 rounded-xl shadow-inner-combo" />
+
+                    <!-- Submit Button -->
+                    <button
+                        class="w-full md:w-1/5 p-5 text-[#135c2e] text-center font-medium rounded-xl shadow-inner-combo">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-[#22262F] text-white py-12">
@@ -194,6 +536,27 @@
         </div>
     </footer>
 
+    <script>
+        // Function to toggle visibility of job details
+        function toggleDetails(detailsId) {
+            // Hide all job details
+            const allDetails = document.querySelectorAll('[id^="job-details"]');
+            allDetails.forEach(details => {
+                if (details.id === detailsId) {
+                    // Toggle the clicked details
+                    details.classList.toggle('hidden');
+                } else {
+                    // Ensure others are hidden
+                    details.classList.add('hidden');
+                }
+            });
+        }
+
+        // Open the first job card by default
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('job-details-1').classList.remove('hidden');
+        });
+    </script>
 </body>
 
 </html>
