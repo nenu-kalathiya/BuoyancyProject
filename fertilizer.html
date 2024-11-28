@@ -23,6 +23,27 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customGray: '#434343',
+                        customBlue: '#001B3A',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'custom-light': '10px 10px 30px 0px #00000073',
+                        'custom-dark': '-10px -10px 30px 0px #2B2B2B',
+                    },
+                },
+            },
+        };
+    </script>
+
 </head>
 
 <body class="font-montserrat">
