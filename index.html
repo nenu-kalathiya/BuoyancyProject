@@ -19,9 +19,19 @@
 
     <!-- swiper slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after,
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            display: none;
+        }
+    </style>
 
     <!-- Tailwind Custom Configuration -->
     <script>
@@ -35,6 +45,10 @@
                     fontFamily: {
                         montserrat: ['Montserrat', 'sans-serif'],
                     },
+                    boxShadow: {
+                        'custom-light': '10px 10px 30px 0px #00000073',
+                        'custom-dark': '-10px -10px 30px 0px #2B2B2B',
+                    },
                 },
             },
         };
@@ -42,7 +56,8 @@
 </head>
 
 <body class="font-montserrat">
-    <!-- Navbar -->
+
+    <!-- Header -->
     <header class="py-5">
         <div class="container mx-auto flex justify-between items-center">
             <div class="logo">
@@ -53,13 +68,10 @@
             <nav>
                 <ul class="flex text-customGray">
                     <li>
-                        <a href="#" class="block p-5 text-emerald-800 font-bold relative">
-                            Home
-
-                        </a>
+                        <a href="#" class="block p-5 "> Home</a>
                     </li>
                     <li>
-                        <a href="#" class="block p-5">About Us</a>
+                        <a href="about.html" class="block p-5">About Us</a>
                     </li>
                     <li>
                         <a href="#" class="block p-5">Services</a>
@@ -82,16 +94,16 @@
                 <a href="#" class="text-2xl text-emerald-800 mr-8">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
-                <button class="bg-white rounded-full pl-8 shadow-md ">
+                <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
                     <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
                     <i
                         class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
-                </button>
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- hero sec -->
+    <!-- Heo Section -->
     <section class="relative">
         <div class="flex items-center">
             <div class="w-5/12 pl-48 pr-24">
@@ -104,11 +116,11 @@
                 <p class="text-lg mb-5 text-gray-500">
                     We Are Trusted Partners In International Market Since 2005 With Prominence & Stability
                 </p>
-                <button class="bg-white rounded-full pl-8 shadow-md ">
+                <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
                     <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
                     <i
                         class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
-                </button>
+                </a>
             </div>
             <div class="w-7/12">
                 <img src="assets/img/slider-img.png" alt="Industrial site" class="w-full h-full object-cover shadow-lg">
@@ -229,8 +241,8 @@
         </div>
     </section>
 
-    <!-- key points section -->
-    <section class="px-4 pb-16">
+    <!-- Key points Section -->
+    <section class="pb-16">
         <div class="relative w-full min-h-screen flex items-center justify-center">
             <!-- Background Container -->
             <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center"
@@ -294,8 +306,8 @@
         </div>
     </section>
 
-    <!-- Product Showcase carousel -->
-    <section class="py-16">
+    <!-- Product Showcase Section -->
+    <section class="py-16 overflow-x-hidden">
         <div class="container mx-auto px-6">
             <!-- Section Header -->
             <div class="mb-12 relative">
@@ -305,98 +317,88 @@
                     page when looking at its layout.
                 </p>
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev left-3/4"></div>
-                <div class="swiper-button-next"></div>
+                <div
+                    class="swiper-button-prev left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-left text-[#B1B1B1]"></i>
+                </div>
+                <div
+                    class="swiper-button-next inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-right text-[#B1B1B1]"></i>
+                </div>
             </div>
-            <!-- Carousel Wrapper -->
             <!-- Slider main container -->
-            <div class="swiper">
+            <div class="swiper" style="width: calc(50% + 60vw);">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper py-10">
                     <!-- Slides -->
-                    <div class="swiper-slide px-3">
-                        <div class="bg-white shadow-lg rounded-3xl p-6 max-w-sm flex-shrink-0">
-                            <img src="assets/img/furtilizer.jpg" alt="Fertilizers"
-                                class="rounded-2xl  w-full h-40 object-cover mb-4" />
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Fertilizers</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                It is a long established fact that a reader will be distracted by the readable content
-                                of a
-                                page.
-                            </p>
-                            <button class="bg-white rounded-full pl-8 shadow-md ">
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/furtilizer.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
                                 <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
                                 <i
                                     class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
-                    <div class="swiper-slide px-3">
-                        <div class="bg-white shadow-lg rounded-lg p-6 max-w-sm flex-shrink-0">
-                            <img src="assets/img/sulfer.jpg" alt="Fertilizers"
-                                class="rounded-md w-full h-40 object-cover mb-4" />
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Fertilizers</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                It is a long established fact that a reader will be distracted by the readable content
-                                of a
-                                page.
-                            </p>
-                            <button class="bg-white rounded-full pl-8 shadow-md ">
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/sulfer.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
                                 <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
                                 <i
                                     class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
-                    <div class="swiper-slide px-3">
-                        <div class="bg-white shadow-lg rounded-lg p-6 max-w-sm flex-shrink-0">
-                            <img src="assets/img/Bitumen.jpg" alt="Fertilizers"
-                                class="rounded-md w-full h-40 object-cover mb-4" />
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Fertilizers</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                It is a long established fact that a reader will be distracted by the readable content
-                                of a
-                                page.
-                            </p>
-                            <button class="bg-white rounded-full pl-8 shadow-md ">
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/Bitumen.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
                                 <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
                                 <i
                                     class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
-                    <div class="swiper-slide px-3">
-                        <div class="bg-white shadow-lg rounded-lg p-6 max-w-sm flex-shrink-0">
-                            <img src="assets/img/sunset.jpg" alt="Fertilizers"
-                                class="rounded-md w-full h-40 object-cover mb-4" />
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Fertilizers</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                It is a long established fact that a reader will be distracted by the readable content
-                                of a
-                                page.
-                            </p>
-                            <button class="bg-white rounded-full pl-8 shadow-md ">
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/sunset.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
                                 <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
                                 <i
                                     class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
-                    <div class="swiper-slide px-3">
-                        <div class="bg-white shadow-lg rounded-lg p-6 max-w-sm flex-shrink-0">
-                            <img src="assets/img/sunset.jpg" alt="Fertilizers"
-                                class="rounded-md w-full h-40 object-cover mb-4" />
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Fertilizers</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                It is a long established fact that a reader will be distracted by the readable content
-                                of a
-                                page.
-                            </p>
-                            <button class="bg-white rounded-full pl-8 shadow-md ">
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/sunset.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
                                 <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
                                 <i
                                     class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -404,7 +406,7 @@
         </div>
     </section>
 
-    <!-- Statistic Till -->
+    <!-- Statistic Till Section -->
     <section class="relative bg-gray-800 text-white py-16">
         <!-- Content Container -->
         <div class="container mx-auto px-6 relative z-10">
@@ -478,7 +480,7 @@
         </div>
     </section>
 
-    <!-- Testimonial -->
+    <!-- Testimonial Section -->
     <section class="py-16">
         <div class="container mx-auto px-6">
             <!-- Swiper Container -->
@@ -528,28 +530,36 @@
                             </div>
                             <!-- Bottom Quote Icon -->
                             <i class="fa-solid fa-quote-left fa-flip-horizontal text-gray-400 text-6xl block"></i>
+                            <div>
+                                <div
+                                    class="swiper-button-prev left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                                    <i class="fa-solid fa-chevron-left text-[#B1B1B1]"></i>
+                                </div>
+                                <div
+                                    class="swiper-button-next inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                                    <i class="fa-solid fa-chevron-right text-[#B1B1B1]"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Navigation Buttons -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
 
-    <!-- Reach out to us -->
-    <section class="relative flex flex-col lg:flex-row w-full min-h-screen items-center">
+    <!-- Reach out to us Section -->
+    <section class="relative flex flex-col lg:flex-row w-full min-h-screen">
         <!-- Left Side (Image Section) -->
         <div class="w-full lg:w-1/2 relative">
-            <img src="assets/img/working_women.jpg" alt="Support Representative" class="w-full h-full object-cover transform -scale-x-100">
+            <img src="assets/img/working_women.jpg" alt="Support Representative"
+                class="w-full h-full object-cover transform -scale-x-100">
         </div>
 
         <!-- Right Side (Form Section) -->
         <div class="w-full lg:w-1/2 bg-[#2D2D2D] text-white p-10 lg:p-20 relative">
             <!-- Background Vector -->
-            <img src="assets/img/bg_vextor.png" alt="Background Vector" class="absolute top-0 left-0 w-full h-full object-cover opacity-20">
+            <img src="assets/img/bg_vextor.png" alt="Background Vector"
+                class="absolute top-0 left-0 w-full h-full object-cover opacity-70">
             <!-- Overlay Content -->
             <div class="relative z-10">
                 <!-- Logo -->
@@ -558,20 +568,23 @@
                 </div>
                 <!-- Heading -->
                 <h2 class="text-4xl font-semibold mb-4">Reach Out to Us</h2>
-                <p class="text-lg text-gray-300 mb-10">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
+                <p class="text-lg text-white font-light mb-10">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <!-- Form -->
-                <form action="#" method="POST" class="space-y-6">
+                <form action="#" method="POST" class="space-y-6 ">
                     <input type="text" placeholder="Your Name"
-                        class="w-full px-4 py-3 bg-[#1E1E1E] text-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500">
+                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
+                        style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);">
                     <input type="email" placeholder="yourmailaddressplease@mail.com"
-                        class="w-full px-4 py-3 bg-[#1E1E1E] text-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500">
-                    <textarea rows="4" placeholder="Your Subject"
-                        class="w-full px-4 py-3 bg-[#1E1E1E] text-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"></textarea>
+                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
+                        style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);">
+                    <textarea rows="6" placeholder="Your Subject"
+                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
+                        style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);"></textarea>
                     <button type="submit"
-                        class="w-full py-3 bg-white text-black font-semibold rounded-lg shadow-lg hover:shadow-2xl hover:bg-gray-200 transition">
+                        class="p-5 py-4 bg-[#2B2B2B] text-white font-semibold rounded-full shadow-custom-light">
                         Get in Touch With Us
                     </button>
                 </form>
@@ -579,33 +592,300 @@
         </div>
     </section>
 
+    <!-- Article and News Section -->
+    <section class="py-16 overflow-x-hidden">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="mb-12 relative">
+                <h2 class="text-[46px] font-medium text-[#001b3a]">Article & News</h2>
+                <p class="text-[#434343] text-[18px] font-normal">
+                    It is a long established fact that a reader will be distracted by the readable content of <br /> a
+                    page when looking at its layout.
+                </p>
+                <!-- If we need navigation buttons -->
+                <div
+                    class="swiper-button-prev left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-left text-[#B1B1B1]"></i>
+                </div>
+                <div
+                    class="swiper-button-next inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-right text-[#B1B1B1]"></i>
+                </div>
+            </div>
+            <!-- Slider main container -->
+            <div class="swiper_1">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper py-10">
+                    <!-- Slides -->
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/powder_img.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <!-- Calendar Icon -->
+                                <i class="fa-regular fa-calendar-days mr-3 text-[18px] text-[#135c2e]"></i>
+                                <span>February 17, 2021</span>
+                                <button class="ml-auto">
+                                    <i
+                                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 flex items-center justify-center text-xl ms-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/oil_img.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <!-- Calendar Icon -->
+                                <i class="fa-regular fa-calendar-days mr-3 text-[18px] text-[#135c2e]"></i>
+                                <span>February 17, 2021</span>
+                                <button class="ml-auto">
+                                    <i
+                                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 flex items-center justify-center text-xl ms-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/drum_img.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <!-- Calendar Icon -->
+                                <i class="fa-regular fa-calendar-days mr-3 text-[18px] text-[#135c2e]"></i>
+                                <span>February 17, 2021</span>
+                                <button class="ml-auto">
+                                    <i
+                                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 flex items-center justify-center text-xl ms-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/powder_img.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <!-- Calendar Icon -->
+                                <i class="fa-regular fa-calendar-days mr-3 text-[18px] text-[#135c2e]"></i>
+                                <span>February 17, 2021</span>
+                                <button class="ml-auto">
+                                    <i
+                                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 flex items-center justify-center text-xl ms-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/oil_img.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <!-- Calendar Icon -->
+                                <i class="fa-regular fa-calendar-days mr-3 text-[18px] text-[#135c2e]"></i>
+                                <span>February 17, 2021</span>
+                                <button class="ml-auto">
+                                    <i
+                                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 flex items-center justify-center text-xl ms-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our collbrators Section -->
+    <section class="py-16 overflow-x-hidden">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="mb-12 relative">
+                <h2 class="text-[46px] font-medium text-[#001b3a]">Our Collborators</h2>
+                <p class="text-[#434343] text-[18px] font-normal">
+                    It is a long established fact that a reader will be distracted by the readable content of <br /> a
+                    page when looking at its layout.
+                </p>
+                <!-- If we need navigation buttons -->
+                <div
+                    class="swiper-button-prev left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-left text-[#B1B1B1]"></i>
+                </div>
+                <div
+                    class="swiper-button-next inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-right text-[#B1B1B1]"></i>
+                </div>
+            </div>
+            <!-- Slider main container -->
+            <div class="swiper_2" style="width: calc(50% + 60vw);">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper py-10">
+                    <!-- Slides -->
+                    <div class="swiper-slide px-4">
+                        <div class="">
+                            <img src="./assets/img/hyundai.png" alt="Logo 1" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/saudi.png" alt="Logo 2" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/cnpc.png" alt="Logo 3" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/bapco.png" alt="Logo 4" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/taneco.png" alt="Logo 5" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-4">
+                        <div class="">
+                            <img src="./assets/img/hyundai.png" alt="Logo 1" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/saudi.png" alt="Logo 2" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/cnpc.png" alt="Logo 3" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/bapco.png" alt="Logo 4" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/taneco.png" alt="Logo 5" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer  -->
+    <footer class="bg-[#22262F] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between">
+                <!-- Logo and Description -->
+                <div class="w-full lg:w-1/4 mb-6 lg:mb-0">
+                    <img src="assets/img/logo_white.png" alt="Buoyancy Logo" class="mb-4">
+                    <p class="font-medium text-[18px]">
+                        Buoyancy Impex Pvt Ltd, has been able to penetrate in the supply chain of upstream to downstream
+                        companies due to its goodwill and professional approach.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="flex space-x-3 mt-4">
+                        <a href="#" class="text-[#135c2e] text-xl hover:text-green-600">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="text-[#135c2e] text-xl hover:text-blue-500">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="#" class="text-[#135c2e] text-xl hover:text-pink-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pages Links -->
+                <div class="w-full lg:w-1/6 mb-6 lg:mb-0">
+                    <h3 class="text-lg font-semibold text-white mb-4">Pages</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Home</a></li>
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Services</a></li>
+                        <li><a href="#" class="hover:text-white">Products</a></li>
+                        <li><a href="#" class="hover:text-white">Career</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div class="w-full lg:w-1/6 mb-6 lg:mb-0">
+                    <h3 class="text-lg font-semibold text-white mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Packaging Service</a></li>
+                        <li><a href="#" class="hover:text-white">Logistic Service</a></li>
+                        <li><a href="#" class="hover:text-white">Export Service</a></li>
+                        <li><a href="#" class="hover:text-white">Bulk Chartering</a></li>
+                        <li><a href="#" class="hover:text-white">Trading</a></li>
+                        <li><a href="#" class="hover:text-white">Documentation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="w-full lg:w-1/4">
+                    <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
+                    <p class="mb-2">
+                        <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
+                        “C” Tower, 10th Floor, Hampton Park, Vesu, Surat 395007 Gujarat, India
+                    </p>
+                    <p class="mb-2">
+                        <i class="fas fa-phone text-green-500 mr-2"></i>
+                        +91 99250 53193
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope text-green-500 mr-2"></i>
+                        info@buoyancyimpex.com<br>
+                        buoyancyinc@gmail.com
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="border-t border-gray-700 mt-8 pt-4 flex flex-wrap justify-between text-sm">
+                <p class="text-[16px] font-[400]">Copyright &copy; Buoyancy 2021 All Rights Reserved | Design & Develop
+                    By Aimstorm.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Use</a>
+                    <a href="#" class="hover:text-white">Sales and Refunds</a>
+                    <a href="#" class="hover:text-white">Legal</a>
+                    <a href="#" class="hover:text-white">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- js script -->
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Toggle mobile menu -->
     <script>
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-        const carousel = document.getElementById('carousel');
-        const cardWidth = document.querySelector('.flex-shrink-0').offsetWidth + 24; // 24px for gap
-
-        // Move carousel to the left
-        prevButton.addEventListener('click', () => {
-            carousel.scrollBy({
-                left: -cardWidth,
-                behavior: 'smooth'
-            });
-        });
-
-        // Move carousel to the right
-        nextButton.addEventListener('click', () => {
-            carousel.scrollBy({
-                left: cardWidth,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-
-
-    <script>
-        // Toggle mobile menu
         const hamburgerButton = document.getElementById("hamburger-btn");
         const mobileMenu = document.getElementById("mobile-menu");
         const closeButton = document.getElementById("close-btn");
@@ -619,6 +899,7 @@
         });
     </script>
 
+    <!-- product showcase swiper -->
     <script>
         const swiper = new Swiper('.swiper', {
 
@@ -635,15 +916,42 @@
         });
     </script>
 
+    <!-- Article & News Swiper -->
     <script>
-        const testimonialSwiper = new Swiper('.swiper_1', {
+        const swiper_1 = new Swiper('.swiper_1', {
+
+            // Optional parameters
             loop: true,
+            slidesPerView: 3,
+            cssMode: true,
+
+            // Navigation arrows
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+
         });
     </script>
+
+    <!-- Article & News Swiper -->
+    <script>
+        const swiper_2 = new Swiper('.swiper_2', {
+
+            // Optional parameters
+            loop: true,
+            slidesPerView: 5,
+            cssMode: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
+
 </body>
 
 </html>
