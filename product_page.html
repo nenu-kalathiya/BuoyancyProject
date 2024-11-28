@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buoyancy || Where Business & Profitability Converge</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.png" type="img/png">
+
+    <!-- Google Fonts - Montserrat Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- swiper slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after,
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            display: none;
+        }
+    </style>
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customGray: '#434343',
+                        customBlue: '#001B3A',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'custom-inset-1': '20px 20px 50px 0px #CDCDCD inset',
+                        'custom-inset-2': '-20px -20px 50px 0px #FFFFFF inset',
+                        'custom': '20px 19px 50px 0px #fff inset, inset 19px 20px 50px 0px #cdcdcd, 17px 20px 50px 0px #fff, 20px 20px 50px 0px #fff inset, -20px -20px 50px 0px #fff inset, 20px 20px 50px 0px #FFFFFF40 inset',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="py-5">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./assets/img/logo.png" alt="logo" class="h-24">
+                </a>
+            </div>
+            <nav>
+                <ul class="flex text-customGray">
+                    <li>
+                        <a href="index.html " class="block p-5 "> Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="block p-5">About Us</a>
+                    </li>
+                    <li>
+                        <a href="services.html" class="block p-5">Services</a>
+                    </li>
+                    <li>
+                        <a href="product_page.html" class="block p-5">Products</a>
+                    </li>
+                    <li>
+                        <a href="career.html" class="block p-5">Career</a>
+                    </li>
+                    <li>
+                        <a href="blog.html" class="block p-5">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact_us.html" class="block p-5">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex items-center">
+                <a href="#" class="text-2xl text-emerald-800 mr-8">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
+                    <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                    <i
+                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="relative">
+        <div class="relative h-[400px] bg-cover  bg-center"
+            style="background-image: url('assets/img/about_us_img.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start ">
+                <div class="pl-36 text-white">
+                    <h1 class="text-6xl font-normal uppercase">Products</h1>
+                    <div class="relative w-60 h-[4px] mt-2 bg-gradient-to-r from-white via-white/50 to-transparent">
+                    </div>
+                    <p class="text-lg mt-2 ">Our Products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section class="py-16 overflow-x-hidden">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="mb-12 relative text-center">
+                <h2 class="text-[46px] font-medium text-[#001b3a]">Product Showcase</h2>
+                <p class="text-[#434343] text-[18px] font-normal">
+                    Buoyancy Impex private limited covers an exhaustive product portfolio with major grades, sub-grades
+                    and forms of bitumen, base oil, sulphur & fertilizers all under one shade. The company is recognized
+                    for its highly successful trade record, world-class transparent services, reliability & quick
+                    delivery time with its operations spread across Several continents giving it a truly global
+                    footprint and making it a vertically integrated company. Each and every product the company supplies
+                    meets highest quality standards and is fully compliant with all international test methods. The
+                    company’s core management and technical team is built of well-experienced professionals with
+                    extensive exposure in major aspects of procurement, logistics, documentation & operations. We
+                    committed to efficiently achieve the greatest risk-adjusted value and returns for our customers
+                </p>
+            </div>
+            <div class="py-10">
+                <!-- Use grid layout with 4 columns -->
+                <div class="grid grid-cols-4 gap-5 px-5">
+                    <!-- Card 1 -->
+                    <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                        <img src="./assets/img/furtilizer.jpg" alt="fertilizers"
+                            class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                        <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                        <p class="text-gray-500 text-lg mb-5">it is a long established fact that a reader will be
+                            distracted by the readable content of a page when looking at its layout.</p>
+                        <a href="fertilizer.html" class="bg-white rounded-full pl-8 shadow-md inline-block text-center hover">
+                            <span class="font-semibold text-lg">View More</span>
+                            <i
+                                class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-[#B1B1B1]"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                        <img src="./assets/img/sulfer.jpg" alt="fertilizers"
+                            class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                        <h3 class="text-2xl font-semibold mb-5">Sulfer</h3>
+                        <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                            distracted by the readable content of a page when looking at its layout.</p>
+                        <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center">
+                            <span class="font-semibold text-lg">View More</span>
+                            <i
+                                class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-[#B1B1B1]"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                        <img src="./assets/img/Bitumen.jpg" alt="fertilizers"
+                            class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                        <h3 class="text-2xl font-semibold mb-5">Bitumen</h3>
+                        <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                            distracted by the readable content of a page when looking at its layout.</p>
+                        <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center">
+                            <span class="font-semibold text-lg">View More</span>
+                            <i
+                                class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-[#B1B1B1]"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                        <img src="./assets/img/sunset.jpg" alt="fertilizers"
+                            class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                        <h3 class="text-2xl font-semibold mb-5">Base Oil & Derivaties</h3>
+                        <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                            distracted by the readable content of a page when looking at its layout.</p>
+                        <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center">
+                            <span class="font-semibold text-lg">View More</span>
+                            <i
+                                class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-[#B1B1B1]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -24,6 +24,16 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <style>
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after,
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            display: none;
+        }
+    </style>
+
+
     <!-- Tailwind Custom Configuration -->
     <script>
         tailwind.config = {
@@ -59,25 +69,25 @@
             <nav>
                 <ul class="flex text-customGray">
                     <li>
-                        <a href="index.html" class="block p-5 ">Home</a>
+                        <a href="#" class="block p-5 "> Home</a>
                     </li>
                     <li>
                         <a href="about.html" class="block p-5">About Us</a>
                     </li>
                     <li>
-                        <a href="#" class="block p-5">Services</a>
+                        <a href="services.html" class="block p-5">Services</a>
                     </li>
                     <li>
-                        <a href="#" class="block p-5">Products</a>
+                        <a href="product_page.html" class="block p-5">Products</a>
                     </li>
                     <li>
-                        <a href="#" class="block p-5">Career</a>
+                        <a href="career.html" class="block p-5">Career</a>
                     </li>
                     <li>
-                        <a href="#" class="block p-5">Blog</a>
+                        <a href="blog.html" class="block p-5">Blog</a>
                     </li>
                     <li>
-                        <a href="#" class="block p-5">Contact Us</a>
+                        <a href="contact_us.html" class="block p-5">Contact Us</a>
                     </li>
                 </ul>
             </nav>
@@ -100,7 +110,7 @@
             style="background-image: url('assets/img/about_us_img.jpg');">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start ">
                 <div class="pl-36 text-white">
-                    <h1 class="text-6xl font-normal">ABOUT US</h1>
+                    <h1 class="text-6xl font-normal uppercase">ABOUT US</h1>
                     <div class="relative w-60 h-[4px] mt-2 bg-gradient-to-r from-white via-white/50 to-transparent">
                     </div>
                     <p class="text-lg mt-2">What We Believe</p>
@@ -193,18 +203,23 @@
     <section class="pb-16">
         <div class="relative w-full min-h-screen flex items-center justify-center">
             <!-- Background Container -->
-            <div class="absolute top-0 left-0 w-full h-full bg-cover" style="background-image: url('assets/img/men_wearing.jpg'); background-position: center -0%; background-size: 110%;">
+            <div class="absolute top-0 left-0 w-full h-full bg-cover"
+                style="background-image: url('assets/img/men_wearing.jpg'); background-position: center -0%; background-size: 110%;">
                 <!-- Half Overlay -->
                 <div class="absolute top-0 left-0 w-1/2 h-full bg-black/70 flex items-center">
                     <!-- Content inside the overlay -->
                     <div class="px-20 py-12 text-white">
                         <h2 class="text-5xl font-bold mb-4">What We Have Done</h2>
                         <p class="text-lg text-start font-[400]">
-                            Buoyancy Impex Pvt Ltd, has been able to penetrate in the supply chain of upstream to downstream
+                            Buoyancy Impex Pvt Ltd, has been able to penetrate in the supply chain of upstream to
+                            downstream
                             companies due to its goodwill and professional approach. This network has been levered into
-                            regional organizations directly accountable to customers they serve and completely focused on
-                            delivering superior value and quality product. The company’s remarkable customer base comprises
-                            of Governments, Industrialists, Private, Trading companies, and End Users from sectors such as
+                            regional organizations directly accountable to customers they serve and completely focused
+                            on
+                            delivering superior value and quality product. The company’s remarkable customer base
+                            comprises
+                            of Governments, Industrialists, Private, Trading companies, and End Users from sectors such
+                            as
                             Agriculture, Construction, Automobile, Paper & Pulp, Lubricants, Pharmacy, Food, heavy
                             industries, etc. It has attained this by delivering service at par and offering products at
                             competitive prices and excellent quality.
@@ -214,7 +229,157 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Section 5 -->
+    <section>
+        <div class="bg-white py-16">
+            <div class="container mx-auto px-16 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-24 text-center">
+                <!-- Experience -->
+                <div class="flex flex-col items-center space-y-6">
+                    <div class="flex justify-center items-center w-36 h-36 bg-gray-100 rounded-full">
+                        <img src="assets/img/experince.png" alt="experince">
+                    </div>
+                    <h3 class="text-lg font-semibold">Experience</h3>
+                    <p class="text-[#434343] text-lg">Established in 2005, we carry 15 years of legacy with expertise &
+                        credibility.</p>
+                </div>
+
+                <!-- Cost Effectiveness -->
+                <div class="flex flex-col items-center space-y-6">
+                    <div class="flex justify-center items-center w-36 h-36 bg-gray-100 rounded-full">
+                        <img src="assets/img/Cost.png" alt="Cost">
+                    </div>
+                    <h3 class="text-lg font-semibold">Cost Effectiveness</h3>
+                    <p class="text-[#434343] text-lg">All products we supply are exhaustively researched to make best
+                        value for your money.</p>
+                </div>
+
+                <!-- Quality Assurance -->
+                <div class="flex flex-col items-center space-y-6">
+                    <div class="flex justify-center items-center w-36 h-36 bg-gray-100 rounded-full">
+                        <img src="assets/img/Quality.png" alt="Quality">
+                    </div>
+                    <h3 class="text-lg font-semibold">Quality Assurance</h3>
+                    <p class="text-[#434343] text-lg">Engaged with top-level international laboratories to give full
+                        peace of mind and satisfaction.</p>
+                </div>
+
+                <!-- Timely Delivery -->
+                <div class="flex flex-col items-center space-y-6">
+                    <div class="flex justify-center items-center w-36 h-36 bg-gray-100 rounded-full">
+                        <img src="assets/img/Delivery.png" alt="Delivery">
+                    </div>
+                    <h3 class="text-lg font-semibold">Timely Delivery</h3>
+                    <p class="text-[#434343] text-lg">We effectively focus on turnaround strategy with all our supplies.
+                    </p>
+                </div>
+
+                <!-- Reliability -->
+                <div class="flex flex-col items-center space-y-6">
+                    <div class="flex justify-center items-center w-36 h-36 bg-gray-100 rounded-full">
+                        <img src="assets/img/setting.png" alt="setting">
+                    </div>
+                    <h3 class="text-lg font-semibold">Reliability</h3>
+                    <p class="text-[#434343] text-lg">We adhere to the same principle of clarity and transparency which
+                        guides the company since its foundation.</p>
+                </div>
+
+                <!-- Customer Satisfaction -->
+                <div class="flex flex-col items-center space-y-6">
+                    <div class="flex justify-center items-center w-36 h-36 bg-gray-100 rounded-full">
+                        <img src="assets/img/Customer.png" alt="Customer">
+                    </div>
+                    <h3 class="text-lg font-semibold">Customer Satisfaction</h3>
+                    <p class="text-[#434343] text-lg">Buoyancy as an Organization believes in policy of, “make a
+                        customer” not just a trade”. Our customer’s perception is treated with immense sincerity as they
+                        are heartbeat of our Company.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our collbrators Section -->
+    <section class="py-16 overflow-x-hidden">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="mb-12 relative">
+                <h2 class="text-[46px] font-medium text-[#001b3a]">Our Collborators</h2>
+                <p class="text-[#434343] text-[18px] font-normal">
+                    It is a long established fact that a reader will be distracted by the readable content of <br /> a
+                    page when looking at its layout.
+                </p>
+                <!-- If we need navigation buttons -->
+                <div
+                    class="swiper-button-prev left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-left text-[#B1B1B1]"></i>
+                </div>
+                <div
+                    class="swiper-button-next inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-right text-[#B1B1B1]"></i>
+                </div>
+            </div>
+            <!-- Slider main container -->
+            <div class="swiper_2" style="width: calc(50% + 60vw);">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper py-10">
+                    <!-- Slides -->
+                    <div class="swiper-slide px-4">
+                        <div class="">
+                            <img src="./assets/img/hyundai.png" alt="Logo 1" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/saudi.png" alt="Logo 2" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/cnpc.png" alt="Logo 3" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/bapco.png" alt="Logo 4" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/taneco.png" alt="Logo 5" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-4">
+                        <div class="">
+                            <img src="./assets/img/hyundai.png" alt="Logo 1" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/saudi.png" alt="Logo 2" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/cnpc.png" alt="Logo 3" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/bapco.png" alt="Logo 4" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/taneco.png" alt="Logo 5" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-[#22262F] text-white py-12">
         <div class="container mx-auto px-6">
@@ -299,6 +464,26 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Collbrators Section -->
+    <script>
+        const swiper_2 = new Swiper('.swiper_2', {
+
+            // Optional parameters
+            loop: true,
+            slidesPerView: 5,
+            cssMode: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
 </body>
 
 </html>
