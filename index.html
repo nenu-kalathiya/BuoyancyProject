@@ -58,7 +58,7 @@
 <body class="font-montserrat">
 
     <!-- Header -->
-    <header class="py-5">
+    <header class="p-4">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo Section -->
             <div class="logo">
@@ -76,7 +76,7 @@
             <nav id="menu" class="hidden md:flex flex-col md:flex-row md:items-center text-customGray md:gap-6">
                 <ul class="md:flex md:gap-4">
                     <li>
-                        <a href="#" class="block p-2 hover:text-emerald-800">Home</a>
+                        <a href="#" class="block p-2 hover:text-emerald-800 ">Home</a>
                     </li>
                     <li>
                         <a href="about.html" class="block p-2 hover:text-emerald-800">About Us</a>
@@ -117,7 +117,7 @@
     <section class="relative">
         <div class="flex items-center flex-col md:flex-row md:items-center">
             <!-- Left Column (Text content) -->
-            <div class="w-full md:w-5/12 px-8 md:px-48 mb-8 md:mb-0">
+            <div class="w-full md:w-5/12 px-8 md:px-48 my-8 md:mb-0">
                 <h1 class="text-3xl md:text-6xl font-semibold text-[#001B3A] leading-tight mb-5">
                     Buoyancy Impex Pvt Ltd.
                 </h1>
@@ -135,7 +135,7 @@
             </div>
 
             <!-- Right Column (Image) -->
-            <div class="w-full md:w-7/12">
+            <div class="w-full md:w-7/12 p-4">
                 <img src="assets/img/slider-img.png" alt="Industrial site" class="w-full h-auto object-cover shadow-lg">
             </div>
         </div>
@@ -271,59 +271,130 @@
     </section>
 
     <!-- Key points Section -->
-    <section class="min-h-screen bg-cover bg-center bg-left relative z-[1] flex items-center" style="background-image: url('./assets/img/industrial.jpg');">
-        <div class="absolute w-1/2 bg-black/50 h-full top-0 left-0 -z-[1]"></div>
+    <section class="min-h-screen bg-cover bg-center bg-left relative z-[1] flex items-center"
+        style="background-image: url('./assets/img/industrial.jpg');">
+        <div class="absolute w-full md:w-1/2 bg-black/50 h-full top-0 left-0 -z-[1]"></div>
         <div class="container mx-auto">
-            <div class="w-1/2 pr-36">
+            <div class="w-full md:w-1/2 py-36 px-4 md:pr-36">
                 <h2 class="text-[46px] font-bold text-white mb-4">About Us</h2>
                 <p class="text-[26px] mb-6 text-white">Key points about company</p>
-                <p class="text-lg mb-6 text-start font-normal text-white">BUOYANCY IMPEX PRIVATE LIMITED is an independent, privately held global enterprise on trading and Exports of Petroleum derivatives like Bitumen, Base oils... <a href="#" class="font-bold">Read More</a></p>
-                <!-- Accordion -->
-                <div class="w-full text-white">
-                    <!-- History -->
-                    <div class="border-b border-white py-4">
-                        <button class="flex justify-between items-center w-full text-left text-[22px]">
-                            <!-- Dots and Text -->
-                            <span class="flex items-center">
-                                <span class="text-xl font-bold mr-2">•••</span>
-                                History
-                            </span>
-                            <!-- Arrow -->
-                            <i class="fa-solid fa-angle-down"></i>
-                        </button>
-                    </div>
+                <p class="text-lg mb-6 text-start font-normal text-white">BUOYANCY IMPEX PRIVATE LIMITED is an
+                    independent, privately held global enterprise on trading and Exports of Petroleum derivatives like
+                    Bitumen, Base oils... <a href="#" class="font-bold">Read More</a></p>
+                <div class="relative antialiased">
+                    <div class="relative flex flex-col justify-center overflow-hidden">
+                        <div class="w-full max-w-2xl mx-auto px-4 md:px-6">
+                            <!-- Accordion component -->
+                            <div class="divide-y divide-slate-200 text-white">
+                                <!-- Accordion item -->
+                                <div x-data="{ expanded: false }" class="py-2">
+                                    <h2>
+                                        <button id="faqs-title-01" type="button"
+                                            class="flex items-center justify-between w-full text-left font-semibold py-2"
+                                            @click="expanded = !expanded" :aria-expanded="expanded"
+                                            aria-controls="faqs-text-01">
+                                            <span>History</span>
+                                            <svg class="fill-white shrink-0 ml-8" width="16" height="16"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect y="7" width="16" height="2" rx="1"
+                                                    class="transform origin-center transition duration-200 ease-out"
+                                                    :class="{'!rotate-180': expanded}" />
+                                                <rect y="7" width="16" height="2" rx="1"
+                                                    class="transform origin-center rotate-90 transition duration-200 ease-out"
+                                                    :class="{'!rotate-180': expanded}" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="faqs-text-01" role="region" aria-labelledby="faqs-title-01"
+                                        class="grid text-sm text-white overflow-hidden transition-all duration-300 ease-in-out"
+                                        :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'">
+                                        <div class="overflow-hidden">
+                                            <p class="pb-3">
+                                                If you go over your organisations or user limit, a member of the team
+                                                will reach out
+                                                about bespoke pricing. In the meantime, our collaborative features won't
+                                                appear in
+                                                accounts or users that are over the 100-account or 1,000-user limit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion item -->
+                                <div x-data="{ expanded: false }" class="py-2">
+                                    <h2>
+                                        <button id="faqs-title-02" type="button"
+                                            class="flex items-center justify-between w-full text-left font-semibold py-2"
+                                            @click="expanded = !expanded" :aria-expanded="expanded"
+                                            aria-controls="faqs-text-02">
+                                            <span>Quality</span>
+                                            <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect y="7" width="16" height="2" rx="1"
+                                                    class="transform origin-center transition duration-200 ease-out"
+                                                    :class="{'!rotate-180': expanded}" />
+                                                <rect y="7" width="16" height="2" rx="1"
+                                                    class="transform origin-center rotate-90 transition duration-200 ease-out"
+                                                    :class="{'!rotate-180': expanded}" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="faqs-text-02" role="region" aria-labelledby="faqs-title-02"
+                                        class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                                        :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'">
+                                        <div class="overflow-hidden">
+                                            <p class="pb-3">
+                                                If you go over your organisations or user limit, a member of the team
+                                                will reach out
+                                                about bespoke pricing. In the meantime, our collaborative features won't
+                                                appear in
+                                                accounts or users that are over the 100-account or 1,000-user limit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion item -->
+                                <div x-data="{ expanded: false }" class="py-2">
+                                    <h2>
+                                        <button id="faqs-title-03" type="button"
+                                            class="flex items-center justify-between w-full text-left font-semibold py-2"
+                                            @click="expanded = !expanded" :aria-expanded="expanded"
+                                            aria-controls="faqs-text-03">
+                                            <span>Future</span>
+                                            <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect y="7" width="16" height="2" rx="1"
+                                                    class="transform origin-center transition duration-200 ease-out"
+                                                    :class="{'!rotate-180': expanded}" />
+                                                <rect y="7" width="16" height="2" rx="1"
+                                                    class="transform origin-center rotate-90 transition duration-200 ease-out"
+                                                    :class="{'!rotate-180': expanded}" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="faqs-text-03" role="region" aria-labelledby="faqs-title-03"
+                                        class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                                        :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'">
+                                        <div class="overflow-hidden">
+                                            <p class="pb-3">
+                                                If you go over your organisations or user limit, a member of the team
+                                                will reach out
+                                                about bespoke pricing. In the meantime, our collaborative features won't
+                                                appear in
+                                                accounts or users that are over the 100-account or 1,000-user limit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- End: Accordion component -->
 
-                    <!-- Quality -->
-                    <div class="border-b border-white py-4">
-                        <button class="flex justify-between items-center w-full text-left text-[22px]">
-                            <!-- Dots and Text -->
-                            <span class="flex items-center">
-                                <span class="text-xl font-bold mr-2">•••</span>
-                                Quality
-                            </span>
-                            <!-- Arrow -->
-                            <i class="fa-solid fa-angle-down"></i>
-                        </button>
-                    </div>
-
-                    <!-- Future -->
-                    <div class="py-4">
-                        <button class="flex justify-between items-center w-full text-left text-[22px]">
-                            <!-- Dots and Text -->
-                            <span class="flex items-center">
-                                <span class="text-xl font-bold mr-2">•••</span>
-                                Future
-                            </span>
-                            <!-- Arrow -->
-                            <i class="fa-solid fa-angle-down"></i>
-                        </button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="w-1/2"></div>
+            <div class="w-full md:w-1/2"></div>
         </div>
     </section>
-    
+
     <!-- Product Showcase Section -->
     <section class="py-36 overflow-x-hidden">
         <div class="container mx-auto px-6">
@@ -336,11 +407,11 @@
                 </p>
                 <!-- If we need navigation buttons -->
                 <div
-                    class="swiper-button-prev left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    class="swiper-button-prev left-[70%] top-[90%] lg:left-[90%] md:left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
                     <i class="fa-solid fa-chevron-left text-[#B1B1B1]"></i>
                 </div>
                 <div
-                    class="swiper-button-next inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    class="swiper-button-next top-[90%] lg:left-[90%] md:left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
                     <i class="fa-solid fa-chevron-right text-[#B1B1B1]"></i>
                 </div>
             </div>
@@ -425,55 +496,66 @@
     </section>
 
     <!-- Statistic Till Section -->
-    <section class="bg-neutral-800 pt-20  relative z-[1]">
+    <section class="bg-neutral-800 pt-20 relative z-[1]">
         <img src="./assets/img/pngwing 2.png" alt="pngwing" class="absolute left-0 top-0 -z-[1] h-full">
-        <div class="container mx-auto">
-            <div class="flex items-center">
-                <div class="w-7/12">
-                    <h2 class="text-[46px] font-medium text-white pt-20 mb-5">Statistic Till 2021</h2>
-                    <p class="text-lg text-white font-normal mb-8">With the impressive and outstanding legacy of 15
-                        years, our company has reached a level that could only be imagined. We’re proud to have the best
-                        brains of the industry and their untiring work has paid dividends. We always exceed the
-                        expectations and do better than the best. Our company is ambitious to give the energy, its full
-                        value. So, join us today in writing a new history.</p>
-                    <ul class="flex flex-wrap mb-32">
-                        <li class="flex items-center gap-x-6 text-white w-5/12 mb-5">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <!-- Left Content -->
+                <div class="w-full lg:w-7/12 mb-10 lg:mb-0">
+                    <h2 class="text-[36px] lg:text-[46px] font-medium text-white pt-20 mb-5">Statistic Till 2021</h2>
+                    <p class="text-base lg:text-lg text-white font-normal mb-8">
+                        With the impressive and outstanding legacy of 15 years, our company has reached a level that
+                        could
+                        only be imagined. We’re proud to have the best brains of the industry and their untiring work
+                        has
+                        paid dividends. We always exceed the expectations and do better than the best. Our company is
+                        ambitious to give the energy, its full value. So, join us today in writing a new history.
+                    </p>
+                    <ul class="flex flex-wrap mb-10 lg:mb-32">
+                        <li class="flex items-center gap-x-4 lg:gap-x-6 text-white w-full lg:w-5/12 mb-5">
                             <i class="fa-solid fa-location-arrow rotate-45"></i>
-                            <h6 class="text-lg font-semibold ">289M $ Sales generated</h6>
+                            <h6 class="text-base lg:text-lg font-semibold">289M $ Sales generated</h6>
                         </li>
-                        <li class="flex items-center gap-x-6 text-white w-5/12 mb-5">
+                        <li class="flex items-center gap-x-4 lg:gap-x-6 text-white w-full lg:w-5/12 mb-5">
                             <i class="fa-solid fa-location-arrow rotate-45"></i>
-                            <h6 class="text-lg font-semibold ">7.3% Market share increase</h6>
+                            <h6 class="text-base lg:text-lg font-semibold">7.3% Market share increase</h6>
                         </li>
-                        <li class="flex items-center gap-x-6 text-white w-5/12">
+                        <li class="flex items-center gap-x-4 lg:gap-x-6 text-white w-full lg:w-5/12">
                             <i class="fa-solid fa-location-arrow rotate-45"></i>
-                            <h6 class="text-lg font-semibold ">19 years of collective experience</h6>
+                            <h6 class="text-base lg:text-lg font-semibold">19 years of collective experience</h6>
                         </li>
-                        <li class="flex items-center gap-x-6 text-white w-6/12">
+                        <li class="flex items-center gap-x-4 lg:gap-x-6 text-white w-full lg:w-6/12">
                             <i class="fa-solid fa-location-arrow rotate-45"></i>
-                            <h6 class="text-lg font-semibold ">Annual Trading Volume: upto 42,370 MT</h6>
+                            <h6 class="text-base lg:text-lg font-semibold">Annual Trading Volume: upto 42,370 MT</h6>
                         </li>
                     </ul>
-                    <div class="flex flex-wrap justify-between pr-16 -mb-32">
+                    <div class="flex flex-wrap justify-center lg:justify-between -mb-[22.5rem]">
                         <div
-                            class="w-60 h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2">
-                            <span class="text-[50px] text-[#135c2e] font-bold">432</span>
-                            <p class="text-lg font-bold text-[#001B3A] m-5">Project <br />Completed</p>
+                            class="w-48 lg:w-60 h-48 lg:h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2 mx-4 mb-10">
+                            <span class="text-[40px] lg:text-[50px] text-[#135c2e] font-bold">432</span>
+                            <p class="text-base lg:text-lg font-bold text-[#001B3A] text-center">
+                                Project <br />Completed
+                            </p>
                         </div>
                         <div
-                            class="w-60 h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2">
-                            <span class="text-[50px] text-[#135c2e] font-bold">38</span>
-                            <p class="text-lg font-bold text-[#001B3A] m-5">In Countries</p>
+                            class="w-48 lg:w-60 h-48 lg:h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2 mx-4 mb-10">
+                            <span class="text-[40px] lg:text-[50px] text-[#135c2e] font-bold">38</span>
+                            <p class="text-base lg:text-lg font-bold text-[#001B3A] text-center">
+                                In Countries
+                            </p>
                         </div>
                         <div
-                            class="w-60 h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2">
-                            <span class="text-[50px] text-[#135c2e] font-bold">186</span>
-                            <p class="text-lg font-bold text-[#001B3A] m-5">Export Client Base</p>
+                            class="w-48 lg:w-60 h-48 lg:h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2 mx-4 mb-10">
+                            <span class="text-[40px] lg:text-[50px] text-[#135c2e] font-bold">186</span>
+                            <p class="text-base lg:text-lg font-bold text-[#001B3A] text-center">
+                                Export Client Base
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="w-5/12 relative">
-                    <img src="./assets/img/worker_img.png" alt="" class=" block bottom-0 -mt-40">
+                <!-- Right Image -->
+                <div class="w-full lg:w-5/12 relative">
+                    <img src="./assets/img/worker_img.png" alt="" class="w-full lg:w-auto block mx-auto lg:mx-0">
                 </div>
             </div>
         </div>
@@ -870,6 +952,8 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
     <!-- js script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -886,13 +970,29 @@
 
             // Optional parameters
             loop: true,
-            slidesPerView: 4,
+            slidesPerView: 1,
 
             // Navigation arrows
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            breakpoints: {
+                // when window width is >= 320px
+                640: {
+                    slidesPerView: 2,
+                },
+                // when window width is >= 480px
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40
+                },
+                // when window width is >= 640px
+                1280: {
+                    slidesPerView: 5,
+                    spaceBetween: 50
+                }
+            }
 
         });
     </script>
