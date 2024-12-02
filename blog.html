@@ -58,39 +58,65 @@
 <body class="font-montserrat">
 
     <!-- Header -->
-    <header class="py-5">
+    <header class="p-4">
         <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo Section -->
             <div class="logo">
                 <a href="./index.html">
                     <img src="./assets/img/logo.png" alt="logo" class="h-24">
                 </a>
             </div>
-            <nav>
-                <ul class="flex text-customGray">
-                    <li>
-                        <a href="index.html" class="block p-5 "> Home</a>
+
+            <!-- Hamburger Button (for mobile screens) -->
+            <button id="menu-toggle" class="text-emerald-800 text-3xl md:hidden focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav id="menu" class="hidden md:flex flex-col md:flex-row md:items-center text-customGray md:gap-6">
+                <ul class="md:flex md:gap-4">
+                    <!-- Active Page -->
+                    <li class="relative">
+                        <a href="index.html" class="block p-2 hover:text-emerald-800">Home</a>
+                        <span
+                            class="absolute left-1/2 -translate-x-1/2 bottom-0 w-1.5 h-1.5 bg-emerald-800 rounded-full scale-0 transition-transform duration-300"></span>
                     </li>
-                    <li>
-                        <a href="about.html" class="block p-5">About Us</a>
+                    <!-- Other Pages -->
+                    <li class="relative">
+                        <a href="about.html" class="block p-2 hover:text-emerald-800">About Us</a>
+                        <span
+                            class="absolute left-1/2 -translate-x-1/2 bottom-0 w-1.5 h-1.5 bg-emerald-800 rounded-full scale-0 transition-transform duration-300"></span>
                     </li>
-                    <li>
-                        <a href="services.html" class="block p-5">Services</a>
+                    <li class="relative">
+                        <a href="services.html" class="block p-2 hover:text-emerald-800">Services</a>
+                        <span
+                            class="absolute left-1/2 -translate-x-1/2 bottom-0 w-1.5 h-1.5 bg-emerald-800 rounded-full scale-0 transition-transform duration-300"></span>
                     </li>
-                    <li>
-                        <a href="product_page.html" class="block p-5">Products</a>
+                    <li class="relative">
+                        <a href="product_page.html" class="block p-2 hover:text-emerald-800">Products</a>
+                        <span
+                            class="absolute left-1/2 -translate-x-1/2 bottom-0 w-1.5 h-1.5 bg-emerald-800 rounded-full scale-0 transition-transform duration-300"></span>
                     </li>
-                    <li>
-                        <a href="career.html" class="block p-5">Career</a>
+                    <li class="relative">
+                        <a href="career.html" class="block p-2 hover:text-emerald-800">Career</a>
+                        <span
+                            class="absolute left-1/2 -translate-x-1/2 bottom-0 w-1.5 h-1.5 bg-emerald-800 rounded-full scale-0 transition-transform duration-300"></span>
                     </li>
-                    <li>
-                        <a href="blog.html" class="block p-5">Blog</a>
+                    <li class="relative">
+                        <a href="blog.html" class="block p-2 hover:text-emerald-800">Blog</a>
+                        <span
+                            class="absolute left-1/2 -translate-x-1/2 bottom-0 w-1.5 h-1.5 bg-emerald-800 rounded-full scale-0 transition-transform duration-300"></span>
                     </li>
-                    <li>
-                        <a href="contact_us.html" class="block p-5">Contact Us</a>
+                    <li class="relative">
+                        <a href="contact_us.html" class="block p-2 hover:text-emerald-800">Contact Us</a>
+                        <span
+                            class="absolute left-1/2 -translate-x-1/2 bottom-0 w-1.5 h-1.5 bg-emerald-800 rounded-full scale-0 transition-transform duration-300"></span>
                     </li>
                 </ul>
             </nav>
-            <div class="flex items-center">
+
+            <!-- Quote Button -->
+            <div class="hidden md:flex items-center">
                 <a href="#" class="text-2xl text-emerald-800 mr-8">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
@@ -500,6 +526,30 @@
 
     <!-- js script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const navLinks = document.querySelectorAll('#menu a');
+        const currentPath = window.location.pathname.split("/").pop();
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('text-emerald-800', 'font-bold');
+                const parentLi = link.parentElement;
+                const dot = parentLi.querySelector('span');
+                if (dot) {
+                    dot.classList.remove('scale-0');
+                    dot.classList.add('scale-100');
+                }
+            } else {
+                link.classList.remove('text-emerald-800', 'font-bold');
+                const parentLi = link.parentElement;
+                const dot = parentLi.querySelector('span');
+                if (dot) {
+                    dot.classList.add('scale-0');
+                    dot.classList.remove('scale-100');
+                }
+            }
+        });
+    </script>
 
     <!-- Article & News Swiper -->
     <script>
