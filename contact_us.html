@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buoyancy || Where Business & Profitability Converge</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.png" type="img/png">
+
+    <!-- Google Fonts - Montserrat Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- swiper slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after,
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            display: none;
+        }
+    </style>
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customGray: '#434343',
+                        customBlue: '#001B3A',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'custom-light': '10px 10px 30px 0px #00000073',
+                        'custom-dark': '-10px -10px 30px 0px #2B2B2B',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="font-montserrat">
+    <!-- Header -->
+    <header class="py-5 bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- Logo Section -->
+          <div class="logo">
+            <a href="./index.html">
+              <img src="./assets/img/logo.png" alt="logo" class="h-16">
+            </a>
+          </div>
+      
+          <!-- Hamburger Button (for mobile screens) -->
+          <button
+            id="menu-toggle"
+            class="text-emerald-800 text-3xl md:hidden focus:outline-none"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+      
+          <!-- Navigation Menu -->
+          <nav
+            id="menu"
+            class="hidden md:flex flex-col md:flex-row md:items-center text-customGray md:gap-6"
+          >
+            <ul class="md:flex md:gap-4">
+              <li>
+                <a href="index.html" class="block p-2 hover:text-emerald-800">Home</a>
+              </li>
+              <li>
+                <a href="about.html" class="block p-2 hover:text-emerald-800">About Us</a>
+              </li>
+              <li>
+                <a href="services.html" class="block p-2 hover:text-emerald-800">Services</a>
+              </li>
+              <li>
+                <a href="product_page.html" class="block p-2 hover:text-emerald-800">Products</a>
+              </li>
+              <li>
+                <a href="career.html" class="block p-2 hover:text-emerald-800">Career</a>
+              </li>
+              <li>
+                <a href="blog.html" class="block p-2 hover:text-emerald-800">Blog</a>
+              </li>
+              <li>
+                <a href="contact_us.html" class="block p-2 hover:text-emerald-800">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+      
+          <!-- Quote Button -->
+          <div class="hidden md:flex items-center gap-4">
+            <a href="#" class="text-2xl text-emerald-800">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a href="#" class="bg-white rounded-full pl-6 pr-4 py-2 shadow-md flex items-center">
+              <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+              <i class="fa-solid fa-angles-right ml-4 text-emerald-800"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+
+    <!--Contact Us-->
+    <section class="relative">
+        <div class="relative h-[400px] bg-cover  bg-center"
+            style="background-image: url('assets/img/about_us_img.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start ">
+                <div class="pl-36 text-white">
+                    <h1 class="text-6xl font-normal uppercase">Contact Us</h1>
+                    <div class="relative w-60 h-[4px] mt-2 bg-gradient-to-r from-white via-white/50 to-transparent">
+                    </div>
+                    <p class="text-lg mt-2 ">Get in Touch With Us</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reach out to us Section -->
+    <section class="container mx-auto py-16 relative flex flex-col lg:flex-row w-full min-h-screen">
+        <!-- Left Side (Image Section) -->
+        <div class="w-full lg:w-1/2 relative">
+            <img src="assets/img/working_women.jpg" alt="Support Representative"
+                class="w-full h-full object-cover transform -scale-x-100">
+        </div>
+
+        <!-- Right Side (Form Section) -->
+        <div class="w-full lg:w-1/2 bg-[#2D2D2D] text-white p-10 lg:p-20 relative">
+            <!-- Background Vector -->
+            <img src="assets/img/bg_vextor.png" alt="Background Vector"
+                class="absolute top-0 left-0 w-full h-full object-cover opacity-70">
+            <!-- Overlay Content -->
+            <div class="relative z-10">
+                <!-- Logo -->
+                <div class="mb-6">
+                    <img src="assets/img/logo_white.png" alt="Logo" class="w-32">
+                </div>
+                <!-- Heading -->
+                <h2 class="text-4xl font-semibold mb-4">Reach Out to Us</h2>
+                <p class="text-lg text-white font-light mb-10">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <!-- Form -->
+                <form action="#" method="POST" class="space-y-6 ">
+                    <input type="text" placeholder="Your Name"
+                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
+                        style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);">
+                    <input type="email" placeholder="yourmailaddressplease@mail.com"
+                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
+                        style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);">
+                    <textarea rows="6" placeholder="Your Subject"
+                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
+                        style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);"></textarea>
+                    <button type="submit"
+                        class="p-5 py-4 bg-[#2B2B2B] text-white font-semibold rounded-full shadow-custom-light">
+                        Get in Touch With Us
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto py-16 flex flex-col lg:flex-row items-center">
+        <!-- Left Side (Contact Info) -->
+        <div class="w-full lg:w-1/2 space-y-6">
+            <h2 class="text-3xl font-semibold text-[#001B3A]">Where Are We Located?</h2>
+            <p class="text-lg text-gray-600">
+                Give us a call or drop by anytime, we endeavor to answer all enquirers within 24 hours on business days.
+                We will be happy to answer your questions.
+            </p>
+
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">Our Address</h3>
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-location-dot text-lg text-[#135c2e]"></i>
+                    <p class="text-lg text-gray-700">"C" Tower, 10th Floor, Hampton Park, Vesu, Surat 395007 Gujarat,
+                        India</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">Our Phone</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-phone text-green-600 text-lg"></i>
+                        <p class="text-lg text-gray-700">+91 99250 53193</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-phone text-green-600 text-lg"></i>
+                        <p class="text-lg text-gray-700">+91 99250 53069</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-phone text-green-600 text-lg"></i>
+                        <p class="text-lg text-gray-700">+91 261-3585515</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-print text-green-600 text-lg"></i>
+                        <p class="text-lg text-gray-700">+91 261-3527238</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">Our Mail Box</h3>
+                <p class="text-lg text-gray-700">
+                    info@buoyancyimpex.com <br>
+                    buoyancyinc@gmail.com
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">Follow Us</h3>
+                <div class="flex space-x-4 text-green-600">
+                    <a href="#" class="text-2xl"><i class="fa fa-whatsapp"></i></a>
+                    <a href="#" class="text-2xl"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="text-2xl"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="text-2xl"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side (Map Section) -->
+        <div class="w-full lg:w-1/2 relative">
+            <img src="assets/img/map.png" alt="Location Map" class="w-full h-full object-cover rounded-lg shadow-lg">
+            <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-600 p-4 rounded-full">
+                <i class="fa fa-map-marker-alt text-white text-3xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#22262F] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between">
+                <!-- Logo and Description -->
+                <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
+                    <img src="assets/img/logo_white.png" alt="Buoyancy Logo" class="mb-4">
+                    <p class="font-medium text-base sm:text-lg">
+                        Buoyancy Impex Pvt Ltd, has been able to penetrate in the supply chain of upstream to downstream
+                        companies due to its goodwill and professional approach.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="flex space-x-3 mt-4">
+                        <a href="#" class="text-[#135c2e] text-xl hover:text-green-600">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="text-[#135c2e] text-xl hover:text-blue-500">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="#" class="text-[#135c2e] text-xl hover:text-pink-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pages Links -->
+                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0">
+                    <h3 class="text-lg font-semibold text-white mb-4">Pages</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white">Services</a></li>
+                        <li><a href="product_page.html" class="hover:text-white">Products</a></li>
+                        <li><a href="career.html" class="hover:text-white">Career</a></li>
+                        <li><a href="contact_us.html" class="hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0">
+                    <h3 class="text-lg font-semibold text-white mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Packaging Service</a></li>
+                        <li><a href="#" class="hover:text-white">Logistic Service</a></li>
+                        <li><a href="#" class="hover:text-white">Export Service</a></li>
+                        <li><a href="#" class="hover:text-white">Bulk Chartering</a></li>
+                        <li><a href="#" class="hover:text-white">Trading</a></li>
+                        <li><a href="#" class="hover:text-white">Documentation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="w-full sm:w-1/2 lg:w-1/4">
+                    <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
+                    <p class="mb-2">
+                        <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
+                        “C” Tower, 10th Floor, Hampton Park, Vesu, Surat 395007 Gujarat, India
+                    </p>
+                    <p class="mb-2">
+                        <i class="fas fa-phone text-green-500 mr-2"></i>
+                        +91 99250 53193
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope text-green-500 mr-2"></i>
+                        info@buoyancyimpex.com<br>
+                        buoyancyinc@gmail.com
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="border-t border-gray-700 mt-8 pt-4 flex flex-wrap justify-between text-sm">
+                <p class="text-center w-full lg:w-auto text-sm md:text-base font-[400] mb-4 lg:mb-0">
+                    Copyright &copy; Buoyancy 2021 All Rights Reserved | Design & Develop By Aimstorm.
+                </p>
+                <div class="flex flex-wrap justify-center space-x-4">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Use</a>
+                    <a href="#" class="hover:text-white">Sales and Refunds</a>
+                    <a href="#" class="hover:text-white">Legal</a>
+                    <a href="#" class="hover:text-white">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

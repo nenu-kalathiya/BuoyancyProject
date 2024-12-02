@@ -14,21 +14,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome CDN  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome CDN link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- swiper slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after,
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            display: none;
+        }
+    </style>
 
     <!-- Tailwind Custom Configuration -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    colors: {
+                        customGray: '#434343',
+                        customBlue: '#001B3A',
+                    },
                     fontFamily: {
-                        montserrat: ['Montserrat', 'sans-serif'], // Custom font define kar rahe hain
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'custom-light': '10px 10px 30px 0px #00000073',
+                        'custom-dark': '-10px -10px 30px 0px #2B2B2B',
                     },
                 },
             },
@@ -36,123 +55,884 @@
     </script>
 </head>
 
-<body>
-    <!-- Navbar -->
-    <header class="bg-transparent text-black  py-4">
-        <div class="container mx-auto px-8 lg:px-20 py-4 flex justify-between items-center">
-            <!-- Left Section: Logo (Replace with your logo image) -->
-            <div class="text-2xl font-bold">
-                <a href="#">
-                    <img src="assets/img/logo.png" alt="Logo" class="h-12 w-auto md:h-8 lg:h-20">
+<body class="font-montserrat">
+
+    <!-- Header -->
+    <header class="py-5">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo Section -->
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./assets/img/logo.png" alt="logo" class="h-24">
                 </a>
             </div>
 
-            <!-- Center Section: Navigation Links -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="#" class="hover:text-gray-300 font-montserrat">Home</a>
-                <a href="#" class="hover:text-gray-300 font-montserrat">About Us</a>
-                <a href="#" class="hover:text-gray-300 font-montserrat">Services</a>
-                <a href="#" class="hover:text-gray-300 font-montserrat">Products</a>
-                <a href="#" class="hover:text-gray-300 font-montserrat">Career</a>
-                <a href="#" class="hover:text-gray-300 font-montserrat">Blog</a>
-                <a href="#" class="hover:text-gray-300 font-montserrat">Contact Us</a>
+            <!-- Hamburger Button (for mobile screens) -->
+            <button id="menu-toggle" class="text-emerald-800 text-3xl md:hidden focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav id="menu" class="hidden md:flex flex-col md:flex-row md:items-center text-customGray md:gap-6">
+                <ul class="md:flex md:gap-4">
+                    <li>
+                        <a href="#" class="block p-2 hover:text-emerald-800">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="block p-2 hover:text-emerald-800">About Us</a>
+                    </li>
+                    <li>
+                        <a href="services.html" class="block p-2 hover:text-emerald-800">Services</a>
+                    </li>
+                    <li>
+                        <a href="product_page.html" class="block p-2 hover:text-emerald-800">Products</a>
+                    </li>
+                    <li>
+                        <a href="career.html" class="block p-2 hover:text-emerald-800">Career</a>
+                    </li>
+                    <li>
+                        <a href="blog.html" class="block p-2 hover:text-emerald-800">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact_us.html" class="block p-2 hover:text-emerald-800">Contact Us</a>
+                    </li>
+                </ul>
             </nav>
 
-            <!-- Right Section: Search Icon and Get a Quote Button -->
-            <div class="flex items-center space-x-4">
-                <!-- Search Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    class="w-5 h-5 mr-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M11 4a7 7 0 100 14 7 7 0 000-14zm0 0V3m0 18v-3m4-4h3m-3-4h3m-3 8h3" />
-                </svg>
+            <!-- Quote Button -->
+            <div class="hidden md:flex items-center">
+                <a href="#" class="text-2xl text-emerald-800 mr-8">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
+                    <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                    <i
+                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative">
+        <div class="flex items-center flex-col md:flex-row md:items-center">
+            <!-- Left Column (Text content) -->
+            <div class="w-full md:w-5/12 px-8 md:px-48 mb-8 md:mb-0">
+                <h1 class="text-3xl md:text-6xl font-semibold text-[#001B3A] leading-tight mb-5">
+                    Buoyancy Impex Pvt Ltd.
+                </h1>
+                <p class="text-2xl md:text-5xl leading-tight text-neutral-500 mb-5">
+                    Where Business & Profitability Converge
+                </p>
+                <p class="text-base md:text-lg mb-5 text-gray-500">
+                    We Are Trusted Partners In International Market Since 2005 With Prominence & Stability
+                </p>
+                <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center">
+                    <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                    <i
+                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
+                </a>
+            </div>
+
+            <!-- Right Column (Image) -->
+            <div class="w-full md:w-7/12">
+                <img src="assets/img/slider-img.png" alt="Industrial site" class="w-full h-auto object-cover shadow-lg">
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div
+            class="flex items-center gap-x-6 transform rotate-90 origin-center absolute -left-[8%] top-2/4 -translate-y-2/4 hidden lg:flex">
+            <!-- Scroll Text -->
+            <p class="uppercase text-sm text-gray-500">Scroll Down</p>
+            <!-- Vertical Line -->
+            <div class="w-56 h-px bg-gray-500"></div>
+            <!-- Up Arrow -->
+            <a href="" class="">
+                <i class="fa-solid fa-chevron-left text-gray-500"></i>
+            </a>
+            <!-- Circle with Dot -->
+            <div class="w-16 h-16 border-2 border-gray-500 rounded-full flex items-center justify-center">
+                <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+            </div>
+            <!-- Down Arrow -->
+            <a href="" class="">
+                <i class="fa-solid fa-chevron-right text-gray-500"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-12 sm:py-20 md:py-28 lg:py-36">
+        <div class="container mx-auto px-4">
+            <!-- Heading -->
+            <h2 class="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#001b3a] mb-6">
+                We’re Here To Revolutionize The Business
+            </h2>
+
+            <!-- Paragraph Text -->
+            <p
+                class="text-[#434343] font-normal text-base sm:text-lg md:text-xl lg:text-2xl text-center mx-auto leading-relaxed">
+                With our journey beginning in 2005, today we’re one of the leading and reputed companies accredited for
+                the procurement and exports of most actively used petroleum derivatives and fertilizers in the best
+                possible
+                manner. With our footprints in upstream, midstream, and downstream markets on global, regional, and
+                territorial levels, we are able to provide our clients with an exhaustive product selection and
+                best-in-class
+                after-sales service. We propose, achieve, and deliver the best value for our clients by effectively
+                combining
+                our experience, network, facilities, and technical know-how. We’re revolutionizing the services and
+                strictly
+                follow all ethical principles, offering a refreshing experience to our valued customers. We are
+                privileged
+                to have a very strong customer base with operations in nearly 32 countries and growing year by year. The
+                seamless and modern experience for our customers is what puts us at the top. With strong and active
+                backing
+                from industry veterans, we’re scaling new heights.
+            </p>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="pb-36">
+        <div class="container mx-auto">
+            <!-- Cards Wrapper -->
+            <div class="flex flex-col items-center bg-white">
+                <h2 class="text-center text-[46px] font-medium text-[#001b3a] mb-16">What We Do</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                    <!-- Card 1 -->
+                    <div>
+                        <div class="relative flex items-center justify-center w-56 h-56 rounded-full bg-white mx-auto"
+                            style="box-shadow: 
+                        20px 19px 50px 0px #fff inset, inset 19px 20px 50px 0px #cdcdcd, 17px 20px 50px 0px #fff, 
+                        20px 20px 50px 0px #fff inset, -20px -20px 50px 0px #fff inset, 20px 20px 50px 0px #FFFFFF40 inset;">
+                            <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center" style="box-shadow: 
+                        inset 0px 1px 18px 0px #CDCDCD, inset -20px -3px 50px 0px #fff;">
+                                <!-- Icon -->
+                                <img src="assets/img/vector-1.png" alt="Packaging Icon" class="h-16 w-16">
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#1F1F1F] mt-6">Packaging Services</h3>
+                        <p class="text-[#434343] text-lg mt-2">
+                            Our skilled and proficient manpower uses quality packing material and hence, our clients get
+                            the best products with uncompromising quality.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div>
+                        <div class="relative flex items-center justify-center w-56 h-56 rounded-full bg-white mx-auto"
+                            style="box-shadow: 
+                        20px 19px 50px 0px #fff inset, inset 19px 20px 50px 0px #cdcdcd, 17px 20px 50px 0px #fff, 
+                        20px 20px 50px 0px #fff inset, -20px -20px 50px 0px #fff inset, 20px 20px 50px 0px #FFFFFF40 inset;">
+                            <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center" style="box-shadow: 
+                        inset 0px 1px 18px 0px #CDCDCD, inset -20px -3px 50px 0px #fff;">
+                                <!-- Icon -->
+                                <img src="assets/img/vector-2.png" alt="Export Icon" class="h-16 w-16">
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#1F1F1F] mt-6">Logistic Services</h3>
+                        <p class="text-[#434343] text-lg mt-2">
+                            This strenuous task is just a cakewalk for us. We’ve dedication and commitment to strong
+                            customer services. Our unmatchable services make us the industry leader.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div>
+                        <div class="relative flex items-center justify-center w-56 h-56 rounded-full bg-white mx-auto"
+                            style="box-shadow: 
+                        20px 19px 50px 0px #fff inset, inset 19px 20px 50px 0px #cdcdcd, 17px 20px 50px 0px #fff, 
+                        20px 20px 50px 0px #fff inset, -20px -20px 50px 0px #fff inset, 20px 20px 50px 0px #FFFFFF40 inset;">
+                            <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center" style="box-shadow: 
+                        inset 0px 1px 18px 0px #CDCDCD, inset -20px -3px 50px 0px #fff;">
+                                <!-- Icon -->
+                                <img src="assets/img/vector-3.png" alt="Export Icon" class="h-16 w-16">
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#1F1F1F] mt-6">Export Services</h3>
+                        <p class="text-[#434343] text-lg mt-2">
+                            We've robust export plan and strategy with proven efficiency. Our export services are unique
+                            and exclusive in more than one way.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- View More Button -->
                 <button
-                    class="flex items-center px-6 py-3 bg-white text-green-700 font-semibold text-lg rounded-full shadow-md hover:shadow-lg focus:outline-none relative">
-                    <span>Get A Quote</span>
-                    <div class="ml-3 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 shadow-inner">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                            stroke="currentColor" class="w-5 h-5 text-green-700">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H3" />
-                        </svg>
+                    class="mt-12 flex items-center bg-white text-[#135c2e] font-semibold text-lg rounded-full shadow-md hover:shadow-lg focus:outline-none">
+                    <span class="px-6 py-3 text-lg">View More</span>
+                    <div class="ml-3 w-14 h-14 flex items-center justify-center rounded-full bg-gray-100 shadow-inner">
+                        <i class="fa-solid fa-angles-right text-xl text-[#135c2e]"></i>
                     </div>
                 </button>
             </div>
         </div>
+    </section>
 
-        <!-- Mobile Menu (Hamburger) -->
-        <div class="md:hidden flex justify-between items-center px-6 py-4">
-            <div class="text-2xl font-bold">
-                <a href="#">
-                    <img src="assets/img/logo.png" alt="Logo" class="h-12 w-auto">
-                </a>
-            </div>
-            <button class="text-white" id="hamburger-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
-        </div>
+    <!-- Key points Section -->
+    <section class="min-h-screen bg-cover bg-center bg-left relative z-[1] flex items-center" style="background-image: url('./assets/img/industrial.jpg');">
+        <div class="absolute w-1/2 bg-black/50 h-full top-0 left-0 -z-[1]"></div>
+        <div class="container mx-auto">
+            <div class="w-1/2 pr-36">
+                <h2 class="text-[46px] font-bold text-white mb-4">About Us</h2>
+                <p class="text-[26px] mb-6 text-white">Key points about company</p>
+                <p class="text-lg mb-6 text-start font-normal text-white">BUOYANCY IMPEX PRIVATE LIMITED is an independent, privately held global enterprise on trading and Exports of Petroleum derivatives like Bitumen, Base oils... <a href="#" class="font-bold">Read More</a></p>
+                <!-- Accordion -->
+                <div class="w-full text-white">
+                    <!-- History -->
+                    <div class="border-b border-white py-4">
+                        <button class="flex justify-between items-center w-full text-left text-[22px]">
+                            <!-- Dots and Text -->
+                            <span class="flex items-center">
+                                <span class="text-xl font-bold mr-2">•••</span>
+                                History
+                            </span>
+                            <!-- Arrow -->
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                    </div>
 
-        <!-- Mobile Menu Links -->
-        <div class="md:hidden hidden" id="mobile-menu">
-            <div class="flex justify-between items-center bg-blue-600 text-white px-6 py-4">
-                <div class="text-2xl font-bold">
-                    <a href="#">
-                        <img src="assets/img/logo.png" alt="Logo" class="h-12 w-auto">
-                    </a>
+                    <!-- Quality -->
+                    <div class="border-b border-white py-4">
+                        <button class="flex justify-between items-center w-full text-left text-[22px]">
+                            <!-- Dots and Text -->
+                            <span class="flex items-center">
+                                <span class="text-xl font-bold mr-2">•••</span>
+                                Quality
+                            </span>
+                            <!-- Arrow -->
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                    </div>
+
+                    <!-- Future -->
+                    <div class="py-4">
+                        <button class="flex justify-between items-center w-full text-left text-[22px]">
+                            <!-- Dots and Text -->
+                            <span class="flex items-center">
+                                <span class="text-xl font-bold mr-2">•••</span>
+                                Future
+                            </span>
+                            <!-- Arrow -->
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                    </div>
                 </div>
-                <button class="text-white" id="close-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                        </path>
-                    </svg>
-                </button>
             </div>
-            <nav class="flex flex-col space-y-4 px-6 py-4 bg-blue-600">
-                <a href="#" class="text-white font-montserrat py-2">Home</a>
-                <a href="#" class="text-white py-2">About Us</a>
-                <a href="#" class="text-white py-2">Services</a>
-                <a href="#" class="text-white py-2">Products</a>
-                <a href="#" class="text-white py-2">Career</a>
-                <a href="#" class="text-white py-2">Blog</a>
-                <a href="#" class="text-white py-2">Contact Us</a>
-            </nav>
+            <div class="w-1/2"></div>
         </div>
-    </header>
-
-    <main>
-        <div class="relative mx-auto">
-            <!-- Scroll Indicator -->
-            <div class="absolute left-0 top-1/3 flex flex-col items-center">
-                <p class="text-gray-600 text-sm uppercase tracking-widest rotate-90">Scroll Down</p>
-                <div class="w-1 h-12 bg-gray-300 rounded-full mt-2"></div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    class="w-6 h-6 text-gray-500 mt-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-            </div>
-        </div>
-    </main>
-
+    </section>
     
+    <!-- Product Showcase Section -->
+    <section class="py-36 overflow-x-hidden">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="mb-12 relative">
+                <h2 class="text-[46px] font-medium text-[#001b3a]">Product Showcase</h2>
+                <p class="text-[#434343] text-[18px] font-normal">
+                    It is a long established fact that a reader will be distracted by the readable content of <br /> a
+                    page when looking at its layout.
+                </p>
+                <!-- If we need navigation buttons -->
+                <div
+                    class="swiper-button-prev left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-left text-[#B1B1B1]"></i>
+                </div>
+                <div
+                    class="swiper-button-next inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-right text-[#B1B1B1]"></i>
+                </div>
+            </div>
+            <!-- Slider main container -->
+            <div class="swiper" style="width: calc(50% + 60vw);">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper py-10">
+                    <!-- Slides -->
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/furtilizer.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
+                                <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                                <i
+                                    class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/sulfer.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
+                                <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                                <i
+                                    class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/Bitumen.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
+                                <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                                <i
+                                    class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/sunset.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
+                                <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                                <i
+                                    class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/sunset.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
+                                <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                                <i
+                                    class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistic Till Section -->
+    <section class="bg-neutral-800 pt-20  relative z-[1]">
+        <img src="./assets/img/pngwing 2.png" alt="pngwing" class="absolute left-0 top-0 -z-[1] h-full">
+        <div class="container mx-auto">
+            <div class="flex items-center">
+                <div class="w-7/12">
+                    <h2 class="text-[46px] font-medium text-white pt-20 mb-5">Statistic Till 2021</h2>
+                    <p class="text-lg text-white font-normal mb-8">With the impressive and outstanding legacy of 15
+                        years, our company has reached a level that could only be imagined. We’re proud to have the best
+                        brains of the industry and their untiring work has paid dividends. We always exceed the
+                        expectations and do better than the best. Our company is ambitious to give the energy, its full
+                        value. So, join us today in writing a new history.</p>
+                    <ul class="flex flex-wrap mb-32">
+                        <li class="flex items-center gap-x-6 text-white w-5/12 mb-5">
+                            <i class="fa-solid fa-location-arrow rotate-45"></i>
+                            <h6 class="text-lg font-semibold ">289M $ Sales generated</h6>
+                        </li>
+                        <li class="flex items-center gap-x-6 text-white w-5/12 mb-5">
+                            <i class="fa-solid fa-location-arrow rotate-45"></i>
+                            <h6 class="text-lg font-semibold ">7.3% Market share increase</h6>
+                        </li>
+                        <li class="flex items-center gap-x-6 text-white w-5/12">
+                            <i class="fa-solid fa-location-arrow rotate-45"></i>
+                            <h6 class="text-lg font-semibold ">19 years of collective experience</h6>
+                        </li>
+                        <li class="flex items-center gap-x-6 text-white w-6/12">
+                            <i class="fa-solid fa-location-arrow rotate-45"></i>
+                            <h6 class="text-lg font-semibold ">Annual Trading Volume: upto 42,370 MT</h6>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap justify-between pr-16 -mb-32">
+                        <div
+                            class="w-60 h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2">
+                            <span class="text-[50px] text-[#135c2e] font-bold">432</span>
+                            <p class="text-lg font-bold text-[#001B3A] m-5">Project <br />Completed</p>
+                        </div>
+                        <div
+                            class="w-60 h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2">
+                            <span class="text-[50px] text-[#135c2e] font-bold">38</span>
+                            <p class="text-lg font-bold text-[#001B3A] m-5">In Countries</p>
+                        </div>
+                        <div
+                            class="w-60 h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2">
+                            <span class="text-[50px] text-[#135c2e] font-bold">186</span>
+                            <p class="text-lg font-bold text-[#001B3A] m-5">Export Client Base</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-5/12 relative">
+                    <img src="./assets/img/worker_img.png" alt="" class=" block bottom-0 -mt-40">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="pt-4 pb-36">
+        <div class="container mx-auto px-6">
+            <!-- Swiper Container -->
+            <div class="swiper_1">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial Slide -->
+                    <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 p-8">
+                        <!-- Image Section -->
+                        <div class="flex-shrink-0 w-full lg:w-80">
+                            <!-- Section Title -->
+                            <h2
+                                class="text-[30px] md:text-[40px] lg:text-[46px] font-medium text-[#001b3a] mb-12 pt-[20%] lg:pt-[40%]">
+                                Client Testimonials
+                            </h2>
+                            <div class="bg-white rounded-3xl shadow-lg w-full p-6">
+                                <!-- Image -->
+                                <div class="overflow-hidden rounded-xl mb-4">
+                                    <img src="assets/img/founder.jpg" alt="Jonathan Seth"
+                                        class="object-cover w-full h-64 shadow-md">
+                                </div>
+                                <!-- Name -->
+                                <h3 class="text-lg font-semibold text-gray-800">Jonathan Seth</h3>
+
+                                <!-- Role -->
+                                <p class="text-lg font-normal text-gray-600">Founder, CEO, Com.</p>
+                            </div>
+                        </div>
+
+                        <!-- Text Section -->
+                        <div class="flex-1 items-center justify-center pt-[20%] lg:pt-[20%]">
+                            <!-- Top Quote Icon -->
+                            <i class="fa-solid fa-quote-left text-gray-400 text-4xl md:text-5xl lg:text-6xl mb-3"></i>
+                            <!-- Paragraph -->
+                            <p
+                                class="text-sm md:text-base lg:text-lg text-[#434343] font-light tracking-wide mb-6 px-4 sm:px-6">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                            <!-- Rating -->
+                            <div class="mt-4">
+                                <i class="fa-solid fa-star text-orange-500"></i>
+                                <i class="fa-solid fa-star text-orange-500"></i>
+                                <i class="fa-solid fa-star text-orange-500"></i>
+                                <i class="fa-solid fa-star text-orange-500"></i>
+                                <i class="fa-solid fa-star text-orange-500"></i>
+                            </div>
+                            <!-- Bottom Quote Icon -->
+                            <i
+                                class="fa-solid fa-quote-left fa-flip-horizontal text-gray-400 text-4xl md:text-5xl lg:text-6xl block mt-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reach out to us Section -->
+    <section class="relative flex flex-col lg:flex-row w-full min-h-screen">
+        <!-- Left Side (Image Section) -->
+        <div class="w-full lg:w-1/2 relative">
+            <img src="assets/img/working_women.jpg" alt="Support Representative"
+                class="w-full h-full object-cover transform -scale-x-100">
+        </div>
+
+        <!-- Right Side (Form Section) -->
+        <div class="w-full lg:w-1/2 bg-[#2D2D2D] text-white p-10 lg:p-20 relative">
+            <!-- Background Vector -->
+            <img src="assets/img/bg_vextor.png" alt="Background Vector"
+                class="absolute top-0 left-0 w-full h-full object-cover opacity-70">
+            <!-- Overlay Content -->
+            <div class="relative z-10">
+                <!-- Logo -->
+                <div class="mb-6">
+                    <img src="assets/img/logo_white.png" alt="Logo" class="w-32">
+                </div>
+                <!-- Heading -->
+                <h2 class="text-4xl font-semibold mb-4">Reach Out to Us</h2>
+                <p class="text-lg text-white font-light mb-10">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <!-- Form -->
+                <form action="#" method="POST" class="space-y-6 ">
+                    <input type="text" placeholder="Your Name"
+                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
+                        style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);">
+                    <input type="email" placeholder="yourmailaddressplease@mail.com"
+                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
+                        style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);">
+                    <textarea rows="6" placeholder="Your Subject"
+                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
+                        style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);"></textarea>
+                    <button type="submit"
+                        class="p-5 py-4 bg-[#2B2B2B] text-white font-semibold rounded-full shadow-custom-light">
+                        Get in Touch With Us
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article and News Section -->
+    <section class="py-16 overflow-x-hidden">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="mb-12 relative">
+                <h2 class="text-[46px] font-medium text-[#001b3a]">Article & News</h2>
+                <p class="text-[#434343] text-[18px] font-normal">
+                    It is a long established fact that a reader will be distracted by the readable content of <br /> a
+                    page when looking at its layout.
+                </p>
+                <!-- If we need navigation buttons -->
+                <div
+                    class="swiper-button-prev left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-left text-[#B1B1B1]"></i>
+                </div>
+                <div
+                    class="swiper-button-next inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-right text-[#B1B1B1]"></i>
+                </div>
+            </div>
+            <!-- Slider main container -->
+            <div class="swiper_1">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper py-10">
+                    <!-- Slides -->
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/powder_img.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <!-- Calendar Icon -->
+                                <i class="fa-regular fa-calendar-days mr-3 text-[18px] text-[#135c2e]"></i>
+                                <span>February 17, 2021</span>
+                                <button class="ml-auto">
+                                    <i
+                                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 flex items-center justify-center text-xl ms-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/oil_img.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <!-- Calendar Icon -->
+                                <i class="fa-regular fa-calendar-days mr-3 text-[18px] text-[#135c2e]"></i>
+                                <span>February 17, 2021</span>
+                                <button class="ml-auto">
+                                    <i
+                                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 flex items-center justify-center text-xl ms-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/drum_img.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <!-- Calendar Icon -->
+                                <i class="fa-regular fa-calendar-days mr-3 text-[18px] text-[#135c2e]"></i>
+                                <span>February 17, 2021</span>
+                                <button class="ml-auto">
+                                    <i
+                                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 flex items-center justify-center text-xl ms-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/powder_img.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <!-- Calendar Icon -->
+                                <i class="fa-regular fa-calendar-days mr-3 text-[18px] text-[#135c2e]"></i>
+                                <span>February 17, 2021</span>
+                                <button class="ml-auto">
+                                    <i
+                                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 flex items-center justify-center text-xl ms-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
+                            <img src="./assets/img/oil_img.jpg" alt="fertilizers"
+                                class="rounded-t-3xl w-full h-72 object-cover block mb-5">
+                            <h3 class="text-2xl font-semibold mb-5">Fertilizers</h3>
+                            <p class="text-gray-500 text-lg mb-5">It is a long established fact that a reader will be
+                                distracted by the readable content of a page.</p>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <!-- Calendar Icon -->
+                                <i class="fa-regular fa-calendar-days mr-3 text-[18px] text-[#135c2e]"></i>
+                                <span>February 17, 2021</span>
+                                <button class="ml-auto">
+                                    <i
+                                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 flex items-center justify-center text-xl ms-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our collbrators Section -->
+    <section class="py-16 overflow-x-hidden">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="mb-12 relative">
+                <h2 class="text-[46px] font-medium text-[#001b3a]">Our Collborators</h2>
+                <p class="text-[#434343] text-[18px] font-normal">
+                    It is a long established fact that a reader will be distracted by the readable content of <br /> a
+                    page when looking at its layout.
+                </p>
+                <!-- If we need navigation buttons -->
+                <div
+                    class="swiper-button-prev left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-left text-[#B1B1B1]"></i>
+                </div>
+                <div
+                    class="swiper-button-next inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
+                    <i class="fa-solid fa-chevron-right text-[#B1B1B1]"></i>
+                </div>
+            </div>
+            <!-- Slider main container -->
+            <div class="swiper_2" style="width: calc(50% + 60vw);">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper py-10">
+                    <!-- Slides -->
+                    <div class="swiper-slide px-4">
+                        <div class="">
+                            <img src="./assets/img/hyundai.png" alt="Logo 1" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/saudi.png" alt="Logo 2" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/cnpc.png" alt="Logo 3" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/bapco.png" alt="Logo 4" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/taneco.png" alt="Logo 5" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-4">
+                        <div class="">
+                            <img src="./assets/img/hyundai.png" alt="Logo 1" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/saudi.png" alt="Logo 2" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/cnpc.png" alt="Logo 3" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/bapco.png" alt="Logo 4" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="p-4">
+                            <img src="./assets/img/taneco.png" alt="Logo 5" class="w-full h-24 object-contain block">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#22262F] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between">
+                <!-- Logo and Description -->
+                <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
+                    <img src="assets/img/logo_white.png" alt="Buoyancy Logo" class="mb-4">
+                    <p class="font-medium text-base sm:text-lg">
+                        Buoyancy Impex Pvt Ltd, has been able to penetrate in the supply chain of upstream to downstream
+                        companies due to its goodwill and professional approach.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="flex space-x-3 mt-4">
+                        <a href="#" class="text-[#135c2e] text-xl hover:text-green-600">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="text-[#135c2e] text-xl hover:text-blue-500">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="#" class="text-[#135c2e] text-xl hover:text-pink-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pages Links -->
+                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0">
+                    <h3 class="text-lg font-semibold text-white mb-4">Pages</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white">Services</a></li>
+                        <li><a href="product_page.html" class="hover:text-white">Products</a></li>
+                        <li><a href="career.html" class="hover:text-white">Career</a></li>
+                        <li><a href="contact_us.html" class="hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0">
+                    <h3 class="text-lg font-semibold text-white mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Packaging Service</a></li>
+                        <li><a href="#" class="hover:text-white">Logistic Service</a></li>
+                        <li><a href="#" class="hover:text-white">Export Service</a></li>
+                        <li><a href="#" class="hover:text-white">Bulk Chartering</a></li>
+                        <li><a href="#" class="hover:text-white">Trading</a></li>
+                        <li><a href="#" class="hover:text-white">Documentation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="w-full sm:w-1/2 lg:w-1/4">
+                    <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
+                    <p class="mb-2">
+                        <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
+                        “C” Tower, 10th Floor, Hampton Park, Vesu, Surat 395007 Gujarat, India
+                    </p>
+                    <p class="mb-2">
+                        <i class="fas fa-phone text-green-500 mr-2"></i>
+                        +91 99250 53193
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope text-green-500 mr-2"></i>
+                        info@buoyancyimpex.com<br>
+                        buoyancyinc@gmail.com
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="border-t border-gray-700 mt-8 pt-4 flex flex-wrap justify-between text-sm">
+                <p class="text-center w-full lg:w-auto text-sm md:text-base font-[400] mb-4 lg:mb-0">
+                    Copyright &copy; Buoyancy 2021 All Rights Reserved | Design & Develop By Aimstorm.
+                </p>
+                <div class="flex flex-wrap justify-center space-x-4">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Use</a>
+                    <a href="#" class="hover:text-white">Sales and Refunds</a>
+                    <a href="#" class="hover:text-white">Legal</a>
+                    <a href="#" class="hover:text-white">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- js script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        // Toggle mobile menu
-        const hamburgerButton = document.getElementById("hamburger-btn");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const closeButton = document.getElementById("close-btn");
-
-        hamburgerButton.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-        });
-
-        closeButton.addEventListener("click", () => {
-            mobileMenu.classList.add("hidden");
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("hidden");
         });
     </script>
+
+    <!-- product showcase swiper -->
+    <script>
+        const swiper = new Swiper('.swiper', {
+
+            // Optional parameters
+            loop: true,
+            slidesPerView: 4,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
+
+    <!-- Article & News Swiper -->
+    <script>
+        const swiper_1 = new Swiper('.swiper_1', {
+
+            // Optional parameters
+            loop: true,
+            slidesPerView: 3,
+            cssMode: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
+
+    <!-- Collbrators Section -->
+    <script>
+        const swiper_2 = new Swiper('.swiper_2', {
+
+            // Optional parameters
+            loop: true,
+            slidesPerView: 5,
+            cssMode: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
+
 </body>
 
 </html>
