@@ -63,18 +63,26 @@
             <!-- Logo Section -->
             <div class="logo">
                 <a href="./index.html">
-                    <img src="./assets/img/logo.png" alt="logo" class="h-24">
+                    <img src="./assets/img/logo.png" alt="logo" class="h-20">
                 </a>
             </div>
 
             <!-- Hamburger Button (for mobile screens) -->
-            <button id="menu-toggle" class="text-emerald-800 text-3xl md:hidden focus:outline-none">
-                <i class="fa-solid fa-bars"></i>
+            <button id="menu-toggle" class="text-customGray text-2xl md:hidden focus:outline-none">
+                <i class="fas fa-bars"></i>
             </button>
 
             <!-- Navigation Menu -->
-            <nav id="menu" class="hidden md:flex flex-col md:flex-row md:items-center text-customGray md:gap-6">
-                <ul class="md:flex md:gap-4">
+            <nav id="menu" class="hidden fixed inset-0 bg-white z-50 md:relative md:flex md:flex-row md:items-center md:gap-6">
+                <div class="p-4 border-b flex justify-between items-center md:hidden">
+                    <!-- logo in mobile menu -->
+                     <img src="assets/img/logo.png" alt="logo" class="h-20">
+                     <!-- close button  -->
+                      <button id="menu-close" class="text-customGray text-2xl focus:outline-none">
+                        <i class="fas fa-times"></i>
+                      </button>
+                </div>
+                <ul class="flex flex-col md:flex-row md:gap-4 items-center justify-center md:h-auto">
                     <!-- Active Page -->
                     <li class="relative">
                         <a href="index.html" class="block p-2 hover:text-emerald-800">Home</a>
@@ -343,7 +351,7 @@
                                             @click="expanded = !expanded" :aria-expanded="expanded"
                                             aria-controls="faqs-text-02">
                                             <span>Quality</span>
-                                            <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16"
+                                            <svg class="fill-white shrink-0 ml-8" width="16" height="16"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <rect y="7" width="16" height="2" rx="1"
                                                     class="transform origin-center transition duration-200 ease-out"
@@ -355,7 +363,7 @@
                                         </button>
                                     </h2>
                                     <div id="faqs-text-02" role="region" aria-labelledby="faqs-title-02"
-                                        class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                                        class="grid text-sm text-white overflow-hidden transition-all duration-300 ease-in-out"
                                         :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'">
                                         <div class="overflow-hidden">
                                             <p class="pb-3">
@@ -376,7 +384,7 @@
                                             @click="expanded = !expanded" :aria-expanded="expanded"
                                             aria-controls="faqs-text-03">
                                             <span>Future</span>
-                                            <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16"
+                                            <svg class="fill-white shrink-0 ml-8" width="16" height="16"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <rect y="7" width="16" height="2" rx="1"
                                                     class="transform origin-center transition duration-200 ease-out"
@@ -388,7 +396,7 @@
                                         </button>
                                     </h2>
                                     <div id="faqs-text-03" role="region" aria-labelledby="faqs-title-03"
-                                        class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                                        class="grid text-sm text-white overflow-hidden transition-all duration-300 ease-in-out"
                                         :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'">
                                         <div class="overflow-hidden">
                                             <p class="pb-3">
@@ -512,66 +520,55 @@
     </section>
 
     <!-- Statistic Till Section -->
-    <section class="bg-neutral-800 pt-20 relative z-[1]">
+    <section class="bg-neutral-800 pt-20  relative z-[1]">
         <img src="./assets/img/pngwing 2.png" alt="pngwing" class="absolute left-0 top-0 -z-[1] h-full">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap items-center">
-                <!-- Left Content -->
-                <div class="w-full lg:w-7/12 mb-10 lg:mb-0">
-                    <h2 class="text-[36px] lg:text-[46px] font-medium text-white pt-20 mb-5">Statistic Till 2021</h2>
-                    <p class="text-base lg:text-lg text-white font-normal mb-8">
-                        With the impressive and outstanding legacy of 15 years, our company has reached a level that
-                        could
-                        only be imagined. We’re proud to have the best brains of the industry and their untiring work
-                        has
-                        paid dividends. We always exceed the expectations and do better than the best. Our company is
-                        ambitious to give the energy, its full value. So, join us today in writing a new history.
-                    </p>
-                    <ul class="flex flex-wrap mb-10 lg:mb-32">
-                        <li class="flex items-center gap-x-4 lg:gap-x-6 text-white w-full lg:w-5/12 mb-5">
+        <div class="container mx-auto">
+            <div class="flex items-center">
+                <div class="w-7/12">
+                    <h2 class="text-[46px] font-medium text-white pt-20 mb-5">Statistic Till 2021</h2>
+                    <p class="text-lg text-white font-normal mb-8">With the impressive and outstanding legacy of 15
+                        years, our company has reached a level that could only be imagined. We’re proud to have the best
+                        brains of the industry and their untiring work has paid dividends. We always exceed the
+                        expectations and do better than the best. Our company is ambitious to give the energy, its full
+                        value. So, join us today in writing a new history.</p>
+                    <ul class="flex flex-wrap mb-32">
+                        <li class="flex items-center gap-x-6 text-white w-5/12 mb-5">
                             <i class="fa-solid fa-location-arrow rotate-45"></i>
-                            <h6 class="text-base lg:text-lg font-semibold">289M $ Sales generated</h6>
+                            <h6 class="text-lg font-semibold ">289M $ Sales generated</h6>
                         </li>
-                        <li class="flex items-center gap-x-4 lg:gap-x-6 text-white w-full lg:w-5/12 mb-5">
+                        <li class="flex items-center gap-x-6 text-white w-5/12 mb-5">
                             <i class="fa-solid fa-location-arrow rotate-45"></i>
-                            <h6 class="text-base lg:text-lg font-semibold">7.3% Market share increase</h6>
+                            <h6 class="text-lg font-semibold ">7.3% Market share increase</h6>
                         </li>
-                        <li class="flex items-center gap-x-4 lg:gap-x-6 text-white w-full lg:w-5/12">
+                        <li class="flex items-center gap-x-6 text-white w-5/12">
                             <i class="fa-solid fa-location-arrow rotate-45"></i>
-                            <h6 class="text-base lg:text-lg font-semibold">19 years of collective experience</h6>
+                            <h6 class="text-lg font-semibold ">19 years of collective experience</h6>
                         </li>
-                        <li class="flex items-center gap-x-4 lg:gap-x-6 text-white w-full lg:w-6/12">
+                        <li class="flex items-center gap-x-6 text-white w-6/12">
                             <i class="fa-solid fa-location-arrow rotate-45"></i>
-                            <h6 class="text-base lg:text-lg font-semibold">Annual Trading Volume: upto 42,370 MT</h6>
+                            <h6 class="text-lg font-semibold ">Annual Trading Volume: upto 42,370 MT</h6>
                         </li>
                     </ul>
-                    <div class="flex flex-wrap justify-center lg:justify-between -mb-[22.5rem]">
+                    <div class="flex flex-wrap justify-between pr-16 -mb-32">
                         <div
-                            class="w-48 lg:w-60 h-48 lg:h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2 mx-4 mb-10">
-                            <span class="text-[40px] lg:text-[50px] text-[#135c2e] font-bold">432</span>
-                            <p class="text-base lg:text-lg font-bold text-[#001B3A] text-center">
-                                Project <br />Completed
-                            </p>
+                            class="w-60 h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2">
+                            <span class="text-[50px] text-[#135c2e] font-bold">432</span>
+                            <p class="text-lg font-bold text-[#001B3A] m-5">Project <br />Completed</p>
                         </div>
                         <div
-                            class="w-48 lg:w-60 h-48 lg:h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2 mx-4 mb-10">
-                            <span class="text-[40px] lg:text-[50px] text-[#135c2e] font-bold">38</span>
-                            <p class="text-base lg:text-lg font-bold text-[#001B3A] text-center">
-                                In Countries
-                            </p>
+                            class="w-60 h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2">
+                            <span class="text-[50px] text-[#135c2e] font-bold">38</span>
+                            <p class="text-lg font-bold text-[#001B3A] m-5">In Countries</p>
                         </div>
                         <div
-                            class="w-48 lg:w-60 h-48 lg:h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2 mx-4 mb-10">
-                            <span class="text-[40px] lg:text-[50px] text-[#135c2e] font-bold">186</span>
-                            <p class="text-base lg:text-lg font-bold text-[#001B3A] text-center">
-                                Export Client Base
-                            </p>
+                            class="w-60 h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2">
+                            <span class="text-[50px] text-[#135c2e] font-bold">186</span>
+                            <p class="text-lg font-bold text-[#001B3A] m-5">Export Client Base</p>
                         </div>
                     </div>
                 </div>
-                <!-- Right Image -->
-                <div class="w-full lg:w-5/12 relative">
-                    <img src="./assets/img/worker_img.png" alt="" class="w-full lg:w-auto block mx-auto lg:mx-0">
+                <div class="w-5/12 relative">
+                    <img src="./assets/img/worker_img.png" alt="" class=" block bottom-0 -mt-40">
                 </div>
             </div>
         </div>
@@ -640,8 +637,8 @@
     <section class="relative flex flex-col lg:flex-row w-full min-h-screen">
         <!-- Left Side (Image Section) -->
         <div class="w-full lg:w-1/2 relative">
-            <img src="assets/img/working_women.jpg" alt="Support Representative"
-                class="w-full h-full object-cover transform -scale-x-100">
+            <img src="assets/img/working_women.png" alt="Support Representative"
+                class="w-full h-full object-cover   ">
         </div>
 
         <!-- Right Side (Form Section) -->
@@ -998,10 +995,18 @@
     </script>
 
     <script>
-        document.getElementById("menu-toggle").addEventListener("click", function () {
-            const menu = document.getElementById("menu");
-            menu.classList.toggle("hidden");
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuClose = document.getElementById("menu-close");
+        const menu = document.getElementById("menu");
+
+        menuToggle.addEventListener("click", () => {
+            menu.classList.remove("hidden");
         });
+
+        menuClose.addEventListener("click", () => {
+            menu.classList.add("hidden");
+        });
+
     </script>
 
     <!-- product showcase swiper -->
