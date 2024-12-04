@@ -57,25 +57,33 @@
 </head>
 
 <body class="font-montserrat">
-
     <!-- Header -->
     <header class="p-4">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo Section -->
             <div class="logo">
                 <a href="./index.html">
-                    <img src="./assets/img/logo.png" alt="logo" class="h-24">
+                    <img src="./assets/img/logo.png" alt="logo" class="h-24 sm:h-20 md:h-24 lg:h-28">
                 </a>
             </div>
 
-            <!-- Hamburger Button (for mobile screens) -->
-            <button id="menu-toggle" class="text-emerald-800 text-3xl md:hidden focus:outline-none">
-                <i class="fa-solid fa-bars"></i>
+            <!-- Hamburger Button (for mobile and tablet screens) -->
+            <button id="menu-toggle" class="text-customGray text-2xl md:hidden focus:outline-none">
+                <i class="fas fa-bars"></i>
             </button>
 
             <!-- Navigation Menu -->
-            <nav id="menu" class="hidden md:flex flex-col md:flex-row md:items-center text-customGray md:gap-6">
-                <ul class="md:flex md:gap-4">
+            <nav id="menu"
+                class="hidden fixed inset-0 bg-white z-50 md:relative md:flex md:flex-row md:items-center md:gap-6">
+                <div class="p-4 border-b flex justify-between items-center md:hidden">
+                    <!-- Logo in mobile menu -->
+                    <img src="assets/img/logo.png" alt="logo" class="h-20">
+                    <!-- Close button -->
+                    <button id="menu-close" class="text-customGray text-2xl focus:outline-none">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul class="flex flex-col md:flex-row md:gap-4 items-center justify-center md:h-auto">
                     <!-- Active Page -->
                     <li class="relative">
                         <a href="index.html" class="block p-2 hover:text-emerald-800">Home</a>
@@ -103,7 +111,7 @@
                         <span
                             class="absolute left-1/2 -translate-x-1/2 bottom-0 w-1.5 h-1.5 bg-emerald-800 rounded-full scale-0 transition-transform duration-300"></span>
                     </li>
-                    <li class="relative">
+                    <li class="relative group">
                         <a href="blog.html" class="block p-2 hover:text-emerald-800">Blog</a>
                         <span
                             class="absolute left-1/2 -translate-x-1/2 bottom-0 w-1.5 h-1.5 bg-emerald-800 rounded-full scale-0 transition-transform duration-300"></span>
@@ -116,12 +124,14 @@
                 </ul>
             </nav>
 
-            <!-- Quote Button -->
-            <div class="hidden md:flex items-center">
-                <a href="#" class="text-2xl text-emerald-800 mr-8">
+            <!-- Quote and Search Button -->
+            <div class="hidden md:flex items-center gap-8">
+                <!-- Search Button -->
+                <a href="#" class="text-2xl text-emerald-800">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
-                <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center ">
+                <!-- Get A Quote Button -->
+                <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center">
                     <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
                     <i
                         class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
@@ -129,8 +139,6 @@
             </div>
         </div>
     </header>
-     
-
     <!-- About Us Section -->
     <section class="relative">
         <div class="relative h-[400px] bg-cover  bg-center"
@@ -465,7 +473,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- js script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -510,7 +518,5 @@
 
         });
     </script>
-
 </body>
-
 </html>
