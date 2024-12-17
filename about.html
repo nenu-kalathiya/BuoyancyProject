@@ -147,20 +147,17 @@
 
     <!-- About Us Section -->
     <section class="relative">
-        <div class="relative h-[250px] sm:h-[300px] md:h-[400px] bg-cover bg-center"
+        <div class="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] bg-cover bg-center"
             style="background-image: url('assets/img/about_us_img.jpg');" data-aos="fade-up" data-aos-duration="1500">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start">
-                <div class="px-4 sm:px-8 md:px-16 lg:pl-36 text-white" data-aos="fade-left" data-aos-duration="1500">
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal uppercase" data-aos="fade-down"
-                        data-aos-duration="1500">
-                        ABOUT US
-                    </h1>
-                    <div class="relative w-28 sm:w-36 md:w-48 lg:w-60 h-[2px] md:h-[4px] mt-2 bg-gradient-to-r from-white via-white/50 to-transparent"
-                        data-aos="fade-right" data-aos-duration="1500">
-                    </div>
-                    <p class="text-sm sm:text-base md:text-lg mt-2" data-aos="fade-up" data-aos-duration="1500">
-                        What We Believe
-                    </p>
+                <div class="px-4 sm:px-8 md:px-16 lg:pl-36 text-white" data-wow-duration="1s" data-wow-delay="0.5s"
+                    data-wow="fadeInLeft">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal uppercase" data-aos="fade-up"
+                        data-aos-duration="1500">ABOUT US</h1>
+                    <div class="relative w-40 sm:w-52 md:w-60 lg:w-80 h-[4px] mt-2 bg-gradient-to-r from-white via-white/50 to-transparent"
+                        data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"></div>
+                    <p class="text-sm sm:text-base md:text-lg mt-2" data-aos="fade-up" data-aos-duration="1500">What We
+                        Believe</p>
                 </div>
             </div>
         </div>
@@ -487,89 +484,82 @@
 
     <!-- Footer -->
     <footer class="bg-[#22262F] text-white py-12" data-aos="fade-up" data-aos-duration="1200">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-between">
-                <!-- Logo and Description -->
-                <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0" data-aos="fade-left" data-aos-duration="1400">
-                    <img src="assets/img/logo_white.png" alt="Buoyancy Logo" class="mb-4">
-                    <p class="font-medium text-base sm:text-lg">
+                <div class="w-full sm:w-1/2 lg:w-1/4 mb-8 lg:mb-0" data-aos="fade-left" data-aos-duration="1400">
+                    <img src="assets/img/logo_white.png" alt="Buoyancy Logo" class="mb-4 w-32 sm:w-40 lg:w-48">
+                    <p class="font-medium text-sm sm:text-base lg:text-lg leading-relaxed">
                         Buoyancy Impex Pvt Ltd, has been able to penetrate in the supply chain of upstream to downstream
                         companies due to its goodwill and professional approach.
                     </p>
-                    <!-- Social Icons -->
-                    <div class="flex space-x-3 mt-4">
-                        <a href="#" class="text-[#135c2e] text-xl hover:text-green-600" data-aos="zoom-in"
-                            data-aos-duration="1600">
+                    <div class="flex items-center space-x-4 mt-4">
+                        <a href="#"
+                            class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-green-600 transition duration-300 ease-in-out"
+                            data-aos="zoom-in" data-aos-duration="1600">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="text-[#135c2e] text-xl hover:text-blue-500" data-aos="zoom-in"
-                            data-aos-duration="1600">
+                        <a href="#"
+                            class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-blue-500 transition duration-300 ease-in-out"
+                            data-aos="zoom-in" data-aos-duration="1600">
                             <i class="fab fa-telegram-plane"></i>
                         </a>
-                        <a href="#" class="text-[#135c2e] text-xl hover:text-pink-600" data-aos="zoom-in"
-                            data-aos-duration="1600">
+                        <a href="#"
+                            class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-pink-600 transition duration-300 ease-in-out"
+                            data-aos="zoom-in" data-aos-duration="1600">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>
-
-                <!-- Pages Links -->
-                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0" data-aos="fade-up" data-aos-duration="1800">
-                    <h3 class="text-lg font-semibold text-white mb-4">Pages</h3>
+                <div class="w-1/2 sm:w-1/4 lg:w-1/6 mb-8 lg:mb-0" data-aos="fade-up" data-aos-duration="1800">
+                    <h3 class="text-lg font-semibold mb-4">Pages</h3>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="hover:text-white">Home</a></li>
-                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-white">Services</a></li>
-                        <li><a href="product_page.html" class="hover:text-white">Products</a></li>
-                        <li><a href="career.html" class="hover:text-white">Career</a></li>
-                        <li><a href="contact_us.html" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gray-300">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-gray-300">Services</a></li>
+                        <li><a href="product_page.html" class="hover:text-gray-300">Products</a></li>
+                        <li><a href="career.html" class="hover:text-gray-300">Career</a></li>
+                        <li><a href="contact_us.html" class="hover:text-gray-300">Contact Us</a></li>
                     </ul>
                 </div>
-
-                <!-- Services Links -->
-                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0" data-aos="fade-up" data-aos-duration="2000">
-                    <h3 class="text-lg font-semibold text-white mb-4">Services</h3>
+                <div class="w-1/2 sm:w-1/4 lg:w-1/6 mb-8 lg:mb-0" data-aos="fade-up" data-aos-duration="2000">
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white">Packaging Service</a></li>
-                        <li><a href="#" class="hover:text-white">Logistic Service</a></li>
-                        <li><a href="#" class="hover:text-white">Export Service</a></li>
-                        <li><a href="#" class="hover:text-white">Bulk Chartering</a></li>
-                        <li><a href="#" class="hover:text-white">Trading</a></li>
-                        <li><a href="#" class="hover:text-white">Documentation</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Packaging Service</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Logistic Service</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Export Service</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Bulk Chartering</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Trading</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Documentation</a></li>
                     </ul>
                 </div>
-
-                <!-- Contact Section -->
                 <div class="w-full sm:w-1/2 lg:w-1/4" data-aos="fade-right" data-aos-duration="2200">
-                    <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
-                    <p class="mb-2">
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <p class="text-sm sm:text-base mb-2">
                         <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
                         “C” Tower, 10th Floor, Hampton Park, Vesu, Surat 395007 Gujarat, India
                     </p>
-                    <p class="mb-2">
+                    <p class="text-sm sm:text-base mb-2">
                         <i class="fas fa-phone text-green-500 mr-2"></i>
                         +91 99250 53193
                     </p>
-                    <p>
+                    <p class="text-sm sm:text-base">
                         <i class="fas fa-envelope text-green-500 mr-2"></i>
                         info@buoyancyimpex.com<br>
                         buoyancyinc@gmail.com
                     </p>
                 </div>
             </div>
-
-            <!-- Bottom Section -->
-            <div class="border-t border-gray-700 mt-8 pt-4 flex flex-wrap justify-between text-sm" data-aos="fade-up"
-                data-aos-duration="2400">
-                <p class="text-center w-full lg:w-auto text-sm md:text-base font-[400] mb-4 lg:mb-0">
+            <div class="border-t border-gray-700 mt-8 pt-4 flex flex-col lg:flex-row justify-between items-center text-sm"
+                data-aos="fade-up" data-aos-duration="2400">
+                <p class="text-center lg:text-left text-xs sm:text-sm md:text-base mb-4 lg:mb-0">
                     Copyright &copy; Buoyancy 2021 All Rights Reserved | Design & Develop By Aimstorm.
                 </p>
-                <div class="flex flex-wrap justify-center space-x-4">
-                    <a href="#" class="hover:text-white">Privacy Policy</a>
-                    <a href="#" class="hover:text-white">Terms of Use</a>
-                    <a href="#" class="hover:text-white">Sales and Refunds</a>
-                    <a href="#" class="hover:text-white">Legal</a>
-                    <a href="#" class="hover:text-white">Site Map</a>
+                <div class="flex flex-wrap justify-center space-x-4 text-xs sm:text-sm">
+                    <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300">Terms of Use</a>
+                    <a href="#" class="hover:text-gray-300">Sales and Refunds</a>
+                    <a href="#" class="hover:text-gray-300">Legal</a>
+                    <a href="#" class="hover:text-gray-300">Site Map</a>
                 </div>
             </div>
         </div>
