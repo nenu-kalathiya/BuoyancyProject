@@ -7,19 +7,23 @@
     <title>Buoyancy || Where Business & Profitability Converge</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/favicon.png" type="img/png">
+    <link rel="icon" href="assets/img/favicon.png" type="img/png" />
 
     <!-- Google Fonts - Montserrat Font -->
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
+
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
     <!-- Font Awesome CDN link -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
     <!-- swiper slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -46,9 +50,8 @@
                         montserrat: ['Montserrat', 'sans-serif'],
                     },
                     boxShadow: {
-                        'custom-inset-1': '20px 20px 50px 0px #CDCDCD inset',
-                        'custom-inset-2': '-20px -20px 50px 0px #FFFFFF inset',
-                        'custom': '20px 19px 50px 0px #fff inset, inset 19px 20px 50px 0px #cdcdcd, 17px 20px 50px 0px #fff, 20px 20px 50px 0px #fff inset, -20px -20px 50px 0px #fff inset, 20px 20px 50px 0px #FFFFFF40 inset',
+                        'custom-light': '10px 10px 30px 0px #00000073',
+                        'custom-dark': '-10px -10px 30px 0px #2B2B2B',
                     },
                 },
             },
@@ -139,7 +142,8 @@
             </div>
         </div>
     </header>
-    <!-- About Us Section -->
+
+    <!-- Services Section -->
     <section class="relative">
         <div class="relative h-[400px] bg-cover  bg-center"
             style="background-image: url('assets/img/about_us_img.jpg');">
@@ -389,11 +393,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#22262F] text-white py-12">
+    <footer class="bg-[#22262F] text-white py-12" data-aos="fade-up" data-aos-duration="1200">
         <div class="container mx-auto px-6">
             <div class="flex flex-wrap justify-between">
                 <!-- Logo and Description -->
-                <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
+                <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0" data-aos="fade-left" data-aos-duration="1400">
                     <img src="assets/img/logo_white.png" alt="Buoyancy Logo" class="mb-4">
                     <p class="font-medium text-base sm:text-lg">
                         Buoyancy Impex Pvt Ltd, has been able to penetrate in the supply chain of upstream to downstream
@@ -401,20 +405,23 @@
                     </p>
                     <!-- Social Icons -->
                     <div class="flex space-x-3 mt-4">
-                        <a href="#" class="text-[#135c2e] text-xl hover:text-green-600">
+                        <a href="#" class="text-[#135c2e] text-xl hover:text-green-600" data-aos="zoom-in"
+                            data-aos-duration="1600">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="text-[#135c2e] text-xl hover:text-blue-500">
+                        <a href="#" class="text-[#135c2e] text-xl hover:text-blue-500" data-aos="zoom-in"
+                            data-aos-duration="1600">
                             <i class="fab fa-telegram-plane"></i>
                         </a>
-                        <a href="#" class="text-[#135c2e] text-xl hover:text-pink-600">
+                        <a href="#" class="text-[#135c2e] text-xl hover:text-pink-600" data-aos="zoom-in"
+                            data-aos-duration="1600">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Pages Links -->
-                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0">
+                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0" data-aos="fade-up" data-aos-duration="1800">
                     <h3 class="text-lg font-semibold text-white mb-4">Pages</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="hover:text-white">Home</a></li>
@@ -427,7 +434,7 @@
                 </div>
 
                 <!-- Services Links -->
-                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0">
+                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0" data-aos="fade-up" data-aos-duration="2000">
                     <h3 class="text-lg font-semibold text-white mb-4">Services</h3>
                     <ul class="space-y-2">
                         <li><a href="#" class="hover:text-white">Packaging Service</a></li>
@@ -440,7 +447,7 @@
                 </div>
 
                 <!-- Contact Section -->
-                <div class="w-full sm:w-1/2 lg:w-1/4">
+                <div class="w-full sm:w-1/2 lg:w-1/4" data-aos="fade-right" data-aos-duration="2200">
                     <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
                     <p class="mb-2">
                         <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
@@ -459,7 +466,8 @@
             </div>
 
             <!-- Bottom Section -->
-            <div class="border-t border-gray-700 mt-8 pt-4 flex flex-wrap justify-between text-sm">
+            <div class="border-t border-gray-700 mt-8 pt-4 flex flex-wrap justify-between text-sm" data-aos="fade-up"
+                data-aos-duration="2400">
                 <p class="text-center w-full lg:w-auto text-sm md:text-base font-[400] mb-4 lg:mb-0">
                     Copyright &copy; Buoyancy 2021 All Rights Reserved | Design & Develop By Aimstorm.
                 </p>
@@ -474,8 +482,26 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
     <!-- js script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- WOW.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <script>
+        AOS.init({
+            duration: 1200,  // Controls animation duration
+            once: true,      // Animation runs only once
+            mirror: true
+        });
+    </script>
 
     <script>
         const navLinks = document.querySelectorAll('#menu a');
@@ -501,6 +527,21 @@
         });
     </script>
 
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuClose = document.getElementById("menu-close");
+        const menu = document.getElementById("menu");
+
+        menuToggle.addEventListener("click", () => {
+            menu.classList.remove("hidden");
+        });
+
+        menuClose.addEventListener("click", () => {
+            menu.classList.add("hidden");
+        });
+
+    </script>
+
     <!-- Article & News Swiper -->
     <script>
         const swiper_1 = new Swiper('.swiper_1', {
@@ -519,4 +560,5 @@
         });
     </script>
 </body>
+
 </html>
