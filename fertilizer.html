@@ -7,27 +7,50 @@
     <title>Buoyancy || Where Business & Profitability Converge</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/favicon.png" type="img/png">
+    <link rel="icon" href="assets/img/favicon.png" type="img/png" />
 
     <!-- Google Fonts - Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
+
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
     <!-- Font Awesome CDN link -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
     <!-- swiper slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after,
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            display: none;
+        }
+    </style>
 
     <!-- Tailwind Custom Configuration -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    screens: {
+                        'mob-s': '320px',
+                        'mob-l': '355px',
+                        'mob-xl': '425px',
+                        'tablet': '768px',
+                        'laptop': '1024px',
+                        'laptop-l': '1440px',
+                        '4k': '2550px',
+                    },
                     colors: {
                         customGray: '#434343',
                         customBlue: '#001B3A',
@@ -116,29 +139,34 @@
             <!-- Quote and Search Button -->
             <div class="hidden md:flex items-center gap-8">
                 <!-- Search Button -->
-                <a href="#" class="text-2xl text-emerald-800">
+                <a href="#"
+                    class="text-2xl text-emerald-800 animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-125 hover:text-emerald-600">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
                 <!-- Get A Quote Button -->
-                <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center">
-                    <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                <a href="#"
+                    class="bg-white rounded-full pl-8 shadow-md inline-block text-center animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-105 hover:text-black hover:shadow-lg hover:rotate-2">
+                    <span class="font-semibold text-emerald-800 text-lg hover:text-black">Get A Quote</span>
                     <i
-                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
+                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 transition duration-500 ease-in-out hover:text-black"></i>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- About Us Section -->
+    <!-- Fertilizer Section -->
     <section class="relative">
-        <div class="relative h-[400px] bg-cover  bg-center"
-            style="background-image: url('assets/img/about_us_img.jpg');">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start ">
-                <div class="pl-36 text-white">
-                    <h1 class="text-6xl font-normal uppercase">Fertilizer</h1>
-                    <div class="relative w-60 h-[4px] mt-2 bg-gradient-to-r from-white via-white/50 to-transparent">
-                    </div>
-                    <p class="text-lg mt-2 ">Our Products</p>
+        <div class="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] bg-cover bg-center"
+            style="background-image: url('assets/img/about_us_img.jpg');" data-aos="fade-up" data-aos-duration="1500">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start">
+                <div class="pl-8 sm:pl-12 md:pl-24 lg:pl-36 text-white" data-wow-duration="1s" data-wow-delay="0.5s"
+                    data-wow="fadeInLeft">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-normal uppercase" data-aos="fade-up"
+                        data-aos-duration="1500">Fertilizer</h1>
+                    <div class="relative w-40 sm:w-52 md:w-60 lg:w-80 h-[4px] mt-2 bg-gradient-to-r from-white via-white/50 to-transparent"
+                        data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"></div>
+                    <p class="text-lg sm:text-xl md:text-2xl mt-2" data-aos="fade-up" data-aos-duration="1500"
+                        data-aos-delay="500">Our Products</p>
                 </div>
             </div>
         </div>
@@ -146,32 +174,30 @@
 
     <section class="py-16">
         <div class="container mx-auto px-6">
-            <!-- Section Header -->
             <div class="relative text-center">
-                <h2 class="text-[46px] font-medium text-[#001b3a]">For exhaustive range of organic/in-organic
-                    fertilizers, we’re the right choice</h2>
-                <p class="text-[#434343] text-[18px] font-normal p-3">
+                <h2 class="text-[46px] font-medium text-[#001b3a]" data-aos="fade-up" data-aos-duration="1200">For
+                    exhaustive range of organic/in-organic fertilizers, we’re the right choice</h2>
+                <p class="text-[#434343] text-[18px] font-normal p-3" data-aos="fade-up" data-aos-duration="1400">
                     Buoyancy® exported fertilizers enhance the growth of cultivation. With our exhaustive range of
-                    organic and in-organic fertilizers our clients are benefited by enhancing the quality and
+                    organic and in-organic fertilizers, our clients are benefited by enhancing the quality and
                     effectiveness of soil by either adding nutrients or by changing the water retention and aeration
-                    required. Our Supplied fertilizers are manufactured using highest quality equipment, raw material
+                    required. Our Supplied fertilizers are manufactured using highest quality equipment, raw material,
                     and most modern technologies. The company continues to out-shine and position itself stronger year
                     by year in the fertilizer business. Buoyancy offers customized packaging services for all
                     fertilizers exported, ranging from 25KG to 1200 Kg bags to cater different requirements as per
                     geographies of our clients.
                 </p>
-                <p class="text-[#434343] text-[18px] font-normal p-3">
+                <p class="text-[#434343] text-[18px] font-normal p-3" data-aos="fade-up" data-aos-duration="1600">
                     The most usual packing is done using PE bags and readily available. Our customized packaging
                     services have received a lot of appreciation as it reduces the importer’s costs of unloading as well
                     as they are able to use these fertilizers as per required quantities without any wastage.
                 </p>
-                <p class="text-[#434343] text-[18px] font-normal p-3">
+                <p class="text-[#434343] text-[18px] font-normal p-3" data-aos="fade-up" data-aos-duration="1800">
                     We also provide customized labeling by which our clients can develop their own brand in their
                     markets without having any extra costs. Please contact us for more information on this. For your
                     assurances and peace of mind, we are engaged with SGS, Bureau Veritas & Inspectorate and we take
-                    their services of inspection for quality and quantity at loading port and even at discharge port
-                    loading port and even at discharge port(if required) and a certificate is issued by default for
-                    every cargo that is exported from the company.
+                    their services of inspection for quality and quantity at loading port and even at discharge port (if
+                    required) and a certificate is issued by default for every cargo that is exported from the company.
                 </p>
             </div>
         </div>
@@ -180,318 +206,342 @@
     <!-- Our Categories -->
     <section>
         <div class="py-16">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 py-10">
                 <!-- Section Title -->
                 <h2 class="text-3xl font-medium text-center text-[#001B3A] mb-12">Our Categories</h2>
                 <!-- Grid Layout -->
-                <div class="grid grid-cols-2 gap-8">
-                    <!-- Card 1 -->
-                    <div class="bg-stone-50 rounded-3xl shadow-lg flex items-center">
-                        <!-- Image Part -->
-                        <div class="w-1/2 aspect-square p-4">
+                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 sm:grid-cols-1 gap-8">
+                    <!-- card 1  -->
+                    <div class="bg-stone-50 rounded-3xl shadow-lg flex flex-col mob-s:flex-row mob-l:flex-row wow animate__animated animate__fadeInLeft"
+                        data-wow-delay="0.2s" data-aos="fade-up">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 aspect-square p-4">
                             <img src="assets/img/categories-1.png" alt="Category Image"
                                 class="w-full h-full object-cover rounded-3xl">
                         </div>
-                        <!-- Content Part -->
-                        <div class="w-1/2">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 p-4">
                             <h3 class="text-lg font-semibold text-gray-800">Urea N46% Prilled</h3>
-                            <p class="text-gray-600 mt-2">
+                            <p class="text-gray-600 mt-2 text-sm mob-xl:text-base">
                                 Urea is the most widely used nitrogen fertilizer in the world. It is effective on all
-                                crops, in regions
-                                with a warm climate.
+                                crops, in regions with a warm climate.
                             </p>
                             <a href="urea.html"
-                                class="bg-white rounded-full pl-8 mt-2 shadow-md inline-block text-center hover:text-[#135c2e] hover:border-[#135c2e]">
+                                class="bg-white rounded-full pl-8 mt-4 shadow-md inline-flex items-center text-center hover:text-[#135c2e] hover:border-[#135c2e]">
                                 <span class="font-semibold text-sm">View More</span>
                                 <i
-                                    class="fa-solid fa-angles-right w-[45px] h-[45px] inline-block shadow-inner leading-[45px] ms-2 rounded-full leading-10 text-[#B1B1B1] hover:text-[#135c2e]"></i>
+                                    class="fa-solid fa-angles-right w-[45px] h-[45px] shadow-inner leading-[45px] ms-2 rounded-full text-[#B1B1B1] hover:text-[#135c2e]"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Card 2 -->
-                    <div class="bg-stone-50 rounded-3xl shadow-lg flex items-center">
-                        <div class="w-1/2 aspect-square p-4">
+                    <!-- card 2 -->
+                    <div class="bg-stone-50 rounded-3xl shadow-lg flex flex-col mob-s:flex-row mob-l:flex-row wow animate__animated animate__fadeInRight"
+                        data-wow-delay="0.2s" data-aos="fade-up">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 aspect-square p-4">
                             <img src="assets/img/categories-2.png" alt="Category Image"
                                 class="w-full h-full object-cover rounded-3xl">
                         </div>
-                        <div class="w-1/2 p-6">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 p-4">
                             <h3 class="text-lg font-semibold text-gray-800">Urea N46% Granular</h3>
-                            <p class="text-gray-600 mt-2">
+                            <p class="text-gray-600 mt-2 text-sm mob-xl:text-base">
                                 Urea is the most widely used nitrogen fertilizer in the world. It is effective on all
-                                crops, in regions
-                                with a warm climate.
+                                crops, in regions with a warm climate.
                             </p>
                             <a href="urea.html"
-                                class="bg-white rounded-full pl-8 mt-2 shadow-md inline-block text-center hover">
+                                class="bg-white rounded-full pl-8 mt-4 shadow-md inline-flex items-center text-center hover:text-[#135c2e] hover:border-[#135c2e]">
                                 <span class="font-semibold text-sm">View More</span>
                                 <i
-                                    class="fa-solid fa-angles-right w-[45px] h-[45px] inline-block shadow-inner leading-[45px] ms-2 rounded-full leading-10 text-[#B1B1B1]"></i>
+                                    class="fa-solid fa-angles-right w-[45px] h-[45px] shadow-inner leading-[45px] ms-2 rounded-full text-[#B1B1B1] hover:text-[#135c2e]"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="bg-stone-50 rounded-3xl shadow-lg flex items-center">
-                        <div class="w-1/2 aspect-square p-4">
-                            <img src="assets/img/categories-3.png" alt="Category Image"
+                    <div class="bg-stone-50 rounded-3xl shadow-lg flex flex-col mob-s:flex-row mob-l:flex-row wow animate__animated animate__fadeInLeft"
+                        data-wow-delay="0.2s" data-aos="fade-up">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 aspect-square p-4">
+                            <img src="assets/img/categories-7.png" alt="Category Image"
                                 class="w-full h-full object-cover rounded-3xl">
                         </div>
-                        <div class="w-1/2 p-6">
-                            <h3 class="text-lg font-semibold text-gray-800">DAP (Diammonium Phosphate)</h3>
-                            <p class="text-gray-600 mt-2">
-                                DAP is the most concentrated phosphate-based fertilizer. It is perfect for any
-                                agriculture crop to provide full phosphorus nutrition throughout crop growth
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Calcium Ammonium Nitrate (CAN)</h3>
+                            <p class="text-gray-600 mt-2 text-sm mob-xl:text-base">
+                                Calcium ammonium nitrate or CAN, also known as nitro-limestone or nitrochalk, is a
+                                widely used
+                                inorganic fertilizer.
                             </p>
                             <a href="urea.html"
-                                class="bg-white rounded-full pl-8 mt-2 shadow-md inline-block text-center hover">
+                                class="bg-white rounded-full pl-8 mt-4 shadow-md inline-flex items-center text-center hover:text-[#135c2e] hover:border-[#135c2e]">
                                 <span class="font-semibold text-sm">View More</span>
                                 <i
-                                    class="fa-solid fa-angles-right w-[45px] h-[45px] inline-block shadow-inner leading-[45px] ms-2 rounded-full leading-10 text-[#B1B1B1]"></i>
+                                    class="fa-solid fa-angles-right w-[45px] h-[45px] shadow-inner leading-[45px] ms-2 rounded-full text-[#B1B1B1] hover:text-[#135c2e]"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="bg-stone-50 rounded-3xl shadow-lg flex items-center">
-                        <div class="w-1/2 aspect-square p-4">
-                            <img src="assets/img/categories-4.png" alt="Category Image"
+                    <div class="bg-stone-50 rounded-3xl shadow-lg flex flex-col mob-s:flex-row mob-l:flex-row wow animate__animated animate__fadeInRight"
+                        data-wow-delay="0.2s" data-aos="fade-up">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 aspect-square p-4">
+                            <img src="assets/img/categories-10.png" alt="Category Image"
                                 class="w-full h-full object-cover rounded-3xl">
                         </div>
-                        <div class="w-1/2 p-6">
-                            <h3 class="text-lg font-semibold text-gray-800">MAP (Monoammonium Phosphate)</h3>
-                            <p class="text-gray-600 mt-2">
-                                Potassium (K) fertilizers are commonly used to overcome plant deficiencies. Where soils
-                                cannot supply the amount of K required by crops, farmers must supplement
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Sulphur Bentonite 90%</h3>
+                            <p class="text-gray-600 mt-2 text-sm mob-xl:text-base">
+                                Sulphur Bentonite is one of the concentrated sources of sulphur. Sulphur deficiency is
+                                predominantly available in soils of many countries.
                             </p>
                             <a href="urea.html"
-                                class="bg-white rounded-full pl-8 mt-2 shadow-md inline-block text-center hover">
+                                class="bg-white rounded-full pl-8 mt-4 shadow-md inline-flex items-center text-center hover:text-[#135c2e] hover:border-[#135c2e]">
                                 <span class="font-semibold text-sm">View More</span>
                                 <i
-                                    class="fa-solid fa-angles-right w-[45px] h-[45px] inline-block shadow-inner leading-[45px] ms-2 rounded-full leading-10 text-[#B1B1B1]"></i>
+                                    class="fa-solid fa-angles-right w-[45px] h-[45px] shadow-inner leading-[45px] ms-2 rounded-full text-[#B1B1B1] hover:text-[#135c2e]"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Card 5 -->
-                    <div class="bg-stone-50 rounded-3xl shadow-lg flex items-center">
-                        <!-- Image Part -->
-                        <div class="w-1/2 aspect-square p-4">
-                            <img src="assets/img/categories-5.png" alt="Category Image"
+                    <div class="bg-stone-50 rounded-3xl shadow-lg flex flex-col mob-s:flex-row mob-l:flex-row wow animate__animated animate__fadeInLeft"
+                        data-wow-delay="0.2s" data-aos="fade-up">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 aspect-square p-4">
+                            <img src="assets/img/categories-2.png" alt="Category Image"
                                 class="w-full h-full object-cover rounded-3xl">
                         </div>
-                        <!-- Content Part -->
-                        <div class="w-1/2 p-6">
-                            <h3 class="text-lg font-semibold text-gray-800">MOP (KCI)- Muriate of Phosphate</h3>
-                            <p class="text-gray-600 mt-2">Potassium (K) fertilizers are commonly used to overcome plant
-                                deficiencies. Where soils cannot supply the amount of K required by crops, farmers must
-                                supplement
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Urea N46% Granular</h3>
+                            <p class="text-gray-600 mt-2 text-sm mob-xl:text-base">
+                                Urea is the most widely used nitrogen fertilizer in the world. It is effective on all
+                                crops,
+                                in regions with a warm climate.
                             </p>
                             <a href="urea.html"
-                                class="bg-white rounded-full pl-8 mt-2 shadow-md inline-block text-center hover">
+                                class="bg-white rounded-full pl-8 mt-4 shadow-md inline-flex items-center text-center hover:text-[#135c2e] hover:border-[#135c2e]">
                                 <span class="font-semibold text-sm">View More</span>
                                 <i
-                                    class="fa-solid fa-angles-right w-[45px] h-[45px] inline-block shadow-inner leading-[45px] ms-2 rounded-full leading-10 text-[#B1B1B1]"></i>
+                                    class="fa-solid fa-angles-right w-[45px] h-[45px] shadow-inner leading-[45px] ms-2 rounded-full text-[#B1B1B1] hover:text-[#135c2e]"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Card 6 -->
-                    <div class="bg-stone-50 rounded-3xl shadow-lg flex items-center">
-                        <div class="w-1/2 aspect-square p-4">
-                            <img src="assets/img/categories-6.png" alt="Category Image"
+                    <div class="bg-stone-50 rounded-3xl shadow-lg flex flex-col mob-s:flex-row mob-l:flex-row wow animate__animated animate__fadeInRight"
+                        data-wow-delay="0.2s" data-aos="fade-up">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 aspect-square p-4">
+                            <img src="assets/img/categories-4.png" alt="Category Image"
                                 class="w-full h-full object-cover rounded-3xl">
                         </div>
-                        <div class="w-1/2 p-6">
-                            <h3 class="text-lg font-semibold text-gray-800">Ammonium Nitrate (AN)</h3>
-                            <p class="text-gray-600 mt-2">
-                                Ammonium Nitrate 34% is a straight Nitrogen Fertilizer, it is a concentrated granular
-                                fertilizer to provide crops with nitrogen in the early spring, as well as after cutting
-
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">MAP (Monoammonium Phosphate)</h3>
+                            <p class="text-gray-600 mt-2 text-sm mob-xl:text-base">
+                                Potassium (K) fertilizers are commonly used to overcome plant deficiencies. Where soils
+                                cannot supply the amount of K required by crops, farmers must supplement
                             </p>
                             <a href="urea.html"
-                                class="bg-white rounded-full pl-8 mt-2 shadow-md inline-block text-center hover">
+                                class="bg-white rounded-full pl-8 mt-4 shadow-md inline-flex items-center text-center hover:text-[#135c2e] hover:border-[#135c2e]">
                                 <span class="font-semibold text-sm">View More</span>
                                 <i
-                                    class="fa-solid fa-angles-right w-[45px] h-[45px] inline-block shadow-inner leading-[45px] ms-2 rounded-full leading-10 text-[#B1B1B1]"></i>
+                                    class="fa-solid fa-angles-right w-[45px] h-[45px] shadow-inner leading-[45px] ms-2 rounded-full text-[#B1B1B1] hover:text-[#135c2e]"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Card 7 -->
-                    <div class="bg-stone-50 rounded-3xl shadow-lg flex items-center">
-                        <div class="w-1/2 aspect-square p-4">
-                            <img src="assets/img/categories-7.png" alt="Category Image"
+                    <div class="bg-stone-50 rounded-3xl shadow-lg flex flex-col mob-s:flex-row mob-l:flex-row wow animate__animated animate__fadeInLeft"
+                        data-wow-delay="0.2s" data-aos="fade-up">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 aspect-square p-4">
+                            <img src="assets/img/categories-8.png" alt="Category Image"
                                 class="w-full h-full object-cover rounded-3xl">
                         </div>
-                        <div class="w-1/2 p-6">
-                            <h3 class="text-lg font-semibold text-gray-800">Calcium Ammonium Nitrate (CAN)</h3>
-                            <p class="text-gray-600 mt-2">
-                                Calcium ammonium nitrate or CAN, also known as nitro-limestone or nitrochalk, is a
-                                widely used inorganic fertilizer, accounting…
-
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Ammonium Sulphate</h3>
+                            <p class="text-gray-600 mt-2 text-sm mob-xl:text-base">
+                                Ammonium Sulfate or Diammonium Sulphate is an inorganic salt which is a vital source of
+                                nitrogen (N) and sulfur (S) for crop nutrition.
                             </p>
                             <a href="urea.html"
-                                class="bg-white rounded-full pl-8 mt-2 shadow-md inline-block text-center hover">
+                                class="bg-white rounded-full pl-8 mt-4 shadow-md inline-flex items-center text-center hover:text-[#135c2e] hover:border-[#135c2e]">
                                 <span class="font-semibold text-sm">View More</span>
                                 <i
-                                    class="fa-solid fa-angles-right w-[45px] h-[45px] inline-block shadow-inner leading-[45px] ms-2 rounded-full leading-10 text-[#B1B1B1]"></i>
+                                    class="fa-solid fa-angles-right w-[45px] h-[45px] shadow-inner leading-[45px] ms-2 rounded-full text-[#B1B1B1] hover:text-[#135c2e]"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Card 8 -->
-                    <div class="bg-stone-50 rounded-3xl shadow-lg flex items-center">
-                        <div class="w-1/2 aspect-square p-4">
-                            <img src="assets/img/categories-8.png" alt="Category Image"
+                    <div class="bg-stone-50 rounded-3xl shadow-lg flex flex-col mob-s:flex-row mob-l:flex-row wow animate__animated animate__fadeInRight"
+                        data-wow-delay="0.2s" data-aos="fade-up">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 aspect-square p-4">
+                            <img src="assets/img/categories-6.png" alt="Category Image"
                                 class="w-full h-full object-cover rounded-3xl">
                         </div>
-                        <div class="w-1/2 p-6">
-                            <h3 class="text-lg font-semibold text-gray-800">Ammonium Sulphate</h3>
-                            <p class="text-gray-600 mt-2">
-                                Ammonium Sulfate or Diammonium Sulphate is an inorganic salt which is a vital source of
-                                nitrogen (N) and sulfur (S) for crop nutrition.
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Ammonium Nitrate (AN)</h3>
+                            <p class="text-gray-600 mt-2 text-sm mob-xl:text-base">
+                                Ammonium Nitrate 34% is a straight Nitrogen Fertilizer, it is a concentrated granular
+                                fertilizer to provide crops with nitrogen in the early spring, as well as after cutting
                             </p>
                             <a href="urea.html"
-                                class="bg-white rounded-full pl-8 mt-2 shadow-md inline-block text-center hover">
+                                class="bg-white rounded-full pl-8 mt-4 shadow-md inline-flex items-center text-center hover:text-[#135c2e] hover:border-[#135c2e]">
                                 <span class="font-semibold text-sm">View More</span>
                                 <i
-                                    class="fa-solid fa-angles-right w-[45px] h-[45px] inline-block shadow-inner leading-[45px] ms-2 rounded-full leading-10 text-[#B1B1B1]"></i>
+                                    class="fa-solid fa-angles-right w-[45px] h-[45px] shadow-inner leading-[45px] ms-2 rounded-full text-[#B1B1B1] hover:text-[#135c2e]"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Card 9 -->
-                    <div class="bg-stone-50 rounded-3xl shadow-lg flex items-center">
-                        <div class="w-1/2 aspect-square p-4">
+                    <div class="bg-stone-50 rounded-3xl shadow-lg flex flex-col mob-s:flex-row mob-l:flex-row wow animate__animated animate__fadeInLeft"
+                        data-wow-delay="0.2s" data-aos="fade-up">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 aspect-square p-4">
                             <img src="assets/img/categories-9.png" alt="Category Image"
                                 class="w-full h-full object-cover rounded-3xl">
                         </div>
-                        <div class="w-1/2 p-6">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 p-4">
                             <h3 class="text-lg font-semibold text-gray-800">NPK Fertilizers</h3>
-                            <p class="text-gray-600 mt-2">
-                                One of the key needs for the successful pplant growth is nitrogen. Ammonium nitrate
-                                makes this macro-nutrient available. It’s very important for the leafy plants growth.
+                            <p class="text-gray-600 mt-2 text-sm mob-xl:text-base">
+                                One of the key needs for the successful plant growth is nitrogen. Ammonium nitrate
+                                makes this macro-nutrient available.
                             </p>
                             <a href="urea.html"
-                                class="bg-white rounded-full pl-8 mt-2 shadow-md inline-block text-center hover">
+                                class="bg-white rounded-full pl-8 mt-4 shadow-md inline-flex items-center text-center hover:text-[#135c2e] hover:border-[#135c2e]">
                                 <span class="font-semibold text-sm">View More</span>
                                 <i
-                                    class="fa-solid fa-angles-right w-[45px] h-[45px] inline-block shadow-inner leading-[45px] ms-2 rounded-full leading-10 text-[#B1B1B1]"></i>
+                                    class="fa-solid fa-angles-right w-[45px] h-[45px] shadow-inner leading-[45px] ms-2 rounded-full text-[#B1B1B1] hover:text-[#135c2e]"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Card 10 -->
-                    <div class="bg-stone-50 rounded-3xl shadow-lg flex items-center">
-                        <div class="w-1/2 aspect-square p-4">
-                            <img src="assets/img/categories-10.png" alt="Category Image"
+                    <div class="bg-stone-50 rounded-3xl shadow-lg flex flex-col mob-s:flex-row mob-l:flex-row wow animate__animated animate__fadeInRight"
+                        data-wow-delay="0.2s" data-aos="fade-up">
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 aspect-square p-4">
+                            <img src="assets/img/categories-1.png" alt="Category Image"
                                 class="w-full h-full object-cover rounded-3xl">
                         </div>
-                        <div class="w-1/2 p-6">
-                            <h3 class="text-lg font-semibold text-gray-800">Sulphur Bentonite 90%</h3>
-                            <p class="text-gray-600 mt-2">
-                                Sulphur Bentonite is one of the concentrated sources of sulphur. Sulphur deficiency is
-                                predominantly available in soils of many countries.
+                        <div class="w-full mob-s:w-1/2 mob-l:w-1/2 p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Urea N46% Prilled</h3>
+                            <p class="text-gray-600 mt-2 text-sm mob-xl:text-base">
+                                Urea is the most widely used nitrogen fertilizer in the world. It is effective on all
+                                crops, in
+                                regions with a warm climate.
                             </p>
                             <a href="urea.html"
-                                class="bg-white rounded-full pl-8 mt-2 shadow-md inline-block text-center hover">
+                                class="bg-white rounded-full pl-8 mt-4 shadow-md inline-flex items-center text-center hover:text-[#135c2e] hover:border-[#135c2e]">
                                 <span class="font-semibold text-sm">View More</span>
                                 <i
-                                    class="fa-solid fa-angles-right w-[45px] h-[45px] inline-block shadow-inner leading-[45px] ms-2 rounded-full leading-10 text-[#B1B1B1]"></i>
+                                    class="fa-solid fa-angles-right w-[45px] h-[45px] shadow-inner leading-[45px] ms-2 rounded-full text-[#B1B1B1] hover:text-[#135c2e]"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#22262F] text-white py-12">
-        <div class="container mx-auto px-6">
+    <footer class="bg-[#22262F] text-white py-12" data-aos="fade-up" data-aos-duration="1200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-between">
-                <!-- Logo and Description -->
-                <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
-                    <img src="assets/img/logo_white.png" alt="Buoyancy Logo" class="mb-4">
-                    <p class="font-medium text-base sm:text-lg">
+                <div class="w-full sm:w-1/2 lg:w-1/4 mb-8 lg:mb-0" data-aos="fade-left" data-aos-duration="1400">
+                    <img src="assets/img/logo_white.png" alt="Buoyancy Logo" class="mb-4 w-32 sm:w-40 lg:w-48">
+                    <p class="font-medium text-sm sm:text-base lg:text-lg leading-relaxed">
                         Buoyancy Impex Pvt Ltd, has been able to penetrate in the supply chain of upstream to downstream
                         companies due to its goodwill and professional approach.
                     </p>
-                    <!-- Social Icons -->
-                    <div class="flex space-x-3 mt-4">
-                        <a href="#" class="text-[#135c2e] text-xl hover:text-green-600">
+                    <div class="flex items-center space-x-4 mt-4">
+                        <a href="#"
+                            class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-green-600 transition duration-300 ease-in-out"
+                            data-aos="zoom-in" data-aos-duration="1600">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="text-[#135c2e] text-xl hover:text-blue-500">
+                        <a href="#"
+                            class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-blue-500 transition duration-300 ease-in-out"
+                            data-aos="zoom-in" data-aos-duration="1600">
                             <i class="fab fa-telegram-plane"></i>
                         </a>
-                        <a href="#" class="text-[#135c2e] text-xl hover:text-pink-600">
+                        <a href="#"
+                            class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-pink-600 transition duration-300 ease-in-out"
+                            data-aos="zoom-in" data-aos-duration="1600">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>
-
-                <!-- Pages Links -->
-                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0">
-                    <h3 class="text-lg font-semibold text-white mb-4">Pages</h3>
+                <div class="w-1/2 sm:w-1/4 lg:w-1/6 mb-8 lg:mb-0" data-aos="fade-up" data-aos-duration="1800">
+                    <h3 class="text-lg font-semibold mb-4">Pages</h3>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="hover:text-white">Home</a></li>
-                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-white">Services</a></li>
-                        <li><a href="product_page.html" class="hover:text-white">Products</a></li>
-                        <li><a href="career.html" class="hover:text-white">Career</a></li>
-                        <li><a href="contact_us.html" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gray-300">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-gray-300">Services</a></li>
+                        <li><a href="product_page.html" class="hover:text-gray-300">Products</a></li>
+                        <li><a href="career.html" class="hover:text-gray-300">Career</a></li>
+                        <li><a href="contact_us.html" class="hover:text-gray-300">Contact Us</a></li>
                     </ul>
                 </div>
-
-                <!-- Services Links -->
-                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0">
-                    <h3 class="text-lg font-semibold text-white mb-4">Services</h3>
+                <div class="w-1/2 sm:w-1/4 lg:w-1/6 mb-8 lg:mb-0" data-aos="fade-up" data-aos-duration="2000">
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white">Packaging Service</a></li>
-                        <li><a href="#" class="hover:text-white">Logistic Service</a></li>
-                        <li><a href="#" class="hover:text-white">Export Service</a></li>
-                        <li><a href="#" class="hover:text-white">Bulk Chartering</a></li>
-                        <li><a href="#" class="hover:text-white">Trading</a></li>
-                        <li><a href="#" class="hover:text-white">Documentation</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Packaging Service</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Logistic Service</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Export Service</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Bulk Chartering</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Trading</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Documentation</a></li>
                     </ul>
                 </div>
-
-                <!-- Contact Section -->
-                <div class="w-full sm:w-1/2 lg:w-1/4">
-                    <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
-                    <p class="mb-2">
+                <div class="w-full sm:w-1/2 lg:w-1/4" data-aos="fade-right" data-aos-duration="2200">
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <p class="text-sm sm:text-base mb-2">
                         <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
                         “C” Tower, 10th Floor, Hampton Park, Vesu, Surat 395007 Gujarat, India
                     </p>
-                    <p class="mb-2">
+                    <p class="text-sm sm:text-base mb-2">
                         <i class="fas fa-phone text-green-500 mr-2"></i>
                         +91 99250 53193
                     </p>
-                    <p>
+                    <p class="text-sm sm:text-base">
                         <i class="fas fa-envelope text-green-500 mr-2"></i>
                         info@buoyancyimpex.com<br>
                         buoyancyinc@gmail.com
                     </p>
                 </div>
             </div>
-
-            <!-- Bottom Section -->
-            <div class="border-t border-gray-700 mt-8 pt-4 flex flex-wrap justify-between text-sm">
-                <p class="text-center w-full lg:w-auto text-sm md:text-base font-[400] mb-4 lg:mb-0">
+            <div class="border-t border-gray-700 mt-8 pt-4 flex flex-col lg:flex-row justify-between items-center text-sm"
+                data-aos="fade-up" data-aos-duration="2400">
+                <p class="text-center lg:text-left text-xs sm:text-sm md:text-base mb-4 lg:mb-0">
                     Copyright &copy; Buoyancy 2021 All Rights Reserved | Design & Develop By Aimstorm.
                 </p>
-                <div class="flex flex-wrap justify-center space-x-4">
-                    <a href="#" class="hover:text-white">Privacy Policy</a>
-                    <a href="#" class="hover:text-white">Terms of Use</a>
-                    <a href="#" class="hover:text-white">Sales and Refunds</a>
-                    <a href="#" class="hover:text-white">Legal</a>
-                    <a href="#" class="hover:text-white">Site Map</a>
+                <div class="flex flex-wrap justify-center space-x-4 text-xs sm:text-sm">
+                    <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300">Terms of Use</a>
+                    <a href="#" class="hover:text-gray-300">Sales and Refunds</a>
+                    <a href="#" class="hover:text-gray-300">Legal</a>
+                    <a href="#" class="hover:text-gray-300">Site Map</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+    <!-- js script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- WOW.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <script>
+        AOS.init({
+            duration: 1200,  // Controls animation duration
+            once: true,      // Animation runs only once
+            mirror: true
+        });
+    </script>
 
     <script>
         const navLinks = document.querySelectorAll('#menu a');
@@ -516,5 +566,21 @@
             }
         });
     </script>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuClose = document.getElementById("menu-close");
+        const menu = document.getElementById("menu");
+
+        menuToggle.addEventListener("click", () => {
+            menu.classList.remove("hidden");
+        });
+
+        menuClose.addEventListener("click", () => {
+            menu.classList.add("hidden");
+        });
+
+    </script>
 </body>
+
 </html>
