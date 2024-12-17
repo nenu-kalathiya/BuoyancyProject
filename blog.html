@@ -7,19 +7,23 @@
     <title>Buoyancy || Where Business & Profitability Converge</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/favicon.png" type="img/png">
+    <link rel="icon" href="assets/img/favicon.png" type="img/png" />
 
     <!-- Google Fonts - Montserrat Font -->
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
+
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
     <!-- Font Awesome CDN link -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
     <!-- swiper slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -38,6 +42,15 @@
         tailwind.config = {
             theme: {
                 extend: {
+                    screens: {
+                        'mob-s': '320px',
+                        'mob-l': '355px',
+                        'mob-xl': '425px',
+                        'tablet': '768px',
+                        'laptop': '1024px',
+                        'laptop-l': '1440px',
+                        '4k': '2550px',
+                    },
                     colors: {
                         customGray: '#434343',
                         customBlue: '#001B3A',
@@ -48,6 +61,7 @@
                     boxShadow: {
                         'custom-light': '10px 10px 30px 0px #00000073',
                         'custom-dark': '-10px -10px 30px 0px #2B2B2B',
+                        'inner-combo': 'inset 10px 10px 20px 0px rgba(0, 0, 0, 0.09), inset -10px -10px 20px 0px rgba(255, 255, 255, 1)',
                     },
                 },
             },
@@ -126,14 +140,16 @@
             <!-- Quote and Search Button -->
             <div class="hidden md:flex items-center gap-8">
                 <!-- Search Button -->
-                <a href="#" class="text-2xl text-emerald-800">
+                <a href="#"
+                    class="text-2xl text-emerald-800 animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-125 hover:text-emerald-600">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
                 <!-- Get A Quote Button -->
-                <a href="#" class="bg-white rounded-full pl-8 shadow-md inline-block text-center">
-                    <span class="font-semibold text-emerald-800 text-lg">Get A Quote</span>
+                <a href="#"
+                    class="bg-white rounded-full pl-8 shadow-md inline-block text-center animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-105 hover:text-black hover:shadow-lg hover:rotate-2">
+                    <span class="font-semibold text-emerald-800 text-lg hover:text-black">Get A Quote</span>
                     <i
-                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
+                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 transition duration-500 ease-in-out hover:text-black"></i>
                 </a>
             </div>
         </div>
@@ -141,14 +157,17 @@
 
     <!--Blog-->
     <section class="relative">
-        <div class="relative h-[400px] bg-cover  bg-center"
-            style="background-image: url('assets/img/about_us_img.jpg');">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start ">
-                <div class="pl-36 text-white">
-                    <h1 class="text-6xl font-normal uppercase">Blog</h1>
-                    <div class="relative w-60 h-[4px] mt-2 bg-gradient-to-r from-white via-white/50 to-transparent">
-                    </div>
-                    <p class="text-lg mt-2 ">Latest News</p>
+        <div class="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] bg-cover bg-center"
+            style="background-image: url('assets/img/about_us_img.jpg');" data-aos="fade-up" data-aos-duration="1500">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start">
+                <div class="pl-8 sm:pl-12 md:pl-24 lg:pl-36 text-white" data-wow-duration="1s" data-wow-delay="0.5s"
+                    data-wow="fadeInLeft">
+                    <h1 class="text-xl sm:text-xl md:text-4xl font-normal uppercase" data-aos="fade-up"
+                        data-aos-duration="1500">Blog</h1>
+                        <div class="relative w-40 sm:w-52 md:w-60 lg:w-80 h-[4px] mt-2 bg-gradient-to-r from-white via-white/50 to-transparent"
+                            data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"></div>
+                        <p class="text-lg sm:text-xl md:text-2xl mt-2" data-aos="fade-up" data-aos-duration="1500"
+                            data-aos-delay="500">Latest News</p>
                 </div>
             </div>
         </div>
@@ -449,93 +468,108 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#22262F] text-white py-12">
-        <div class="container mx-auto px-6">
+    <footer class="bg-[#22262F] text-white py-12" data-aos="fade-up" data-aos-duration="1200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-between">
-                <!-- Logo and Description -->
-                <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
-                    <img src="assets/img/logo_white.png" alt="Buoyancy Logo" class="mb-4">
-                    <p class="font-medium text-base sm:text-lg">
+                <div class="w-full sm:w-1/2 lg:w-1/4 mb-8 lg:mb-0" data-aos="fade-left" data-aos-duration="1400">
+                    <img src="assets/img/logo_white.png" alt="Buoyancy Logo" class="mb-4 w-32 sm:w-40 lg:w-48">
+                    <p class="font-medium text-sm sm:text-base lg:text-lg leading-relaxed">
                         Buoyancy Impex Pvt Ltd, has been able to penetrate in the supply chain of upstream to downstream
                         companies due to its goodwill and professional approach.
                     </p>
-                    <!-- Social Icons -->
-                    <div class="flex space-x-3 mt-4">
-                        <a href="#" class="text-[#135c2e] text-xl hover:text-green-600">
+                    <div class="flex items-center space-x-4 mt-4">
+                        <a href="#"
+                            class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-green-600 transition duration-300 ease-in-out"
+                            data-aos="zoom-in" data-aos-duration="1600">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="text-[#135c2e] text-xl hover:text-blue-500">
+                        <a href="#"
+                            class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-blue-500 transition duration-300 ease-in-out"
+                            data-aos="zoom-in" data-aos-duration="1600">
                             <i class="fab fa-telegram-plane"></i>
                         </a>
-                        <a href="#" class="text-[#135c2e] text-xl hover:text-pink-600">
+                        <a href="#"
+                            class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-pink-600 transition duration-300 ease-in-out"
+                            data-aos="zoom-in" data-aos-duration="1600">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>
-
-                <!-- Pages Links -->
-                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0">
-                    <h3 class="text-lg font-semibold text-white mb-4">Pages</h3>
+                <div class="w-1/2 sm:w-1/4 lg:w-1/6 mb-8 lg:mb-0" data-aos="fade-up" data-aos-duration="1800">
+                    <h3 class="text-lg font-semibold mb-4">Pages</h3>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="hover:text-white">Home</a></li>
-                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-white">Services</a></li>
-                        <li><a href="product_page.html" class="hover:text-white">Products</a></li>
-                        <li><a href="career.html" class="hover:text-white">Career</a></li>
-                        <li><a href="contact_us.html" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gray-300">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-gray-300">Services</a></li>
+                        <li><a href="product_page.html" class="hover:text-gray-300">Products</a></li>
+                        <li><a href="career.html" class="hover:text-gray-300">Career</a></li>
+                        <li><a href="contact_us.html" class="hover:text-gray-300">Contact Us</a></li>
                     </ul>
                 </div>
-
-                <!-- Services Links -->
-                <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 lg:mb-0">
-                    <h3 class="text-lg font-semibold text-white mb-4">Services</h3>
+                <div class="w-1/2 sm:w-1/4 lg:w-1/6 mb-8 lg:mb-0" data-aos="fade-up" data-aos-duration="2000">
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white">Packaging Service</a></li>
-                        <li><a href="#" class="hover:text-white">Logistic Service</a></li>
-                        <li><a href="#" class="hover:text-white">Export Service</a></li>
-                        <li><a href="#" class="hover:text-white">Bulk Chartering</a></li>
-                        <li><a href="#" class="hover:text-white">Trading</a></li>
-                        <li><a href="#" class="hover:text-white">Documentation</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Packaging Service</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Logistic Service</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Export Service</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Bulk Chartering</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Trading</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Documentation</a></li>
                     </ul>
                 </div>
-
-                <!-- Contact Section -->
-                <div class="w-full sm:w-1/2 lg:w-1/4">
-                    <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
-                    <p class="mb-2">
+                <div class="w-full sm:w-1/2 lg:w-1/4" data-aos="fade-right" data-aos-duration="2200">
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <p class="text-sm sm:text-base mb-2">
                         <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
                         “C” Tower, 10th Floor, Hampton Park, Vesu, Surat 395007 Gujarat, India
                     </p>
-                    <p class="mb-2">
+                    <p class="text-sm sm:text-base mb-2">
                         <i class="fas fa-phone text-green-500 mr-2"></i>
                         +91 99250 53193
                     </p>
-                    <p>
+                    <p class="text-sm sm:text-base">
                         <i class="fas fa-envelope text-green-500 mr-2"></i>
                         info@buoyancyimpex.com<br>
                         buoyancyinc@gmail.com
                     </p>
                 </div>
             </div>
-
-            <!-- Bottom Section -->
-            <div class="border-t border-gray-700 mt-8 pt-4 flex flex-wrap justify-between text-sm">
-                <p class="text-center w-full lg:w-auto text-sm md:text-base font-[400] mb-4 lg:mb-0">
+            <div class="border-t border-gray-700 mt-8 pt-4 flex flex-col lg:flex-row justify-between items-center text-sm"
+                data-aos="fade-up" data-aos-duration="2400">
+                <p class="text-center lg:text-left text-xs sm:text-sm md:text-base mb-4 lg:mb-0">
                     Copyright &copy; Buoyancy 2021 All Rights Reserved | Design & Develop By Aimstorm.
                 </p>
-                <div class="flex flex-wrap justify-center space-x-4">
-                    <a href="#" class="hover:text-white">Privacy Policy</a>
-                    <a href="#" class="hover:text-white">Terms of Use</a>
-                    <a href="#" class="hover:text-white">Sales and Refunds</a>
-                    <a href="#" class="hover:text-white">Legal</a>
-                    <a href="#" class="hover:text-white">Site Map</a>
+                <div class="flex flex-wrap justify-center space-x-4 text-xs sm:text-sm">
+                    <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300">Terms of Use</a>
+                    <a href="#" class="hover:text-gray-300">Sales and Refunds</a>
+                    <a href="#" class="hover:text-gray-300">Legal</a>
+                    <a href="#" class="hover:text-gray-300">Site Map</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
     <!-- js script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- WOW.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <script>
+        AOS.init({
+            duration: 1200,  // Controls animation duration
+            once: true,      // Animation runs only once
+            mirror: true
+        });
+    </script>
 
     <script>
         const navLinks = document.querySelectorAll('#menu a');
@@ -559,6 +593,37 @@
                 }
             }
         });
+    </script>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuClose = document.getElementById("menu-close");
+        const menu = document.getElementById("menu");
+
+        menuToggle.addEventListener("click", () => {
+            menu.classList.remove("hidden");
+        });
+
+        menuClose.addEventListener("click", () => {
+            menu.classList.add("hidden");
+        });
+
+    </script>
+
+    <script>
+        function toggleDetails(id) {
+            const element = document.getElementById(id);
+            const icon = element.previousElementSibling.querySelector('i');
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+                icon.classList.remove('fa-angle-down');
+                icon.classList.add('fa-angle-up');
+            } else {
+                element.classList.add('hidden');
+                icon.classList.remove('fa-angle-up');
+                icon.classList.add('fa-angle-down');
+            }
+        }
     </script>
 
     <!-- Article & News Swiper -->
