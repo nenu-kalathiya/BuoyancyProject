@@ -73,37 +73,28 @@
     <!-- Header -->
     <header class="p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo Section -->
             <div class="logo">
                 <a href="./index.html">
                     <img src="./assets/img/logo.png" alt="logo" class="h-24 sm:h-20 md:h-24 lg:h-28">
                 </a>
             </div>
-
-            <!-- Hamburger Button (for mobile and tablet screens) -->
             <button id="menu-toggle" class="text-customGray text-2xl md:hidden focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
-
-            <!-- Navigation Menu -->
             <nav id="menu"
                 class="hidden fixed inset-0 bg-white z-50 md:relative md:flex md:flex-row md:items-center md:gap-6">
                 <div class="p-4 border-b flex justify-between items-center md:hidden">
-                    <!-- Logo in mobile menu -->
                     <img src="assets/img/logo.png" alt="logo" class="h-20">
-                    <!-- Close button -->
                     <button id="menu-close" class="text-customGray text-2xl focus:outline-none">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
                 <ul class="flex flex-col md:flex-row md:gap-4 items-center justify-center md:h-auto">
-                    <!-- Active Page -->
                     <li class="relative">
                         <a href="index.html" class="block p-2 hover:text-emerald-800">Home</a>
                         <span
                             class="absolute left-1/2 -translate-x-1/2 bottom-0 w-1.5 h-1.5 bg-emerald-800 rounded-full scale-0 transition-transform duration-300"></span>
                     </li>
-                    <!-- Other Pages -->
                     <li class="relative">
                         <a href="about.html" class="block p-2 hover:text-emerald-800">About Us</a>
                         <span
@@ -136,15 +127,11 @@
                     </li>
                 </ul>
             </nav>
-
-            <!-- Quote and Search Button -->
             <div class="hidden md:flex items-center gap-8">
-                <!-- Search Button -->
                 <a href="#"
                     class="text-2xl text-emerald-800 animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-125 hover:text-emerald-600">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
-                <!-- Get A Quote Button -->
                 <a href="#"
                     class="bg-white rounded-full pl-8 shadow-md inline-block text-center animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-105 hover:text-black hover:shadow-lg hover:rotate-2">
                     <span class="font-semibold text-emerald-800 text-lg hover:text-black">Get A Quote</span>
@@ -175,7 +162,6 @@
 
     <!-- urea download page -->
     <section class="container mx-auto py-16">
-        <!-- Download Button Section -->
         <div class="flex items-center justify-center sm:justify-end mb-10">
             <a href="assets/img/urea_page.jpg" download="urea_page.jpg"
                 class="bg-white rounded-full pl-8 shadow-md inline-block text-center wow animate__animated animate__fadeInUp"
@@ -185,8 +171,6 @@
                     class="fa-solid fa-download w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800"></i>
             </a>
         </div>
-
-        <!-- Image Section -->
         <div class="flex justify-center items-center">
             <img src="assets/img/urea_page.jpg" alt="urea page"
                 class="w-full md:w-3/4 lg:w-1/2 wow animate__animated animate__fadeIn" data-wow-delay="0.4s"
@@ -321,8 +305,8 @@
 
     <script>
         AOS.init({
-            duration: 1200,  // Controls animation duration
-            once: true,      // Animation runs only once
+            duration: 1200,  
+            once: true,      
             mirror: true
         });
     </script>

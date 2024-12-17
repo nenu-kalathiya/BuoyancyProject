@@ -72,37 +72,28 @@
     <!-- Header -->
     <header class="p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo Section -->
             <div class="logo">
                 <a href="./index.html">
                     <img src="./assets/img/logo.png" alt="logo" class="h-24 sm:h-20 md:h-24 lg:h-28">
                 </a>
             </div>
-
-            <!-- Hamburger Button (for mobile and tablet screens) -->
             <button id="menu-toggle" class="text-customGray text-2xl md:hidden focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
-
-            <!-- Navigation Menu -->
             <nav id="menu"
                 class="hidden fixed inset-0 bg-white z-50 md:relative md:flex md:flex-row md:items-center md:gap-6">
                 <div class="p-4 border-b flex justify-between items-center md:hidden">
-                    <!-- Logo in mobile menu -->
                     <img src="assets/img/logo.png" alt="logo" class="h-20">
-                    <!-- Close button -->
                     <button id="menu-close" class="text-customGray text-2xl focus:outline-none">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
                 <ul class="flex flex-col md:flex-row md:gap-4 items-center justify-center md:h-auto">
-                    <!-- Active Page -->
                     <li class="relative">
                         <a href="index.html" class="block p-2 hover:text-emerald-800">Home</a>
                         <span
                             class="absolute left-1/2 -translate-x-1/2 bottom-0 w-1.5 h-1.5 bg-emerald-800 rounded-full scale-0 transition-transform duration-300"></span>
                     </li>
-                    <!-- Other Pages -->
                     <li class="relative">
                         <a href="about.html" class="block p-2 hover:text-emerald-800">About Us</a>
                         <span
@@ -135,15 +126,11 @@
                     </li>
                 </ul>
             </nav>
-
-            <!-- Quote and Search Button -->
             <div class="hidden md:flex items-center gap-8">
-                <!-- Search Button -->
                 <a href="#"
                     class="text-2xl text-emerald-800 animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-125 hover:text-emerald-600">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
-                <!-- Get A Quote Button -->
                 <a href="#"
                     class="bg-white rounded-full pl-8 shadow-md inline-block text-center animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-105 hover:text-black hover:shadow-lg hover:rotate-2">
                     <span class="font-semibold text-emerald-800 text-lg hover:text-black">Get A Quote</span>
@@ -157,7 +144,6 @@
     <!-- Hero Section -->
     <section class="relative">
         <div class="flex items-center flex-col md:flex-row md:items-center">
-            <!-- Left Column (Text content) -->
             <div class="w-full md:w-5/12 px-8 md:px-48 my-8 md:mb-0" data-aos="fade-left" data-aos-duration="1000"
                 data-aos-delay="200">
                 <h1
@@ -177,30 +163,21 @@
                         class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800  hover:text-black"></i>
                 </a>
             </div>
-
-            <!-- Right Column (Image) -->
             <div class="w-full md:w-7/12 p-4" data-aos="zoom-in" data-aos-duration="1500">
                 <img src="assets/img/slider-img.png" alt="Industrial site"
                     class="w-full h-auto object-cover shadow-lg ">
             </div>
         </div>
-
-        <!-- Scroll Indicator -->
         <div
             class="flex items-center gap-x-6 transform rotate-90 origin-center absolute -left-[8%] top-2/4 -translate-y-2/4 hidden lg:flex">
-            <!-- Scroll Text -->
             <p class="uppercase text-sm text-gray-500">Scroll Down</p>
-            <!-- Vertical Line -->
             <div class="w-56 h-px bg-gray-500"></div>
-            <!-- Up Arrow -->
             <a href="" class="">
                 <i class="fa-solid fa-chevron-left text-gray-500"></i>
             </a>
-            <!-- Circle with Dot -->
             <div class="w-16 h-16 border-2 border-gray-500 rounded-full flex items-center justify-center">
                 <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
             </div>
-            <!-- Down Arrow -->
             <a href="" class="">
                 <i class="fa-solid fa-chevron-right text-gray-500"></i>
             </a>
@@ -210,13 +187,10 @@
     <!-- About Section -->
     <section class="py-12 sm:py-20 md:py-28 lg:py-36">
         <div class="container mx-auto px-4">
-            <!-- Heading -->
             <h2 class="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#001b3a] mb-6"
                 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
                 We’re Here To Revolutionize The Business
             </h2>
-
-            <!-- Paragraph Text -->
             <p class="text-[#434343] font-normal text-base sm:text-lg md:text-xl lg:text-2xl text-center mx-auto leading-relaxed"
                 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
                 With our journey beginning in 2005, today we’re one of the leading and reputed companies accredited for
@@ -239,17 +213,12 @@
     <!-- What We Do Section -->
     <section class="pb-36">
         <div class="container mx-auto">
-            <!-- Cards Wrapper -->
             <div class="flex flex-col items-center bg-white">
-                <!-- Heading Animation -->
                 <h2 class="text-center text-[46px] font-medium text-[#001b3a] mb-16" data-aos="fade-down"
                     data-aos-duration="1000" data-aos-delay="200">
                     What We Do
                 </h2>
-
-                <!-- Cards with Animations -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                    <!-- Card 1 -->
                     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                         <div class="relative flex items-center justify-center w-56 h-56 rounded-full bg-white mx-auto"
                             style="box-shadow: 
@@ -257,7 +226,6 @@
                         20px 20px 50px 0px #fff inset, -20px -20px 50px 0px #fff inset, 20px 20px 50px 0px #FFFFFF40 inset;">
                             <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center" style="box-shadow: 
                         inset 0px 1px 18px 0px #CDCDCD, inset -20px -3px 50px 0px #fff;">
-                                <!-- Icon -->
                                 <img src="assets/img/vector-1.png" alt="Packaging Icon" class="h-16 w-16">
                             </div>
                         </div>
@@ -267,8 +235,6 @@
                             the best products with uncompromising quality.
                         </p>
                     </div>
-
-                    <!-- Card 2 -->
                     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                         <div class="relative flex items-center justify-center w-56 h-56 rounded-full bg-white mx-auto"
                             style="box-shadow: 
@@ -276,7 +242,6 @@
                         20px 20px 50px 0px #fff inset, -20px -20px 50px 0px #fff inset, 20px 20px 50px 0px #FFFFFF40 inset;">
                             <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center" style="box-shadow: 
                         inset 0px 1px 18px 0px #CDCDCD, inset -20px -3px 50px 0px #fff;">
-                                <!-- Icon -->
                                 <img src="assets/img/vector-2.png" alt="Export Icon" class="h-16 w-16">
                             </div>
                         </div>
@@ -286,8 +251,6 @@
                             customer services. Our unmatchable services make us the industry leader.
                         </p>
                     </div>
-
-                    <!-- Card 3 -->
                     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
                         <div class="relative flex items-center justify-center w-56 h-56 rounded-full bg-white mx-auto"
                             style="box-shadow: 
@@ -295,7 +258,6 @@
                         20px 20px 50px 0px #fff inset, -20px -20px 50px 0px #fff inset, 20px 20px 50px 0px #FFFFFF40 inset;">
                             <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center" style="box-shadow: 
                         inset 0px 1px 18px 0px #CDCDCD, inset -20px -3px 50px 0px #fff;">
-                                <!-- Icon -->
                                 <img src="assets/img/vector-3.png" alt="Export Icon" class="h-16 w-16">
                             </div>
                         </div>
@@ -306,8 +268,6 @@
                         </p>
                     </div>
                 </div>
-
-                <!-- View More Button Animation -->
                 <button
                     class="mt-12 flex items-center bg-white text-[#135c2e] font-semibold text-lg rounded-full shadow-md hover:shadow-lg focus:outline-none transition-transform duration-500 ease-in-out hover:scale-105"
                     data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
@@ -343,9 +303,7 @@
                 <div class="relative antialiased">
                     <div class="relative flex flex-col justify-center overflow-hidden">
                         <div class="w-full max-w-2xl mx-auto px-4 md:px-6">
-                            <!-- Accordion component -->
                             <div class="divide-y divide-slate-200 text-white">
-                                <!-- Accordion item 1 -->
                                 <div x-data="{ expanded: false }" class="py-2" data-aos="fade-up"
                                     data-aos-duration="1000" data-aos-delay="600">
                                     <h2>
@@ -378,7 +336,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Accordion item 2 -->
                                 <div x-data="{ expanded: false }" class="py-2" data-aos="fade-up"
                                     data-aos-duration="1000" data-aos-delay="800">
                                     <h2>
@@ -411,7 +368,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Accordion item 3 -->
                                 <div x-data="{ expanded: false }" class="py-2" data-aos="fade-up"
                                     data-aos-duration="1000" data-aos-delay="1000">
                                     <h2>
@@ -444,7 +400,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> <!-- End: Accordion component -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -456,14 +412,12 @@
     <!-- Product Showcase Section -->
     <section class="py-36 overflow-x-hidden">
         <div class="container mx-auto px-6">
-            <!-- Section Header -->
             <div class="mb-12 relative">
                 <h2 class="text-[46px] font-medium text-[#001b3a]">Product Showcase</h2>
                 <p class="text-[#434343] text-[18px] font-normal">
                     It is a long established fact that a reader will be distracted by the readable content of <br /> a
                     page when looking at its layout.
                 </p>
-                <!-- Navigation Buttons -->
                 <div
                     class="swiper-button-prev left-[85%] top-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
                     <i class="fa-solid fa-chevron-left text-[#B1B1B1]"></i>
@@ -473,11 +427,8 @@
                     <i class="fa-solid fa-chevron-right text-[#B1B1B1]"></i>
                 </div>
             </div>
-            <!-- Slider main container -->
             <div class="swiper" style="width: calc(50% + 60vw);" data-swiper>
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper pb-10">
-                    <!-- Slides -->
                     <div class="swiper-slide px-5">
                         <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg animate__animated animate__fadeIn">
                             <img src="./assets/img/furtilizer.jpg" alt="fertilizers"
@@ -564,7 +515,6 @@
         <div class="container mx-auto">
             <div class="flex items-center">
                 <div class="w-7/12">
-                    <!-- Header with animation -->
                     <h2 class="text-[46px] font-medium text-white pt-20 mb-5" data-aos="fade-up"
                         data-aos-duration="1000">Statistic Till 2021</h2>
                     <p class="text-lg text-white font-normal mb-8" data-aos="fade-up" data-aos-duration="1200"
@@ -575,7 +525,6 @@
                         company is ambitious to give the energy, its full value. So, join us today in writing a new
                         history.
                     </p>
-                    <!-- Statistic list with animation -->
                     <ul class="flex flex-wrap mb-32">
                         <li class="flex items-center gap-x-6 text-white w-5/12 mb-5" data-aos="fade-right"
                             data-aos-duration="1000" data-aos-delay="300">
@@ -598,7 +547,6 @@
                             <h6 class="text-lg font-semibold">Annual Trading Volume: upto 42,370 MT</h6>
                         </li>
                     </ul>
-                    <!-- Circular statistics with animation -->
                     <div class="flex flex-wrap justify-between pr-16 -mb-32">
                         <div class="w-60 h-60 bg-gray-100 rounded-full shadow-xl flex flex-col items-center justify-center space-y-2"
                             data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="700">
@@ -617,7 +565,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Image with animation -->
                 <div class="w-5/12 relative">
                     <img src="./assets/img/worker_img.png" alt="" class="block bottom-0 -mt-40" data-aos="fade-up"
                         data-aos-duration="1200" data-aos-delay="1000">
@@ -629,39 +576,27 @@
     <!-- Testimonial Section -->
     <section class="pt-4 pb-36">
         <div class="container mx-auto px-6">
-            <!-- Swiper Container -->
             <div class="swiper_1">
                 <div class="swiper-wrapper">
-                    <!-- Testimonial Slide -->
                     <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 p-8" data-aos="fade-up"
                         data-aos-duration="1000">
-                        <!-- Image Section -->
                         <div class="flex-shrink-0 w-full lg:w-80" data-aos="fade-right" data-aos-duration="1000">
-                            <!-- Section Title -->
                             <h2 class="text-[30px] md:text-[40px] lg:text-[46px] font-medium text-[#001b3a] mb-12 pt-[20%] lg:pt-[40%]"
                                 data-aos="fade-up" data-aos-duration="1200">
                                 Client Testimonials
                             </h2>
                             <div class="bg-white rounded-3xl shadow-lg w-full p-6">
-                                <!-- Image -->
                                 <div class="overflow-hidden rounded-xl mb-4">
                                     <img src="assets/img/founder.jpg" alt="Jonathan Seth"
                                         class="object-cover w-full h-64 shadow-md">
                                 </div>
-                                <!-- Name -->
                                 <h3 class="text-lg font-semibold text-gray-800">Jonathan Seth</h3>
-
-                                <!-- Role -->
                                 <p class="text-lg font-normal text-gray-600">Founder, CEO, Com.</p>
                             </div>
                         </div>
-
-                        <!-- Text Section -->
                         <div class="flex-1 items-center justify-center pt-[20%] lg:pt-[20%]" data-aos="fade-left"
                             data-aos-duration="1200">
-                            <!-- Top Quote Icon -->
                             <i class="fa-solid fa-quote-left text-gray-400 text-4xl md:text-5xl lg:text-6xl mb-3"></i>
-                            <!-- Paragraph -->
                             <p
                                 class="text-sm md:text-base lg:text-lg text-[#434343] font-light tracking-wide mb-6 px-4 sm:px-6">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -669,7 +604,6 @@
                                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
                                 dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                             </p>
-                            <!-- Rating -->
                             <div class="mt-4">
                                 <i class="fa-solid fa-star text-orange-500"></i>
                                 <i class="fa-solid fa-star text-orange-500"></i>
@@ -677,7 +611,6 @@
                                 <i class="fa-solid fa-star text-orange-500"></i>
                                 <i class="fa-solid fa-star text-orange-500"></i>
                             </div>
-                            <!-- Bottom Quote Icon -->
                             <i
                                 class="fa-solid fa-quote-left fa-flip-horizontal text-gray-400 text-4xl md:text-5xl lg:text-6xl block mt-3"></i>
                         </div>
@@ -689,35 +622,22 @@
 
     <!-- Reach out to us Section -->
     <section class="relative flex flex-col lg:flex-row w-full min-h-screen">
-        <!-- Left Side (Image Section) -->
         <div class="w-full lg:w-1/2 relative" data-aos="fade-right" data-aos-duration="1000">
             <img src="assets/img/working_women.png" alt="Support Representative" class="w-full h-full object-cover">
         </div>
-
-        <!-- Right Side (Form Section) -->
         <div class="w-full lg:w-1/2 bg-[#2D2D2D] text-white p-10 lg:p-20 relative" data-aos="fade-left"
             data-aos-duration="1000">
-            <!-- Background Vector -->
             <img src="assets/img/bg_vextor.png" alt="Background Vector"
                 class="absolute top-0 left-0 w-full h-full object-cover opacity-70">
-
-            <!-- Overlay Content -->
             <div class="relative z-10">
-                <!-- Logo -->
                 <div class="mb-6" data-aos="fade-up" data-aos-duration="1200">
                     <img src="assets/img/logo_white.png" alt="Logo" class="w-32">
                 </div>
-
-                <!-- Heading -->
                 <h2 class="text-4xl font-semibold mb-4" data-aos="fade-up" data-aos-duration="1400">Reach Out to Us</h2>
-
-                <!-- Paragraph -->
                 <p class="text-lg text-white font-light mb-10" data-aos="fade-up" data-aos-duration="1600">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.
                 </p>
-
-                <!-- Form -->
                 <form action="#" method="POST" class="space-y-6" data-aos="fade-up" data-aos-duration="1800">
                     <input type="text" placeholder="Your Name"
                         class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
@@ -744,7 +664,6 @@
     <!-- Article and News Section -->
     <section class="py-16 overflow-x-hidden" data-aos="fade-up" data-aos-duration="1000">
         <div class="container mx-auto px-6">
-            <!-- Section Header -->
             <div class="mb-12 relative">
                 <h2 class="text-[46px] font-medium text-[#001b3a]" data-aos="fade-up" data-aos-duration="1200">
                     Article & News
@@ -753,7 +672,6 @@
                     It is a long established fact that a reader will be distracted by the readable content of <br /> a
                     page when looking at its layout.
                 </p>
-                <!-- Navigation buttons -->
                 <div class="swiper-button-prev left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg"
                     data-aos="fade-left" data-aos-duration="1600">
                     <i class="fa-solid fa-chevron-left text-[#B1B1B1]"></i>
@@ -763,10 +681,8 @@
                     <i class="fa-solid fa-chevron-right text-[#B1B1B1]"></i>
                 </div>
             </div>
-            <!-- Slider main container -->
             <div class="swiper_1">
                 <div class="swiper-wrapper pb-10">
-                    <!-- Slides -->
                     <div class="swiper-slide px-5" data-aos="fade-up" data-aos-duration="1800">
                         <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg">
                             <img src="./assets/img/powder_img.jpg" alt="fertilizers"
@@ -860,14 +776,12 @@
     <!-- Our Collaborators Section -->
     <section class="py-16 overflow-x-hidden">
         <div class="container mx-auto px-6">
-            <!-- Section Header -->
             <div class="mb-12 relative" data-aos="fade-up" data-aos-duration="1200">
                 <h2 class="text-[46px] font-medium text-[#001b3a]">Our Collaborators</h2>
                 <p class="text-[#434343] text-[18px] font-normal">
                     It is a long established fact that a reader will be distracted by the readable content of <br /> a
                     page when looking at its layout.
                 </p>
-                <!-- If we need navigation buttons -->
                 <div
                     class="swiper-button-prev left-[90%] inline-block w-14 h-14 bg-stone-50 text-center text-2xl leading-[56px] rounded-full shadow-lg">
                     <i class="fa-solid fa-chevron-left text-[#B1B1B1]"></i>
@@ -877,12 +791,8 @@
                     <i class="fa-solid fa-chevron-right text-[#B1B1B1]"></i>
                 </div>
             </div>
-
-            <!-- Slider main container -->
             <div class="swiper_2" style="width: calc(50% + 60vw);">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper py-10">
-                    <!-- Slides with AOS Animation -->
                     <div class="swiper-slide px-4" data-aos="fade-up" data-aos-duration="1500">
                         <div class="">
                             <img src="./assets/img/hyundai.png" alt="Logo 1" class="w-full h-24 object-contain block">
@@ -908,7 +818,6 @@
                             <img src="./assets/img/taneco.png" alt="Logo 5" class="w-full h-24 object-contain block">
                         </div>
                     </div>
-                    <!-- Duplicate slides for continuous effect -->
                     <div class="swiper-slide px-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
                         <div class="">
                             <img src="./assets/img/hyundai.png" alt="Logo 1" class="w-full h-24 object-contain block">
@@ -1037,8 +946,8 @@
 
     <script>
         AOS.init({
-            duration: 1200,  // Controls animation duration
-            once: true,      // Animation runs only once
+            duration: 1200,
+            once: true,
             mirror: true
         });
     </script>
@@ -1113,11 +1022,9 @@
                 768: {
                     slidesPerView: 2,
                 },
-                // On medium screens (tablets), show 2 slides
                 1024: {
                     slidesPerView: 2,
                 },
-                // On larger screens, show 4 slides
                 1280: {
                     slidesPerView: 4,
                 },
@@ -1128,13 +1035,9 @@
     <!-- Article & News Swiper -->
     <script>
         const swiper_1 = new Swiper('.swiper_1', {
-
-            // Optional parameters
             loop: true,
             slidesPerView: 3,
             cssMode: true,
-
-            // Navigation arrows
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -1146,13 +1049,9 @@
     <!-- Collbrators Section -->
     <script>
         const swiper_2 = new Swiper('.swiper_2', {
-
-            // Optional parameters
             loop: true,
             slidesPerView: 5,
             cssMode: true,
-
-            // Navigation arrows
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
