@@ -178,22 +178,36 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.
                 </p>
-                <form action="#" method="POST" class="space-y-6" data-aos="fade-up" data-aos-duration="1800">
-                    <input type="text" placeholder="Your Name"
+                <form id="contactForm" action="#" method="POST" class="space-y-6" data-aos="fade-up"
+                    data-aos-duration="900">
+                    <input type="text" id="name" placeholder="Your Name"
                         class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
                         style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);">
-                    <input type="email" placeholder="yourmailaddressplease@mail.com"
+                    <input type="email" id="email" placeholder="yourmailaddressplease@mail.com"
                         class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
                         style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);">
-                    <textarea rows="6" placeholder="Your Subject"
+                    <textarea id="subject" rows="6" placeholder="Your Subject"
                         class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
                         style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);"></textarea>
-                    <button type="submit"
-                        class="p-5 py-4 bg-[#2B2B2B] text-white font-semibold rounded-full shadow-custom-light"
-                        data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="300">
+                    <button type="button" onclick="openModal()"
+                        class="p-5 py-4 bg-[#2B2B2B] text-white font-semibold rounded-full border-2 border-transparent transition-all duration-300 ease-in-out transform hover:scale-110 hover:border-[#000] hover:shadow-xl"
+                        data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
                         Get in Touch With Us
                     </button>
                 </form>
+
+                <div id="myModal"
+                    class="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50 hidden">
+                    <div class="bg-white rounded-lg w-96 p-6 shadow-lg">
+                        <h3 class="text-2xl font-semibold text-center mb-4">Thank you for reaching out!</h3>
+                        <p class="text-center text-gray-700 mb-6">Your form has been submitted successfully. We will get
+                            in touch with you shortly.</p>
+                        <div class="flex justify-center">
+                            <button onclick="closeModal()"
+                                class="bg-[#2B2B2B] text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#1e1e1e]">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -273,19 +287,19 @@
                         companies due to its goodwill and professional approach.
                     </p>
                     <div class="flex items-center space-x-6 mt-6">
-                        <a href="https://wa.me" 
-                           class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-green-600 transition-all duration-700 ease-in-out transform hover:scale-110 hover:opacity-90" 
-                           target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me"
+                            class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-green-600 transition-all duration-700 ease-in-out transform hover:scale-110 hover:opacity-90"
+                            target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="https://t.me" 
-                           class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-blue-500 transition-all duration-700 ease-in-out transform hover:scale-110 hover:opacity-90" 
-                           target="_blank" rel="noopener noreferrer">
+                        <a href="https://t.me"
+                            class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-blue-500 transition-all duration-700 ease-in-out transform hover:scale-110 hover:opacity-90"
+                            target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-telegram-plane"></i>
                         </a>
-                        <a href="https://www.instagram.com" 
-                           class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-pink-600 transition-all duration-700 ease-in-out transform hover:scale-110 hover:opacity-90" 
-                           target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com"
+                            class="text-[#135c2e] bg-white rounded-full w-10 h-10 text-xl flex items-center justify-center hover:text-pink-600 transition-all duration-700 ease-in-out transform hover:scale-110 hover:opacity-90"
+                            target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -293,29 +307,44 @@
                 <div class="w-1/2 sm:w-1/4 lg:w-1/6 mb-8 lg:mb-0">
                     <h3 class="text-lg font-semibold mb-4">Pages</h3>
                     <ul class="space-y-2">
-                        <li><a href="/" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Home</a></li>
-                        <li><a href="about.html" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Services</a></li>
-                        <li><a href="product_page.html" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Products</a></li>
-                        <li><a href="career.html" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Career</a></li>
-                        <li><a href="contact_us.html" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Contact Us</a></li>
+                        <li><a href="/" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Home</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="hover:text-gray-300 transition-colors duration-300 ease-in-out">About Us</a></li>
+                        <li><a href="services.html"
+                                class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Services</a></li>
+                        <li><a href="product_page.html"
+                                class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Products</a></li>
+                        <li><a href="career.html"
+                                class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Career</a></li>
+                        <li><a href="contact_us.html"
+                                class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Contact Us</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="w-1/2 sm:w-1/4 lg:w-1/6 mb-8 lg:mb-0">
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Packaging Service</a></li>
-                        <li><a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Logistic Service</a></li>
-                        <li><a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Export Service</a></li>
-                        <li><a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Bulk Chartering</a></li>
-                        <li><a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Trading</a></li>
-                        <li><a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Documentation</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Packaging
+                                Service</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Logistic
+                                Service</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Export
+                                Service</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Bulk
+                                Chartering</a></li>
+                        <li><a href="#"
+                                class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Trading</a></li>
+                        <li><a href="#"
+                                class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Documentation</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-1/4">
                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
                     <p class="text-sm sm:text-base mb-2">
-                        <a href="https://www.google.com/maps?q=10th+Floor,+Hampton+Park,+Vesu,+Surat+395007,+Gujarat,+India" target="_blank">
+                        <a href="https://www.google.com/maps?q=10th+Floor,+Hampton+Park,+Vesu,+Surat+395007,+Gujarat,+India"
+                            target="_blank">
                             <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
                             “C” Tower, 10th Floor, Hampton Park, Vesu, Surat 395007 Gujarat, India
                         </a>
@@ -336,22 +365,26 @@
                         </a>
                     </p>
                 </div>
-                
+
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-4 flex flex-col lg:flex-row justify-between items-center text-sm">
-                <p class="text-center lg:text-left text-xs sm:text-sm md:text-base mb-4 lg:mb-0 hover:text-gray-300 transition-colors duration-300 ease-in-out">
+            <div
+                class="border-t border-gray-700 mt-8 pt-4 flex flex-col lg:flex-row justify-between items-center text-sm">
+                <p
+                    class="text-center lg:text-left text-xs sm:text-sm md:text-base mb-4 lg:mb-0 hover:text-gray-300 transition-colors duration-300 ease-in-out">
                     Copyright &copy; Buoyancy 2021 All Rights Reserved | Design & Develop By Aimstorm.
                 </p>
-                
+
                 <div class="flex flex-wrap justify-center space-x-4 text-xs sm:text-sm">
-                    <a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Privacy
+                        Policy</a>
                     <a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Terms of Use</a>
-                    <a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Sales and Refunds</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Sales and
+                        Refunds</a>
                     <a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Legal</a>
                     <a href="#" class="hover:text-gray-300 transition-colors duration-300 ease-in-out">Site Map</a>
                 </div>
             </div>
-            
+
         </div>
     </footer>
 
@@ -430,6 +463,17 @@
             }
         }
     </script>
+
+<script>
+    function openModal() {
+        document.getElementById('myModal').classList.remove('hidden');
+    }
+    function closeModal() {
+        document.getElementById('myModal').classList.add('hidden');
+        document.getElementById('contactForm').reset();
+    }
+</script>
+
 </body>
 
 </html>
