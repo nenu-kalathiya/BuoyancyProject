@@ -187,9 +187,7 @@
                 page editors now use Lorem Ipsum as their default model text.
             </p>
         </div>
-
         <div class="space-y-4">
-            <!-- Job Card 1 -->
             <div class="bg-white rounded-lg shadow-md border-2 hover:border-[#135c2e]" data-aos="fade-up"
                 onclick="toggleDetails('job-details-1')">
                 <div class="flex justify-between items-center p-4 border-b border-[#135c2e]">
@@ -695,22 +693,22 @@
         });
     </script>
 
-<script>
-    function handleSubmit() {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        if (name && email) {
-            document.getElementById('popup').classList.remove('hidden');
-            document.getElementById('name').value = '';
-            document.getElementById('email').value = '';
-        } else {
-            alert('Please fill in all fields.');
+    <script>
+        function handleSubmit() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            if (name && email) {
+                document.getElementById('popup').classList.remove('hidden');
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+            } else {
+                alert('Please fill in all fields.');
+            }
         }
-    }
-    function closePopup() {
-        document.getElementById('popup').classList.add('hidden');
-    }
-</script>
+        function closePopup() {
+            document.getElementById('popup').classList.add('hidden');
+        }
+    </script>
 </body>
 
 </html>

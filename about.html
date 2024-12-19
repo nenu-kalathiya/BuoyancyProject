@@ -616,10 +616,8 @@
 
     <script>
         const navLinks = document.querySelectorAll('#menu a');
-        const currentPath = window.location.pathname.split("/").pop() || "index.html"; // Fallback to "index.html" for homepage
-
+        const currentPath = window.location.pathname.split("/").pop() || "index.html"; 
         navLinks.forEach(link => {
-            // Check if the href matches the current path (considering the homepage)
             if (link.getAttribute('href') === currentPath) {
                 link.classList.add('text-emerald-800', 'font-bold');
                 const parentLi = link.parentElement;
