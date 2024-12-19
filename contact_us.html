@@ -71,7 +71,7 @@
 
 <body class="font-montserrat">
     <!-- Header -->
-    <header class="p-4">
+    <header class="p-4 sticky top-0 bg-white z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="logo">
                 <a href="/">
@@ -127,18 +127,18 @@
                     </li>
                 </ul>
             </nav>
-            <div class="hidden laptop-l:flex items-center gap-8">
+            <div class="hidden laptop:flex items-center gap-8 laptop:gap-7">
                 <a href="#"
-                    class="text-2xl text-emerald-800 animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-125 hover:text-emerald-600">
+                    class="text-2xl laptop:text-xl laptop-l:text-2xl text-emerald-800 animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-125 hover:text-emerald-600">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
                 <a href="#"
-                    class="group bg-white rounded-full pl-8 shadow-md inline-block text-center transition duration-700 ease-in-out hover:scale-105 hover:shadow-lg ">
+                    class="group bg-white rounded-full laptop-l:pl-8 laptop:pl-3 4k:pl-8 shadow-md inline-block text-center transition duration-700 ease-in-out hover:scale-105 hover:shadow-lg ">
                     <span
-                        class="font-semibold text-emerald-800 text-lg group-hover:text-black transition-colors duration-300">Get
+                        class="font-semibold text-emerald-800 text-lg laptop:text-base group-hover:text-black transition-colors duration-300">Get
                         A Quote</span>
                     <i
-                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 group-hover:text-black transition-colors duration-300"></i>
+                        class="fa-solid fa-angles-right laptop-l:w-[60px] laptop-l:h-[60px] 4k:w-[60px] 4k:h-[60px] laptop:w-[50px] laptop:h-[50px] laptop:leading-[50px] 4k:leading-[60px] inline-block shadow-inner laptop-l:leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 group-hover:text-black transition-colors duration-300"></i>
                 </a>
             </div>
         </div>
@@ -151,7 +151,7 @@
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start">
                 <div class="pl-8 sm:pl-12 md:pl-24 lg:pl-36 text-white" data-wow-duration="1s" data-wow-delay="0.5s"
                     data-wow="fadeInLeft">
-                    <h1 class="text-xl sm:text-xl md:text-4xl font-normal uppercase" data-aos="fade-up"
+                    <h1 class="text-xl sm:text-xl md:text-2xl lg:text-5xl font-normal uppercase" data-aos="fade-up"
                         data-aos-duration="1500">Contact Us</h1>
                     <div class="relative w-40 sm:w-52 md:w-60 lg:w-80 h-[4px] mt-2 bg-gradient-to-r from-white via-white/50 to-transparent"
                         data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"></div>
@@ -180,23 +180,26 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.
                 </p>
-                <form id="contactForm" action="#" method="POST" class="space-y-6" data-aos="fade-up"
-                    data-aos-duration="900">
+                <form id="contactForm" action="#" method="POST" class="space-y-6" data-aos="fade-up" data-aos-duration="900">
                     <input type="text" id="name" placeholder="Your Name"
-                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
+                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500 hover:bg-[#333333] transition-colors duration-300"
                         style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);">
+                    
                     <input type="email" id="email" placeholder="yourmailaddressplease@mail.com"
-                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
+                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500 hover:bg-[#333333] transition-colors duration-300"
                         style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);">
+                    
                     <textarea id="subject" rows="6" placeholder="Your Subject"
-                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
+                        class="w-4/5 px-4 py-4 bg-[#1E1E1E] text-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500 hover:bg-[#333333] transition-colors duration-300"
                         style="box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);"></textarea>
+                    
                     <button type="button" onclick="openModal()"
-                        class="p-5 py-4 bg-[#2B2B2B] text-white font-semibold rounded-full border-2 border-transparent transition-all duration-300 ease-in-out transform hover:scale-110 hover:border-[#000] hover:shadow-xl"
+                        class="p-5 py-4 bg-[#2B2B2B] text-white font-semibold rounded-full border-2 border-transparent transition-all duration-300 ease-in-out transform hover:scale-110 hover:border-[#000] hover:shadow-xl hover:bg-[#444444]"
                         data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
                         Get in Touch With Us
                     </button>
                 </form>
+                
 
                 <div id="myModal"
                     class="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50 hidden">
@@ -216,68 +219,138 @@
 
     <!-- Map Section -->
     <section class="container mx-auto py-16 flex flex-col lg:flex-row items-center">
-        <div class="w-full lg:w-1/2 space-y-6">
-            <h2 class="text-5xl font-semibold text-[#001B3A]">Where Are We Located?</h2>
-            <p class="text-lg text-gray-600">
+        <div class="w-full lg:w-1/2 space-y-6 p-5">
+            <h2
+                class="text-5xl mob-s:text-[20px] mob-l:text-[22px] mob-xl:text-[24px] tablet:text-[28px] laptop:text-[40px] 4k:text-[46px] font-semibold text-[#001B3A]">
+                Where Are We Located?</h2>
+            <p
+                class="text-lg mob-s:text-sm mob-l:text-sm mob-xl:text-sm tablet:text-sm laptop:text-base laptop-l:text-lg 4k:text-lg text-[#434343]">
                 Give us a call or drop by anytime, we endeavor to answer all inquiries
                 within 24 hours on business days. We will be happy to answer your
                 questions.
             </p>
             <div>
-                <h3 class="text-2xl font-medium text-[#1f1f1f]">Our Address</h3>
-                <div class="flex items-start space-x-3 mt-3">
-                    <i class="fa-solid fa-location-dot text-[#135C2E] text-lg"></i>
+                <h3 class="text-2xl font-medium text-[#1f1f1f] mb-2">Our Address</h3>
+                <div class="flex items-center space-x-3 mt-3">
+                    <svg class="h-7 w-7 text-[#135C2E]" viewBox="0 0 22 31" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.9961 0.5C5.18055 0.5 0.449219 5.23133 0.449219 11.0469C0.449219 13.0118 0.993496 14.9293 2.02357 16.5929L10.3957 30.0845C10.4746 30.2116 10.5846 30.3164 10.7152 30.3891C10.8459 30.4618 10.993 30.5 11.1425 30.5H11.1495C11.3002 30.4988 11.4481 30.4589 11.5789 30.3841C11.7097 30.3093 11.8191 30.202 11.8966 30.0727L20.0553 16.4504C21.0286 14.822 21.543 12.9535 21.543 11.0469C21.543 5.23133 16.8116 0.5 10.9961 0.5ZM18.5468 15.5479L11.1292 27.9328L3.5176 15.6668C2.6602 14.2821 2.19531 12.6846 2.19531 11.0469C2.19531 6.20059 6.1498 2.24609 10.9961 2.24609C15.8424 2.24609 19.791 6.20059 19.791 11.0469C19.791 12.636 19.3568 14.1927 18.5468 15.5479Z"
+                            fill="#135C2E" />
+                        <path
+                            d="M10.9961 5.77344C8.08832 5.77344 5.72266 8.1391 5.72266 11.0469C5.72266 13.9361 8.04982 16.3203 10.9961 16.3203C13.9787 16.3203 16.2695 13.9043 16.2695 11.0469C16.2695 8.1391 13.9039 5.77344 10.9961 5.77344ZM10.9961 14.5742C9.04744 14.5742 7.46875 12.9903 7.46875 11.0469C7.46875 9.10836 9.05758 7.51953 10.9961 7.51953C12.9346 7.51953 14.5176 9.10836 14.5176 11.0469C14.5176 12.9619 12.9756 14.5742 10.9961 14.5742Z"
+                            fill="#135C2E" />
+                    </svg>
                     <a href="https://www.google.com/maps?q=C%20Tower%2C%2010th%20Floor%2C%20Hampton%20Park%2C%20Vesu%2C%20Surat%20395007%20Gujarat%2C%20India"
-                        target="_blank" class="text-lg text-gray-700 hover:text-[#135C2E]">
+                        target="_blank" class="text-lg text-[#1f1f1f] hover:text-[#135C2E]">
                         "C" Tower, 10th Floor, Hampton Park, Vesu, Surat 395007 Gujarat, India
                     </a>
                 </div>
             </div>
-            <div>
+
+            <div class="space-y-6">
                 <h3 class="text-2xl font-medium text-[#1f1f1f]">Our Phone</h3>
-                <div class="space-y-4 mt-3">
-                    <div class="flex items-center space-x-3">
-                        <i class="fa-solid fa-phone text-[#135C2E] text-lg"></i>
-                        <a href="tel:+919925053193" class="text-lg text-gray-700 hover:text-[#135C2E]">+91 99250
-                            53193</a>
+                <div class="flex flex-wrap gap-8">
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#135C2E]" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6.27 4.54a1 1 0 011.42-.04l2.84 2.8a1 1 0 01-.04 1.42l-1.33 1.33a16.18 16.18 0 006.36 6.36l1.33-1.33a1 1 0 011.42-.04l2.8 2.84a1 1 0 01-.04 1.42l-2.42 2.42a2.91 2.91 0 01-3.28.59c-2.8-1.3-5.36-3.14-7.63-5.41S3.35 11.8 2.05 9c-.59-1.27-.34-2.76.59-3.8l2.42-2.42z" />
+                                </svg>
+                            </span>
+                            <p class="text-[#1f1f1f] text-xl">+91 99250 53193</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#135C2E]" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6.27 4.54a1 1 0 011.42-.04l2.84 2.8a1 1 0 01-.04 1.42l-1.33 1.33a16.18 16.18 0 006.36 6.36l1.33-1.33a1 1 0 011.42-.04l2.8 2.84a1 1 0 01-.04 1.42l-2.42 2.42a2.91 2.91 0 01-3.28.59c-2.8-1.3-5.36-3.14-7.63-5.41S3.35 11.8 2.05 9c-.59-1.27-.34-2.76.59-3.8l2.42-2.42z" />
+                                </svg>
+                            </span>
+                            <p class="text-[#1f1f1f] text-xl">+91 99250 53069</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#135C2E]" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6.27 4.54a1 1 0 011.42-.04l2.84 2.8a1 1 0 01-.04 1.42l-1.33 1.33a16.18 16.18 0 006.36 6.36l1.33-1.33a1 1 0 011.42-.04l2.8 2.84a1 1 0 01-.04 1.42l-2.42 2.42a2.91 2.91 0 01-3.28.59c-2.8-1.3-5.36-3.14-7.63-5.41S3.35 11.8 2.05 9c-.59-1.27-.34-2.76.59-3.8l2.42-2.42z" />
+                                </svg>
+                            </span>
+                            <p class="text-[#1f1f1f] text-xl">+91-261-3527238</p>
+                        </div>
                     </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fa-solid fa-phone text-[#135C2E] text-lg"></i>
-                        <a href="tel:+919925053069" class="text-lg text-gray-700 hover:text-[#135C2E]">+91 99250
-                            53069</a>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fa-solid fa-phone text-[#135C2E] text-lg"></i>
-                        <a href="tel:+912613585515" class="text-lg text-gray-700 hover:text-[#135C2E]">+91
-                            261-3585515</a>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fa-solid fa-phone text-[#135C2E] text-lg"></i>
-                        <a href="tel:+912613527238" class="text-lg text-gray-700 hover:text-[#135C2E]">+91
-                            261-3527238</a>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-500">
+                                <svg class="h-7 w-7 text-[#135C2E]" viewBox="0 0 30 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M26.8533 21.7923H23.5333C23.3779 21.7923 23.2289 21.7306 23.119 21.6207C23.0091 21.5108 22.9474 21.3618 22.9474 21.2064C22.9474 21.051 23.0091 20.9019 23.119 20.7921C23.2289 20.6822 23.3779 20.6204 23.5333 20.6204H26.8533C27.147 20.6201 27.4286 20.5033 27.6363 20.2956C27.844 20.0879 27.9608 19.8063 27.9612 19.5125V9.34935C27.9608 9.05562 27.844 8.77402 27.6363 8.56633C27.4286 8.35863 27.147 8.2418 26.8533 8.24146H3.1392C2.84546 8.24178 2.56385 8.35861 2.35614 8.5663C2.14843 8.774 2.03159 9.05561 2.03125 9.34935V19.5125C2.03159 19.8063 2.14843 20.0879 2.35614 20.2956C2.56385 20.5033 2.84546 20.6201 3.1392 20.6204H6.45912C6.61452 20.6204 6.76356 20.6822 6.87344 20.7921C6.98333 20.9019 7.04506 21.051 7.04506 21.2064C7.04506 21.3618 6.98333 21.5108 6.87344 21.6207C6.76356 21.7306 6.61452 21.7923 6.45912 21.7923H3.1392C2.53477 21.7916 1.95529 21.5512 1.52789 21.1238C1.10049 20.6964 0.860073 20.117 0.859375 19.5125V9.34935C0.860073 8.74492 1.10049 8.16545 1.52789 7.73806C1.95529 7.31067 2.53477 7.07026 3.1392 7.06958H26.8533C27.4577 7.07025 28.0372 7.31065 28.4646 7.73804C28.892 8.16543 29.1324 8.74491 29.1331 9.34935V19.5125C29.1324 20.117 28.892 20.6965 28.4646 21.1239C28.0372 21.5512 27.4577 21.7916 26.8533 21.7923Z"
+                                        fill="#135C2E" />
+                                    <path
+                                        d="M6.46094 8.24152C6.30554 8.24152 6.1565 8.17979 6.04662 8.06991C5.93673 7.96002 5.875 7.81099 5.875 7.65559V2.70951C5.87568 2.10506 6.1161 1.52557 6.54352 1.09817C6.97093 0.670762 7.55044 0.430354 8.15488 0.429688H19.8086C19.964 0.429688 20.113 0.49142 20.2229 0.601305C20.3328 0.711189 20.3945 0.860225 20.3945 1.01562C20.3945 1.17103 20.3328 1.32006 20.2229 1.42995C20.113 1.53983 19.964 1.60156 19.8086 1.60156H8.15488C7.86114 1.60189 7.57951 1.71872 7.3718 1.92643C7.16409 2.13414 7.04726 2.41577 7.04693 2.70951V7.65559C7.04693 7.81099 6.9852 7.96002 6.87532 8.06991C6.76543 8.17979 6.61634 8.24152 6.46094 8.24152ZM23.5352 8.24152C23.3798 8.24152 23.2307 8.17979 23.1208 8.06991C23.011 7.96002 22.9492 7.81099 22.9492 7.65559V4.74213C22.9492 4.58673 23.011 4.43769 23.1208 4.32781C23.2307 4.21792 23.3798 4.15619 23.5352 4.15619C23.6906 4.15619 23.8396 4.21792 23.9495 4.32781C24.0594 4.43769 24.1211 4.58673 24.1211 4.74213V7.65559C24.1211 7.81099 24.0594 7.96002 23.9495 8.06991C23.8396 8.17979 23.6906 8.24152 23.5352 8.24152ZM21.8413 24.5703H8.15488C7.55045 24.5696 6.97096 24.3292 6.54356 23.9019C6.11616 23.4745 5.87574 22.895 5.87506 22.2905V15.7861C5.87506 15.6307 5.93679 15.4817 6.04668 15.3718C6.15656 15.2619 6.3056 15.2002 6.461 15.2002C6.6164 15.2002 6.76543 15.2619 6.87532 15.3718C6.9852 15.4817 7.04693 15.6307 7.04693 15.7861V22.2905C7.04727 22.5843 7.16412 22.8659 7.37182 23.0736C7.57953 23.2813 7.86115 23.3981 8.15488 23.3984H21.8413C22.135 23.3981 22.4166 23.2813 22.6243 23.0736C22.832 22.8659 22.9488 22.5843 22.9492 22.2905V15.7861C22.9492 15.6307 23.0109 15.4817 23.1208 15.3718C23.2307 15.2619 23.3797 15.2002 23.5351 15.2002C23.6905 15.2002 23.8395 15.2619 23.9494 15.3718C24.0593 15.4817 24.121 15.6307 24.121 15.7861V22.2905C24.1204 22.895 23.8799 23.4744 23.4526 23.9018C23.0252 24.3292 22.4457 24.5696 21.8413 24.5703Z"
+                                        fill="#135C2E" />
+                                    <path
+                                        d="M23.5351 5.32807H21.1637C20.6491 5.32749 20.1557 5.12281 19.7918 4.75892C19.4279 4.39503 19.2232 3.90165 19.2227 3.38703V1.01562C19.2227 0.860225 19.2844 0.711189 19.3943 0.601305C19.5042 0.49142 19.6532 0.429688 19.8086 0.429688C19.964 0.429688 20.113 0.49142 20.2229 0.601305C20.3328 0.711189 20.3945 0.860225 20.3945 1.01562V3.38703C20.3948 3.59095 20.4759 3.78646 20.6201 3.93065C20.7643 4.07485 20.9598 4.15596 21.1637 4.15619H23.535C23.6904 4.15619 23.8395 4.21792 23.9494 4.32781C24.0592 4.43769 24.121 4.58673 24.121 4.74213C24.121 4.89753 24.0592 5.04657 23.9494 5.15645C23.8395 5.26633 23.6904 5.32807 23.535 5.32807H23.5351Z"
+                                        fill="#135C2E" />
+                                    <path
+                                        d="M23.531 5.32808C23.454 5.32818 23.3777 5.31306 23.3066 5.2836C23.2355 5.25414 23.1709 5.21091 23.1166 5.1564L19.3901 1.42996C19.2802 1.32007 19.2185 1.17102 19.2185 1.01562C19.2185 0.860215 19.2802 0.711178 19.3901 0.601295C19.5 0.491411 19.649 0.429682 19.8044 0.429688C19.9599 0.429693 20.1089 0.491433 20.2188 0.601324L23.9452 4.32777C24.0272 4.40971 24.083 4.51411 24.1056 4.62777C24.1282 4.74144 24.1166 4.85926 24.0723 4.96633C24.028 5.07341 23.9529 5.16493 23.8565 5.22932C23.7601 5.29371 23.6469 5.32808 23.531 5.32808ZM25.0893 16.3721H4.89844C4.74304 16.3721 4.594 16.3103 4.48412 16.2004C4.37423 16.0906 4.3125 15.9415 4.3125 15.7861C4.3125 15.6307 4.37423 15.4817 4.48412 15.3718C4.594 15.2619 4.74304 15.2002 4.89844 15.2002H25.0893C25.2447 15.2002 25.3937 15.2619 25.5036 15.3718C25.6135 15.4817 25.6752 15.6307 25.6752 15.7861C25.6752 15.9415 25.6135 16.0906 25.5036 16.2004C25.3937 16.3103 25.2447 16.3721 25.0893 16.3721ZM20.6292 19.1838H9.35854C9.20314 19.1838 9.0541 19.1221 8.94421 19.0122C8.83433 18.9023 8.7726 18.7533 8.7726 18.5979C8.7726 18.4425 8.83433 18.2934 8.94421 18.1835C9.0541 18.0737 9.20314 18.0119 9.35854 18.0119H20.6292C20.7846 18.0119 20.9336 18.0737 21.0435 18.1835C21.1534 18.2934 21.2151 18.4425 21.2151 18.5979C21.2151 18.7533 21.1534 18.9023 21.0435 19.0122C20.9336 19.1221 20.7846 19.1838 20.6292 19.1838ZM20.6292 21.7585H9.35854C9.20314 21.7585 9.0541 21.6968 8.94421 21.5869C8.83433 21.477 8.7726 21.328 8.7726 21.1726C8.7726 21.0172 8.83433 20.8682 8.94421 20.7583C9.0541 20.6484 9.20314 20.5867 9.35854 20.5867H20.6292C20.7846 20.5867 20.9336 20.6484 21.0435 20.7583C21.1534 20.8682 21.2151 21.0172 21.2151 21.1726C21.2151 21.328 21.1534 21.477 21.0435 21.5869C20.9336 21.6968 20.7846 21.7585 20.6292 21.7585ZM24.7505 13.1198C24.4202 13.1198 24.0973 13.0219 23.8227 12.8384C23.548 12.6549 23.3339 12.3941 23.2075 12.0889C23.0811 11.7838 23.048 11.448 23.1124 11.124C23.1769 10.8001 23.3359 10.5025 23.5695 10.2689C23.8031 10.0353 24.1006 9.87628 24.4246 9.81183C24.7486 9.74739 25.0844 9.78047 25.3895 9.90687C25.6947 10.0333 25.9555 10.2473 26.139 10.522C26.3225 10.7966 26.4205 11.1195 26.4205 11.4498C26.4199 11.8926 26.2438 12.317 25.9308 12.6301C25.6177 12.9432 25.1933 13.1193 24.7505 13.1198ZM24.7505 10.9517C24.652 10.9517 24.5557 10.9808 24.4737 11.0356C24.3918 11.0903 24.3279 11.1681 24.2902 11.2591C24.2525 11.3501 24.2426 11.4503 24.2618 11.547C24.281 11.6436 24.3284 11.7324 24.3981 11.8021C24.4678 11.8717 24.5565 11.9192 24.6532 11.9384C24.7498 11.9577 24.85 11.9478 24.941 11.9101C25.0321 11.8724 25.1099 11.8085 25.1646 11.7266C25.2194 11.6447 25.2486 11.5484 25.2486 11.4498C25.2484 11.3178 25.1959 11.1912 25.1026 11.0978C25.0092 11.0044 24.8826 10.9518 24.7505 10.9517Z"
+                                        fill="#135C2E" />
+                                </svg>
+                            </span>
+                            <p class="text-[#1f1f1f] text-xl">+91-261-3585515</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div>
                 <h3 class="text-2xl font-medium text-[#1f1f1f]">Our Mail Box</h3>
-                <p class="text-lg text-gray-700 mt-3">
-                    <i class="fa-regular fa-envelope text-[#135C2E] text-lg mr-2"></i>
-                    <a href="mailto:info@buoyancyimpex.com"
-                        class="hover:text-[#135C2E]">info@buoyancyimpex.com</a><br />
-                    <a href="mailto:buoyancyinc@gmail.com" class="hover:text-[#135C2E]">buoyancyinc@gmail.com</a>
+                <p class="text-lg text-gray-700 mt-3 flex items-center">
+                    <svg class="h-7 w-7 hover:text-[#25D366] transition-colors duration-300 hover:scale-110 transform mr-2" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.3594 0.953125H2.63281C1.18191 0.953125 -0.00390625 2.13373 -0.00390625 3.58984V19.4102C-0.00390625 20.8668 1.18268 22.0469 2.63281 22.0469H27.3594C28.8103 22.0469 29.9961 20.8663 29.9961 19.4102V3.58984C29.9961 2.13338 28.8097 0.953125 27.3594 0.953125ZM26.9545 2.71094L15.6772 14.025C15.3336 14.3697 14.6588 14.3699 14.315 14.025L3.0377 2.71094H26.9545ZM1.75391 19.087V3.91299L9.31631 11.5L1.75391 19.087ZM3.0377 20.2891L10.5573 12.745L13.0701 15.266C14.0998 16.2991 15.8928 16.2987 16.9222 15.266L19.435 12.7451L26.9545 20.2891H3.0377ZM28.2383 19.087L20.6759 11.5L28.2383 3.91299V19.087Z" fill="#135C2E"/>
+                    </svg>
+                    
+                    <a href="mailto:info@buoyancyimpex.com" class="hover:text-[#135C2E] ml-2">info@buoyancyimpex.com</a>
                 </p>
+                
             </div>
             <div>
                 <h3 class="text-xl font-semibold text-[#1f1f1f]">Follow Us</h3>
                 <div class="flex space-x-4 text-[#135C2E] mt-3">
-                    <a href="https://wa.me/+919925053193" class="text-2xl hover:text-[#135C2E]"><i
-                            class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/" class="text-2xl hover:text-[#135C2E]"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/" class="text-2xl hover:text-[#135C2E]"><i
-                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://wa.me/+919925053193" class="h-7 w-7 hover:text-[#25D366] transition-colors duration-300 hover:scale-110 transform">
+                        <svg viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.9357 4.58726C21.3045 1.95296 17.8052 0.501538 14.0771 0.5C6.39533 0.5 0.143408 6.75175 0.140332 14.4356C0.139277 16.8919 0.780923 19.2897 2.00058 21.4032L0.0234375 28.625L7.41156 26.6869C9.44729 27.7974 11.7392 28.3826 14.0715 28.3833H14.0774C21.7583 28.3833 28.0109 22.1311 28.0138 14.4468C28.0154 10.7228 26.5671 7.22143 23.9357 4.58726ZM14.0771 26.0296H14.0723C11.9939 26.0287 9.95538 25.4702 8.17661 24.4149L7.75385 24.1638L3.36961 25.3139L4.53978 21.0394L4.26425 20.6011C3.10471 18.7568 2.49237 16.6252 2.49343 14.4365C2.49584 8.0498 7.69237 2.8538 14.0818 2.8538C17.1758 2.85481 20.0843 4.06124 22.2712 6.25077C24.4582 8.4403 25.6619 11.3507 25.6609 14.4459C25.6581 20.833 20.462 26.0296 14.0771 26.0296ZM20.431 17.354C20.0829 17.1796 18.3707 16.3374 18.0514 16.2211C17.7325 16.1048 17.5 16.047 17.2681 16.3955C17.0359 16.7439 16.3686 17.5284 16.1654 17.7607C15.9621 17.9931 15.7592 18.0223 15.4109 17.8479C15.0627 17.6736 13.9406 17.3058 12.6105 16.1194C11.5753 15.1961 10.8765 14.0557 10.6733 13.7073C10.4704 13.3584 10.6715 13.1881 10.826 12.9965C11.203 12.5284 11.5805 12.0377 11.6965 11.8054C11.8127 11.5729 11.7545 11.3696 11.6674 11.1953C11.5805 11.0211 10.8841 9.30703 10.594 8.60958C10.3111 7.93084 10.0242 8.02247 9.81032 8.01188C9.60742 8.00172 9.37517 7.99966 9.14292 7.99966C8.9108 7.99966 8.53349 8.08667 8.21422 8.43551C7.89509 8.78417 6.99562 9.62651 6.99562 11.3406C6.99562 13.0546 8.2434 14.7104 8.41747 14.9428C8.5915 15.1753 10.8731 18.6926 14.3662 20.2008C15.197 20.56 15.8456 20.774 16.3515 20.9345C17.1857 21.1996 17.9447 21.1622 18.5448 21.0725C19.2139 20.9724 20.6049 20.23 20.8953 19.4166C21.1855 18.6032 21.1855 17.9061 21.0982 17.7607C21.0114 17.6155 20.7792 17.5284 20.431 17.354Z" fill="#135C2E"/>
+                            </svg>
+                            
+                    </a>
+                    <a href="https://www.instagram.com/" class="h-7 w-7 hover:text-[#E1306C] transition-colors duration-300 hover:scale-110 transform">
+                        <svg  viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_70_4744)">
+                            <path d="M28.8068 2.48511L-0.00390625 14.1397V15.8243L8.24782 18.3717L10.8575 26.7441L12.9407 26.7438L16.2995 23.3072L23.3897 28.5151L24.7698 27.99L29.9962 3.48332L28.8068 2.48511ZM23.3341 26.2929L13.9961 19.4342L12.9554 20.851L14.8685 22.2562L12.151 24.9859L10.0187 18.1451L22.3695 10.7708L21.4682 9.26131L8.93574 16.7441L2.87272 14.8725L27.9315 4.73564L23.3341 26.2929Z" fill="#135C2E"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_70_4744">
+                            <rect width="30" height="30" fill="white" transform="translate(-0.00390625 0.5)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+                    </a>
+                    <a href="https://www.linkedin.com/" class="h-7 w-7 hover:text-[#0077b5] transition-colors duration-300 hover:scale-110 transform">
+                        <svg  viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.9961 3.21084C18.972 3.21084 19.5142 3.21084 21.1407 3.21084C22.5865 3.21084 23.3093 3.57229 23.8515 3.75301C24.5744 4.11446 25.1166 4.29518 25.6587 4.83735C26.2009 5.37952 26.5624 5.92169 26.7431 6.64458C26.9238 7.18675 27.1045 7.90964 27.2853 9.35542C27.2853 10.9819 27.2853 11.3434 27.2853 15.5C27.2853 19.6566 27.2853 20.0181 27.2853 21.6446C27.2853 23.0904 26.9238 23.8133 26.7431 24.3554C26.3816 25.0783 26.2009 25.6205 25.6587 26.1627C25.1166 26.7048 24.5744 27.0663 23.8515 27.247C23.3093 27.4277 22.5865 27.6084 21.1407 27.7892C19.5142 27.7892 19.1527 27.7892 14.9961 27.7892C10.8395 27.7892 10.478 27.7892 8.85152 27.7892C7.40573 27.7892 6.68284 27.4277 6.14067 27.247C5.41778 26.8855 4.87561 26.7048 4.33344 26.1627C3.79128 25.6205 3.42983 25.0783 3.24911 24.3554C3.06838 23.8133 2.88766 23.0904 2.70694 21.6446C2.70694 20.0181 2.70694 19.6566 2.70694 15.5C2.70694 11.3434 2.70694 10.9819 2.70694 9.35542C2.70694 7.90964 3.06838 7.18675 3.24911 6.64458C3.61055 5.92169 3.79128 5.37952 4.33344 4.83735C4.87561 4.29518 5.41778 3.93374 6.14067 3.75301C6.68284 3.57229 7.40573 3.39157 8.85152 3.21084C10.478 3.21084 11.0202 3.21084 14.9961 3.21084ZM14.9961 0.5C10.8395 0.5 10.478 0.5 8.85152 0.5C7.22501 0.5 6.14067 0.861447 5.23706 1.22289C4.33344 1.58434 3.42983 2.12651 2.52622 3.03012C1.6226 3.93374 1.26116 4.65663 0.718986 5.74097C0.357541 6.64458 0.176817 7.72892 -0.00390625 9.35542C-0.00390625 10.9819 -0.00390625 11.5241 -0.00390625 15.5C-0.00390625 19.6566 -0.00390625 20.0181 -0.00390625 21.6446C-0.00390625 23.2711 0.357541 24.3554 0.718986 25.259C1.08043 26.1627 1.6226 27.0663 2.52622 27.9699C3.42983 28.8735 4.15272 29.2349 5.23706 29.7771C6.14067 30.1386 7.22501 30.3193 8.85152 30.5C10.478 30.5 11.0202 30.5 14.9961 30.5C18.972 30.5 19.5142 30.5 21.1407 30.5C22.7672 30.5 23.8515 30.1386 24.7551 29.7771C25.6587 29.4157 26.5624 28.8735 27.466 27.9699C28.3696 27.0663 28.731 26.3434 29.2732 25.259C29.6347 24.3554 29.8154 23.2711 29.9961 21.6446C29.9961 20.0181 29.9961 19.4759 29.9961 15.5C29.9961 11.5241 29.9961 10.9819 29.9961 9.35542C29.9961 7.72892 29.6347 6.64458 29.2732 5.74097C28.9118 4.83735 28.3696 3.93374 27.466 3.03012C26.5624 2.12651 25.8395 1.76506 24.7551 1.22289C23.8515 0.861447 22.7672 0.680723 21.1407 0.5C19.5142 0.5 19.1527 0.5 14.9961 0.5Z" fill="#135C2E"/>
+                            <path d="M14.9961 7.72892C10.6587 7.72892 7.22501 11.1627 7.22501 15.5C7.22501 19.8374 10.6587 23.2711 14.9961 23.2711C19.3334 23.2711 22.7672 19.8374 22.7672 15.5C22.7672 11.1627 19.3334 7.72892 14.9961 7.72892ZM14.9961 20.5602C12.2853 20.5602 9.93585 18.3916 9.93585 15.5C9.93585 12.7892 12.1045 10.4398 14.9961 10.4398C17.7069 10.4398 20.0563 12.6084 20.0563 15.5C20.0563 18.2108 17.7069 20.5602 14.9961 20.5602Z" fill="#135C2E"/>
+                            <path d="M22.9479 9.35542C23.946 9.35542 24.7551 8.5463 24.7551 7.54819C24.7551 6.55009 23.946 5.74097 22.9479 5.74097C21.9498 5.74097 21.1407 6.55009 21.1407 7.54819C21.1407 8.5463 21.9498 9.35542 22.9479 9.35542Z" fill="#135C2E"/>
+                            </svg>
+                            
+                    </a>
                 </div>
             </div>
+            
         </div>
 
         <div class="w-full lg:w-1/2 relative mt-10 lg:mt-0" data-aos="fade-up" data-aos-delay="200">
@@ -403,9 +476,9 @@
         </div>
     </footer>
 
+    <!-- js script -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
-    <!-- js script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- WOW.js CDN -->
@@ -426,7 +499,8 @@
 
     <script>
         const navLinks = document.querySelectorAll('#menu a');
-        const currentPath = window.location.pathname.split("/").pop();
+        const currentPath = window.location.pathname === '/' ? 'index.html' : window.location.pathname.split("/").pop();
+
         navLinks.forEach(link => {
             if (link.getAttribute('href') === currentPath) {
                 link.classList.add('text-emerald-800', 'font-bold');
@@ -449,6 +523,16 @@
     </script>
 
     <script>
+        function openModal() {
+            document.getElementById('myModal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('myModal').classList.add('hidden');
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+
+    <script>
         const menuToggle = document.getElementById("menu-toggle");
         const menuClose = document.getElementById("menu-close");
         const menu = document.getElementById("menu");
@@ -462,23 +546,6 @@
         });
 
     </script>
-
-    <script>
-        function toggleDetails(id) {
-            const element = document.getElementById(id);
-            const icon = element.previousElementSibling.querySelector('i');
-            if (element.classList.contains('hidden')) {
-                element.classList.remove('hidden');
-                icon.classList.remove('fa-angle-down');
-                icon.classList.add('fa-angle-up');
-            } else {
-                element.classList.add('hidden');
-                icon.classList.remove('fa-angle-up');
-                icon.classList.add('fa-angle-down');
-            }
-        }
-    </script>
-
     <script>
         function openModal() {
             document.getElementById('myModal').classList.remove('hidden');

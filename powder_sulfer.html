@@ -71,7 +71,7 @@
 
 <body class="font=montserrat">
     <!-- Header -->
-    <header class="p-4">
+    <header class="p-4 sticky top-0 bg-white z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="logo">
                 <a href="/">
@@ -127,18 +127,18 @@
                     </li>
                 </ul>
             </nav>
-            <div class="hidden laptop-l:flex items-center gap-8">
+            <div class="hidden laptop:flex items-center gap-8 laptop:gap-7">
                 <a href="#"
-                    class="text-2xl text-emerald-800 animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-125 hover:text-emerald-600">
+                    class="text-2xl laptop:text-xl laptop-l:text-2xl text-emerald-800 animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-125 hover:text-emerald-600">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
                 <a href="#"
-                    class="group bg-white rounded-full pl-8 shadow-md inline-block text-center transition duration-700 ease-in-out hover:scale-105 hover:shadow-lg ">
+                    class="group bg-white rounded-full laptop-l:pl-8 laptop:pl-3 4k:pl-8 shadow-md inline-block text-center transition duration-700 ease-in-out hover:scale-105 hover:shadow-lg ">
                     <span
-                        class="font-semibold text-emerald-800 text-lg group-hover:text-black transition-colors duration-300">Get
+                        class="font-semibold text-emerald-800 text-lg laptop:text-base group-hover:text-black transition-colors duration-300">Get
                         A Quote</span>
                     <i
-                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 group-hover:text-black transition-colors duration-300"></i>
+                        class="fa-solid fa-angles-right laptop-l:w-[60px] laptop-l:h-[60px] 4k:w-[60px] 4k:h-[60px] laptop:w-[50px] laptop:h-[50px] laptop:leading-[50px] 4k:leading-[60px] inline-block shadow-inner laptop-l:leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 group-hover:text-black transition-colors duration-300"></i>
                 </a>
             </div>
         </div>
@@ -149,7 +149,7 @@
         <div class="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] bg-cover bg-center"
             style="background-image: url('assets/img/about_us_img.jpg');" data-aos="fade-up" data-aos-duration="1500">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start">
-                <div class="pl-8 sm:pl-12 md:pl-24 lg:pl-36 text-white" data-wow-duration="1s" data-wow-delay="0.5s"
+                <div class="pl-8 sm:text-xl md:text-2xl lg:text-5xl text-white" data-wow-duration="1s" data-wow-delay="0.5s"
                     data-wow="fadeInLeft">
                     <h1 class="text-xl sm:text-xl md:text-4xl font-normal uppercase" data-aos="fade-up"
                         data-aos-duration="1500">POWDER SULPHER 325 MESH CARGO tO KENYA</h1>
@@ -164,7 +164,7 @@
 
     <!-- first section` -->
     <section>
-        <div class="container mx-auto px-4 py-12 mt-10">
+        <div class="container mx-auto py-12 mt-10">
             <div class="flex flex-col lg:flex-row items-center gap-8">
                 <div class="w-full lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
                     <div class="relative bg-white rounded-2xl shadow-lg">
@@ -198,7 +198,7 @@
 
     <!-- Article and News Section -->
     <section class="py-16 overflow-x-hidden" data-aos="fade-up" data-aos-duration="500">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto">
             <div class="mb-12 relative">
                 <h2 class="text-[46px] mob-s:text-[26px] mob-l:text-[26px] mob-xl:text-[30px] tablet:text-[45px] laptop:text-[50px] 4k:text-[60px]  font-medium text-[#001b3a]" data-aos="fade-up" data-aos-duration="600">
                     Article & News
@@ -322,7 +322,7 @@
 
     <!-- Footer -->
     <footer class="bg-[#22262F] text-white py-12">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto">
             <div class="flex flex-wrap justify-between">
                 <div class="w-full sm:w-1/2 lg:w-1/4 mb-8 lg:mb-0">
                     <a href="#" class="mb-4">
@@ -406,9 +406,6 @@
                             <i class="fas fa-envelope text-green-500 mr-2"></i>
                             info@buoyancyimpex.com
                         </a><br>
-                        <a href="mailto:buoyancyinc@gmail.com">
-                            buoyancyinc@gmail.com
-                        </a>
                     </p>
                 </div>
 
@@ -434,17 +431,20 @@
         </div>
     </footer>
 
+    <!-- js script -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
-    <!-- js script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- WOW.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <script>
         new WOW().init();
+    </script>
 
+    <script>
         AOS.init({
             duration: 1200,
             once: true,
@@ -454,7 +454,8 @@
 
     <script>
         const navLinks = document.querySelectorAll('#menu a');
-        const currentPath = window.location.pathname.split("/").pop();
+        const currentPath = window.location.pathname === '/' ? 'index.html' : window.location.pathname.split("/").pop();
+
         navLinks.forEach(link => {
             if (link.getAttribute('href') === currentPath) {
                 link.classList.add('text-emerald-800', 'font-bold');
@@ -477,6 +478,16 @@
     </script>
 
     <script>
+        function openModal() {
+            document.getElementById('myModal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('myModal').classList.add('hidden');
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+
+    <script>
         const menuToggle = document.getElementById("menu-toggle");
         const menuClose = document.getElementById("menu-close");
         const menu = document.getElementById("menu");
@@ -489,22 +500,6 @@
             menu.classList.add("hidden");
         });
 
-    </script>
-
-    <script>
-        function toggleDetails(id) {
-            const element = document.getElementById(id);
-            const icon = element.previousElementSibling.querySelector('i');
-            if (element.classList.contains('hidden')) {
-                element.classList.remove('hidden');
-                icon.classList.remove('fa-angle-down');
-                icon.classList.add('fa-angle-up');
-            } else {
-                element.classList.add('hidden');
-                icon.classList.remove('fa-angle-up');
-                icon.classList.add('fa-angle-down');
-            }
-        }
     </script>
 
     <!-- Article & News Swiper -->
