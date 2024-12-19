@@ -74,8 +74,8 @@
     <header class="p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="logo">
-                <a href="./">
-                    <img src="./assets/img/logo.png" alt="logo" class="h-24 sm:h-20 md:h-24 lg:h-28">
+                <a href="/">
+                    <img src="./assets/img/logo.png" alt="logo" class="h-24">
                 </a>
             </div>
             <button id="menu-toggle" class="text-customGray text-2xl md:hidden focus:outline-none">
@@ -89,7 +89,7 @@
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
-                <ul class="flex flex-col md:flex-row md:gap-4 items-center justify-center md:h-auto">
+                <ul class="flex flex-col md:flex-row laptop:gap-4 items-center justify-center md:h-auto">
                     <li class="relative">
                         <a href="index.html" class="block p-2 hover:text-emerald-800">Home</a>
                         <span
@@ -127,16 +127,18 @@
                     </li>
                 </ul>
             </nav>
-            <div class="hidden md:flex items-center gap-8">
+            <div class="hidden laptop-l:flex items-center gap-8">
                 <a href="#"
                     class="text-2xl text-emerald-800 animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-125 hover:text-emerald-600">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
                 <a href="#"
-                    class="bg-white rounded-full pl-8 shadow-md inline-block text-center animate__animated animate__pulse transform transition duration-500 ease-in-out hover:scale-105 hover:text-black hover:shadow-lg hover:rotate-2">
-                    <span class="font-semibold text-emerald-800 text-lg hover:text-black">Get A Quote</span>
+                    class="group bg-white rounded-full pl-8 shadow-md inline-block text-center transition duration-700 ease-in-out hover:scale-105 hover:shadow-lg ">
+                    <span
+                        class="font-semibold text-emerald-800 text-lg group-hover:text-black transition-colors duration-300">Get
+                        A Quote</span>
                     <i
-                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 transition duration-500 ease-in-out hover:text-black"></i>
+                        class="fa-solid fa-angles-right w-[60px] h-[60px] inline-block shadow-inner leading-[60px] ms-4 rounded-full leading-10 text-emerald-800 group-hover:text-black transition-colors duration-300"></i>
                 </a>
             </div>
         </div>
