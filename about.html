@@ -68,6 +68,7 @@
         };
     </script>
 </head>
+
 <body class="font-montserrat">
     <!-- Header -->
     <header class="p-4 sticky top-0 bg-white z-50">
@@ -181,7 +182,7 @@
                     data-aos="fade-up" data-aos-duration="700">
                     Company Information
                 </h2>
-                <p class="text-[#434343] mt-4 mob-s:text-sm mob-l:text-base mob-xl:text-lg tablet:text-xl laptop:text-base laptop-l:text-2xl" 
+                <p class="text-[#434343] mt-4 mob-s:text-sm mob-l:text-base mob-xl:text-lg tablet:text-xl laptop:text-base laptop-l:text-2xl"
                     data-aos="fade-up" data-aos-duration="700">
                     BUOYANCY IMPEX PRIVATE LIMITED is an independent, privately held global enterprise on trading and
                     Exports of Petroleum derivatives like Bitumen, Base oils, Sulphur & Polymers. And Fertilizers.
@@ -204,7 +205,8 @@
     <!-- Vision, Mission, and Assurance Section -->
     <section class="py-16">
         <div class="container mx-auto py-16 md:px-20 cursor-pointer">
-            <div class="grid grid-cols-1 mob-l:grid-cols-1 mob-s:grid-cols-1 mob-xl:grid-cols-1 tablet:grid-cols-1 laptop:grid-cols-3 laptop-l:grid-cols-3 gap-8">
+            <div
+                class="grid grid-cols-1 mob-l:grid-cols-1 mob-s:grid-cols-1 mob-xl:grid-cols-1 tablet:grid-cols-1 laptop:grid-cols-3 laptop-l:grid-cols-3 gap-8">
                 <!-- Card 1 -->
                 <div class="bg-stone-50 p-6 rounded-[40px] shadow-lg text-center transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:rotate-3"
                     data-aos="fade-up" data-aos-duration="700">
@@ -687,8 +689,11 @@
         const swiper_2 = new Swiper('.swiper_2', {
             loop: true,
             slidesPerView: 5,
-            // spaceBetween: 10,
             cssMode: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
             navigation: {
                 nextEl: '.swiper-button-next-collab',
                 prevEl: '.swiper-button-prev-collab',
